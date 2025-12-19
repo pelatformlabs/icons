@@ -1,17 +1,17 @@
 import React from 'react';
 
-interface IconSquareMinusProps {
+interface IconOptionProps {
   className?: string;
   'data-slot'?: string;
   [key: string]: any;
 }
 
-const IconSquareMinus: React.FC<IconSquareMinusProps> = (props) => {
+const IconOption: React.FC<IconOptionProps> = (props) => {
   // Handle size classes - if user provides size-* class, use it, otherwise default to size-4
   const userClassName = props.className || '';
   const hasSizeClass = /\bsize-\w+\b/.test(userClassName);
   const defaultSize = hasSizeClass ? '' : 'size-4';
-  const finalClassName = `pelatform-icons pelatform-icon-square-minus ${defaultSize} ${userClassName}`.trim();
+  const finalClassName = `pelatform-icons pelatform-icon-option ${defaultSize} ${userClassName}`.trim();
 
   return (
     <svg
@@ -24,10 +24,9 @@ const IconSquareMinus: React.FC<IconSquareMinusProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M9 12h6" />
-    <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+    <path d="M14 6h5m0 12h-5l-5 -12h-4" />
   </svg>
   );
 };
 
-export default IconSquareMinus;
+export default IconOption;

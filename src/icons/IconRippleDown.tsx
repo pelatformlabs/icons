@@ -1,17 +1,17 @@
 import React from 'react';
 
-interface IconSquareMinusProps {
+interface IconRippleDownProps {
   className?: string;
   'data-slot'?: string;
   [key: string]: any;
 }
 
-const IconSquareMinus: React.FC<IconSquareMinusProps> = (props) => {
+const IconRippleDown: React.FC<IconRippleDownProps> = (props) => {
   // Handle size classes - if user provides size-* class, use it, otherwise default to size-4
   const userClassName = props.className || '';
   const hasSizeClass = /\bsize-\w+\b/.test(userClassName);
   const defaultSize = hasSizeClass ? '' : 'size-4';
-  const finalClassName = `pelatform-icons pelatform-icon-square-minus ${defaultSize} ${userClassName}`.trim();
+  const finalClassName = `pelatform-icons pelatform-icon-ripple-down ${defaultSize} ${userClassName}`.trim();
 
   return (
     <svg
@@ -24,10 +24,13 @@ const IconSquareMinus: React.FC<IconSquareMinusProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M9 12h6" />
-    <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+    <path d="M3 7q 4.5 -3 9 0t 9 0" />
+    <path d="M3 17q 4.5 -3 9 0q .213 .142 .427 .27" />
+    <path d="M3 12q 4.5 -3 9 0q 2.006 1.338 4.012 1.482" />
+    <path d="M19 16v6" />
+    <path d="M22 19l-3 3l-3 -3" />
   </svg>
   );
 };
 
-export default IconSquareMinus;
+export default IconRippleDown;
