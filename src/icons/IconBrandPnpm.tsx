@@ -24,14 +24,14 @@ const IconBrandPnpm: React.FC<IconBrandPnpmProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 17h4v4h-4z" />
-    <path d="M10 17h4v4h-4z" />
-    <path d="M17 17h4v4h-4z" />
-    <path d="M17 10h4v4h-4z" />
-    <path d="M17 3h4v4h-4z" />
-    <path d="M10 10h4v4h-4z" />
-    <path d="M10 3h4v4h-4z" />
-    <path d="M3 3h4v4h-4z" />
+    <path d="M3 17h4v4h-4l0 -4" />
+    <path d="M10 17h4v4h-4l0 -4" />
+    <path d="M17 17h4v4h-4l0 -4" />
+    <path d="M17 10h4v4h-4l0 -4" />
+    <path d="M17 3h4v4h-4l0 -4" />
+    <path d="M10 10h4v4h-4l0 -4" />
+    <path d="M10 3h4v4h-4l0 -4" />
+    <path d="M3 3h4v4h-4l0 -4" />
   </svg>
   );
 };

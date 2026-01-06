@@ -24,13 +24,13 @@ const IconTopologyStar3: React.FC<IconTopologyStar3Props> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M10 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-    <path d="M18 5a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-    <path d="M10 5a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-    <path d="M6 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-    <path d="M18 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-    <path d="M14 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-    <path d="M22 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
+    <path d="M10 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0" />
+    <path d="M18 5a2 2 0 1 0 -4 0a2 2 0 0 0 4 0" />
+    <path d="M10 5a2 2 0 1 0 -4 0a2 2 0 0 0 4 0" />
+    <path d="M6 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0" />
+    <path d="M18 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0" />
+    <path d="M14 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0" />
+    <path d="M22 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0" />
     <path d="M6 12h4" />
     <path d="M14 12h4" />
     <path d="M15 7l-2 3" />

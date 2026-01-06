@@ -24,9 +24,9 @@ const IconDotsDiagonal2: React.FC<IconDotsDiagonal2Props> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M7 7m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-    <path d="M17 17m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+    <path d="M6 7a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+    <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+    <path d="M16 17a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
   </svg>
   );
 };

@@ -24,7 +24,7 @@ const IconH6: React.FC<IconH6Props> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M19 14a2 2 0 1 0 0 4a2 2 0 0 0 0 -4z" />
+    <path d="M19 14a2 2 0 1 0 0 4a2 2 0 0 0 0 -4" />
     <path d="M21 12a2 2 0 1 0 -4 0v4" />
     <path d="M4 6v12" />
     <path d="M12 6v12" />

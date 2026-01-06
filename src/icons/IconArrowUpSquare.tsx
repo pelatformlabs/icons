@@ -26,7 +26,7 @@ const IconArrowUpSquare: React.FC<IconArrowUpSquareProps> = (props) => {
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M12 17l0 -14" />
     <path d="M15 6l-3 -3l-3 3" />
-    <path d="M10 21v-4h4v4z" />
+    <path d="M10 21v-4h4v4l-4 0" />
   </svg>
   );
 };

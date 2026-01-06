@@ -25,9 +25,9 @@ const IconDiscount: React.FC<IconDiscountProps> = (props) => {
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M9 15l6 -6" />
-    <circle cx={9.5} cy={9.5} r={0.5} fill="currentColor" />
-    <circle cx={14.5} cy={14.5} r={0.5} fill="currentColor" />
-    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+    <path d="M9 9.5a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0" fill="currentColor" />
+    <path d="M14 14.5a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0" fill="currentColor" />
+    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
   </svg>
   );
 };

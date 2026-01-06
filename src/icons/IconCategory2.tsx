@@ -24,10 +24,10 @@ const IconCategory2: React.FC<IconCategory2Props> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M14 4h6v6h-6z" />
-    <path d="M4 14h6v6h-6z" />
-    <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-    <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+    <path d="M14 4h6v6h-6l0 -6" />
+    <path d="M4 14h6v6h-6l0 -6" />
+    <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+    <path d="M4 7a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
   </svg>
   );
 };

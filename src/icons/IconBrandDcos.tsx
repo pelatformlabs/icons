@@ -24,7 +24,7 @@ const IconBrandDcos: React.FC<IconBrandDcosProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 18l18 -12h-18l9 14l9 -14v10l-18 -10z" />
+    <path d="M3 18l18 -12h-18l9 14l9 -14v10l-18 -10l0 12" />
   </svg>
   );
 };

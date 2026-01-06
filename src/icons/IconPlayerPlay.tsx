@@ -24,7 +24,7 @@ const IconPlayerPlay: React.FC<IconPlayerPlayProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M7 4v16l13 -8z" />
+    <path d="M7 4v16l13 -8l-13 -8" />
   </svg>
   );
 };

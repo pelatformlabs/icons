@@ -24,7 +24,7 @@ const IconGenderAgender: React.FC<IconGenderAgenderProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 12m-6 0a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" />
+    <path d="M6 12a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" />
     <path d="M7 12h11" />
   </svg>
   );

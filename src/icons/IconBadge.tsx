@@ -24,7 +24,7 @@ const IconBadge: React.FC<IconBadgeProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M17 17v-13l-5 3l-5 -3v13l5 3z" />
+    <path d="M17 17v-13l-5 3l-5 -3v13l5 3l5 -3" />
   </svg>
   );
 };

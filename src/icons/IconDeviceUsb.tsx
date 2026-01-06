@@ -24,7 +24,7 @@ const IconDeviceUsb: React.FC<IconDeviceUsbProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M7 8h10v8a5 5 0 0 1 -10 0z" />
+    <path d="M7 8h10v8a5 5 0 0 1 -10 0l0 -8" />
     <path d="M9 8v-5h6v5" />
   </svg>
   );

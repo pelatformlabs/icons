@@ -24,7 +24,7 @@ const IconCircleDottedLetterB: React.FC<IconCircleDottedLetterBProps> = (props) 
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M10 16h2a2 2 0 1 0 0 -4h-2h2a2 2 0 1 0 0 -4h-2z" />
+    <path d="M10 16h2a2 2 0 1 0 0 -4h-2h2a2 2 0 1 0 0 -4h-2l0 8" />
     <path d="M7.5 4.21v.01" />
     <path d="M4.21 7.5v.01" />
     <path d="M3 12v.01" />

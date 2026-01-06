@@ -24,7 +24,7 @@ const IconCrown: React.FC<IconCrownProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 6l4 6l5 -4l-2 10h-14l-2 -10l5 4z" />
+    <path d="M12 6l4 6l5 -4l-2 10h-14l-2 -10l5 4l4 -6" />
   </svg>
   );
 };

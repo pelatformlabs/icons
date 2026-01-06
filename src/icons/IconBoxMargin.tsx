@@ -24,7 +24,7 @@ const IconBoxMargin: React.FC<IconBoxMarginProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M8 8h8v8h-8z" />
+    <path d="M8 8h8v8h-8l0 -8" />
     <path d="M4 4v.01" />
     <path d="M8 4v.01" />
     <path d="M12 4v.01" />

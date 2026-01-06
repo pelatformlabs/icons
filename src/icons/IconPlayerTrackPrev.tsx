@@ -24,8 +24,8 @@ const IconPlayerTrackPrev: React.FC<IconPlayerTrackPrevProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M21 5v14l-8 -7z" />
-    <path d="M10 5v14l-8 -7z" />
+    <path d="M21 5v14l-8 -7l8 -7" />
+    <path d="M10 5v14l-8 -7l8 -7" />
   </svg>
   );
 };

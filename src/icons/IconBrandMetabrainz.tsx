@@ -24,8 +24,8 @@ const IconBrandMetabrainz: React.FC<IconBrandMetabrainzProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 7v10l7 4v-18z" />
-    <path d="M21 7v10l-7 4v-18z" />
+    <path d="M3 7v10l7 4v-18l-7 4" />
+    <path d="M21 7v10l-7 4v-18l7 4" />
   </svg>
   );
 };

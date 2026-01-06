@@ -24,8 +24,8 @@ const IconBrandSublimeText: React.FC<IconBrandSublimeTextProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M19 8l-14 4.5v-5.5l14 -4.5z" />
-    <path d="M19 17l-14 4.5v-5.5l14 -4.5z" />
+    <path d="M19 8l-14 4.5v-5.5l14 -4.5l0 5.5" />
+    <path d="M19 17l-14 4.5v-5.5l14 -4.5l0 5.5" />
     <path d="M19 11.5l-14 -4.5" />
     <path d="M5 12.5l14 4.5" />
   </svg>

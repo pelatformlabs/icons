@@ -24,7 +24,7 @@ const IconBoxAlignTop: React.FC<IconBoxAlignTopProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 10.005h16v-5a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1v5z" />
+    <path d="M4 10.005h16v-5a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1v5" />
     <path d="M4 15.005v-.01" />
     <path d="M4 20.005v-.01" />
     <path d="M9 20.005v-.01" />

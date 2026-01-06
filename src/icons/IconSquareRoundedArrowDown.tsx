@@ -26,7 +26,7 @@ const IconSquareRoundedArrowDown: React.FC<IconSquareRoundedArrowDownProps> = (p
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M8 12l4 4l4 -4" />
     <path d="M12 8v8" />
-    <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
+    <path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" />
   </svg>
   );
 };

@@ -24,7 +24,7 @@ const IconPlayerSkipForward: React.FC<IconPlayerSkipForwardProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 5v14l12 -7z" />
+    <path d="M4 5v14l12 -7l-12 -7" />
     <path d="M20 5l0 14" />
   </svg>
   );

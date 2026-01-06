@@ -24,7 +24,7 @@ const IconPodium: React.FC<IconPodiumProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M5 8h14l-.621 2.485a2 2 0 0 1 -1.94 1.515h-8.878a2 2 0 0 1 -1.94 -1.515l-.621 -2.485z" />
+    <path d="M5 8h14l-.621 2.485a2 2 0 0 1 -1.94 1.515h-8.878a2 2 0 0 1 -1.94 -1.515l-.621 -2.485" />
     <path d="M7 8v-2a3 3 0 0 1 3 -3" />
     <path d="M8 12l1 9" />
     <path d="M16 12l-1 9" />

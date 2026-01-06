@@ -24,7 +24,7 @@ const IconCurrencySolana: React.FC<IconCurrencySolanaProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 18h12l4 -4h-12z" />
+    <path d="M4 18h12l4 -4h-12l-4 4" />
     <path d="M8 14l-4 -4h12l4 4" />
     <path d="M16 10l4 -4h-12l-4 4" />
   </svg>

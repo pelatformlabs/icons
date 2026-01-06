@@ -25,7 +25,7 @@ const IconPercentage33: React.FC<IconPercentage33Props> = (props) => {
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path
-      d="M12 3a9 9 0 0 1 7.794 13.5l-7.79 -4.497z"
+      d="M12 3a9 9 0 0 1 7.794 13.5l-7.79 -4.497v-9"
       fill="currentColor"
       stroke="none"
     />

@@ -24,7 +24,7 @@ const IconUmbrellaClosed: React.FC<IconUmbrellaClosedProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M9 16l3 -13l3 13z" />
+    <path d="M9 16l3 -13l3 13l-6 0" />
     <path d="M12 16v3c0 2.667 4 2.667 4 0" />
   </svg>
   );

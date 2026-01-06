@@ -24,7 +24,7 @@ const IconArrowBadgeDown: React.FC<IconArrowBadgeDownProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M17 13v-6l-5 4l-5 -4v6l5 4z" />
+    <path d="M17 13v-6l-5 4l-5 -4v6l5 4l5 -4" />
   </svg>
   );
 };

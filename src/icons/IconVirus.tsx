@@ -24,7 +24,7 @@ const IconVirus: React.FC<IconVirusProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 12m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0" />
+    <path d="M7 12a5 5 0 1 0 10 0a5 5 0 1 0 -10 0" />
     <path d="M12 7v-4" />
     <path d="M11 3h2" />
     <path d="M15.536 8.464l2.828 -2.828" />

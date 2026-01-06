@@ -24,7 +24,8 @@ const IconBrandUnsplash: React.FC<IconBrandUnsplashProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 11h5v4h6v-4h5v9h-16zm5 -7h6v4h-6z" />
+    <path d="M4 11h5v4h6v-4h5v9h-16v-9" />
+    <path d="M9 4h6v4h-6l0 -4" />
   </svg>
   );
 };

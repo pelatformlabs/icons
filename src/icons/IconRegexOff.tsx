@@ -24,7 +24,7 @@ const IconRegexOff: React.FC<IconRegexOffProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M6.5 15a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0 -5z" />
+    <path d="M6.5 15a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0 -5" />
     <path d="M17 7.875l3 -1.687" />
     <path d="M17 7.875v3.375" />
     <path d="M17 7.875l-3 -1.687" />

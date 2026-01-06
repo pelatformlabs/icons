@@ -24,8 +24,8 @@ const IconBrandValorant: React.FC<IconBrandValorantProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M14.5 14h4.5l2 -2v-6z" />
-    <path d="M9 19h5l-11 -13v6z" />
+    <path d="M14.5 14h4.5l2 -2v-6l-6.5 8" />
+    <path d="M9 19h5l-11 -13v6l6 7" />
   </svg>
   );
 };

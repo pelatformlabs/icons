@@ -24,7 +24,7 @@ const IconDualScreen: React.FC<IconDualScreenProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M5 4l8 3v15l-8 -3z" />
+    <path d="M5 4l8 3v15l-8 -3l0 -15" />
     <path d="M13 19h6v-15h-14" />
   </svg>
   );

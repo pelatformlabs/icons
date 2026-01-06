@@ -25,7 +25,7 @@ const IconMathAvg: React.FC<IconMathAvgProps> = (props) => {
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M3 21l18 -18" />
-    <path d="M12 12m-8 0a8 8 0 1 0 16 0a8 8 0 1 0 -16 0" />
+    <path d="M4 12a8 8 0 1 0 16 0a8 8 0 1 0 -16 0" />
   </svg>
   );
 };

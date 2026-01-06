@@ -25,7 +25,7 @@ const IconAugmentedReality2: React.FC<IconAugmentedReality2Props> = (props) => {
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M10 21h-2a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v3.5" />
-    <path d="M17 17l-4 -2.5l4 -2.5l4 2.5v4.5l-4 2.5z" />
+    <path d="M17 17l-4 -2.5l4 -2.5l4 2.5v4.5l-4 2.5l0 -4.5" />
     <path d="M13 14.5v4.5l4 2.5" />
     <path d="M17 17l4 -2.5" />
     <path d="M11 4h2" />

@@ -24,7 +24,7 @@ const IconBrandTeams: React.FC<IconBrandTeamsProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 7h10v10h-10z" />
+    <path d="M3 7h10v10h-10l0 -10" />
     <path d="M6 10h4" />
     <path d="M8 10v4" />
     <path d="M8.104 17c.47 2.274 2.483 4 4.896 4a5 5 0 0 0 5 -5v-7h-5" />

@@ -25,7 +25,7 @@ const IconToolsKitchen3: React.FC<IconToolsKitchen3Props> = (props) => {
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M7 4v17m-3 -17v3a3 3 0 1 0 6 0v-3" />
-    <path d="M17 8m-3 0a3 4 0 1 0 6 0a3 4 0 1 0 -6 0" />
+    <path d="M14 8a3 4 0 1 0 6 0a3 4 0 1 0 -6 0" />
     <path d="M17 12v9" />
   </svg>
   );

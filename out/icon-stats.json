@@ -1,7 +1,7 @@
 {
   "summary": {
-    "totalIcons": 5985,
-    "totalFilled": 999,
+    "totalIcons": 5987,
+    "totalFilled": 1001,
     "totalOutline": 4986,
     "totalCategories": 42
   },
@@ -563,7 +563,7 @@
         "brand-adobe-illustrator.svg",
         "brand-adobe-indesign.svg",
         "brand-adobe-photoshop.svg",
-        "brand-adobe-premier.svg",
+        "brand-adobe-premiere.svg",
         "brand-adobe-xd.svg",
         "brand-adobe.svg",
         "brand-adonis-js.svg",
@@ -1423,8 +1423,8 @@
       ]
     },
     "Design": {
-      "total": 428,
-      "filled": 98,
+      "total": 429,
+      "filled": 99,
       "outline": 330,
       "filledIcons": [
         "ad-filled.svg",
@@ -1464,6 +1464,7 @@
         "crop-7-5-filled.svg",
         "crop-landscape-filled.svg",
         "crop-portrait-filled.svg",
+        "crown-filled.svg",
         "droplet-filled.svg",
         "droplet-half-2-filled.svg",
         "droplet-half-filled.svg",
@@ -2309,8 +2310,8 @@
       ]
     },
     "Document": {
-      "total": 265,
-      "filled": 62,
+      "total": 266,
+      "filled": 63,
       "outline": 203,
       "filledIcons": [
         "archive-filled.svg",
@@ -2369,6 +2370,7 @@
         "file-x-filled.svg",
         "files-filled.svg",
         "folder-filled.svg",
+        "folder-open-filled.svg",
         "folders-filled.svg",
         "manual-gearbox-filled.svg",
         "presentation-analytics-filled.svg",

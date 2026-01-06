@@ -26,7 +26,7 @@ const IconClockStop: React.FC<IconClockStopProps> = (props) => {
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M21 12a9 9 0 1 0 -9 9" />
     <path d="M12 7v5l1 1" />
-    <path d="M16 16h6v6h-6z" />
+    <path d="M16 16h6v6h-6l0 -6" />
   </svg>
   );
 };

@@ -24,7 +24,7 @@ const IconHttpDeleteOff: React.FC<IconHttpDeleteOffProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 8v8h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2z" />
+    <path d="M3 8v8h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2l-2 0" />
     <path d="M14 8h-2m-2 2v6h4" />
     <path d="M10 12h2" />
     <path d="M17 8v5m3 3h1" />

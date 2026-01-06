@@ -24,7 +24,7 @@ const IconAtom2: React.FC<IconAtom2Props> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
     <path d="M12 21l0 .01" />
     <path d="M3 9l0 .01" />
     <path d="M21 9l0 .01" />

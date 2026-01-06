@@ -24,7 +24,7 @@ const IconHexagons: React.FC<IconHexagonsProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 18v-5l4 -2l4 2v5l-4 2z" />
+    <path d="M4 18v-5l4 -2l4 2v5l-4 2l-4 -2" />
     <path d="M8 11v-5l4 -2l4 2v5" />
     <path d="M12 13l4 -2l4 2v5l-4 2l-4 -2" />
   </svg>

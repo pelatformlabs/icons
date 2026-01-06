@@ -24,8 +24,8 @@ const IconBrandInertia: React.FC<IconBrandInertiaProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12.5 8l4 4l-4 4h4.5l4 -4l-4 -4z" />
-    <path d="M3.5 8l4 4l-4 4h4.5l4 -4l-4 -4z" />
+    <path d="M12.5 8l4 4l-4 4h4.5l4 -4l-4 -4l-4.5 0" />
+    <path d="M3.5 8l4 4l-4 4h4.5l4 -4l-4 -4l-4.5 0" />
   </svg>
   );
 };

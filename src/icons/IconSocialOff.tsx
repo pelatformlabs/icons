@@ -24,8 +24,8 @@ const IconSocialOff: React.FC<IconSocialOffProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-    <path d="M5 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M3 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
     <path d="M17.57 17.602a2 2 0 0 0 2.83 2.827" />
     <path d="M11.113 11.133a3 3 0 1 0 3.765 3.715" />
     <path d="M12 7v1" />

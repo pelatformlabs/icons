@@ -24,7 +24,7 @@ const IconDrone: React.FC<IconDroneProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M10 10h4v4h-4z" />
+    <path d="M10 10h4v4h-4l0 -4" />
     <path d="M10 10l-3.5 -3.5" />
     <path d="M9.96 6a3.5 3.5 0 1 0 -3.96 3.96" />
     <path d="M14 10l3.5 -3.5" />

@@ -24,7 +24,7 @@ const IconLollipop: React.FC<IconLollipopProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M14 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M7 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
     <path d="M21 10a3.5 3.5 0 0 0 -7 0" />
     <path d="M14 10a3.5 3.5 0 0 1 -7 0" />
     <path d="M14 17a3.5 3.5 0 0 0 0 -7" />

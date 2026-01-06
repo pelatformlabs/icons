@@ -24,7 +24,7 @@ const IconBrightness: React.FC<IconBrightnessProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
     <path d="M12 3l0 18" />
     <path d="M12 9l4.65 -4.65" />
     <path d="M12 14.3l7.37 -7.37" />

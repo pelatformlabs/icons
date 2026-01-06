@@ -24,7 +24,7 @@ const IconBrandSupabase: React.FC<IconBrandSupabaseProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 14h8v7l8 -11h-8v-7z" />
+    <path d="M4 14h8v7l8 -11h-8v-7l-8 11" />
   </svg>
   );
 };

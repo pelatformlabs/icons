@@ -24,7 +24,7 @@ const IconLayoutSidebarRightInactive: React.FC<IconLayoutSidebarRightInactivePro
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+    <path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12" />
     <path d="M15 4v1" />
     <path d="M15 9v1" />
     <path d="M15 14v1" />

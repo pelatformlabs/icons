@@ -26,7 +26,7 @@ const IconHome2: React.FC<IconHome2Props> = (props) => {
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
     <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-    <path d="M10 12h4v4h-4z" />
+    <path d="M10 12h4v4h-4l0 -4" />
   </svg>
   );
 };

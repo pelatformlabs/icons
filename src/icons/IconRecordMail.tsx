@@ -24,8 +24,8 @@ const IconRecordMail: React.FC<IconRecordMailProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M7 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-    <path d="M17 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+    <path d="M4 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+    <path d="M14 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
     <path d="M7 15l10 0" />
   </svg>
   );

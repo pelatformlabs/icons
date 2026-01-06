@@ -24,7 +24,7 @@ const IconDelta: React.FC<IconDeltaProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 20h16l-8 -16z" />
+    <path d="M4 20h16l-8 -16l-8 16" />
   </svg>
   );
 };

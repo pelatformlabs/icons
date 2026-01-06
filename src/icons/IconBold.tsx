@@ -24,7 +24,7 @@ const IconBold: React.FC<IconBoldProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M7 5h6a3.5 3.5 0 0 1 0 7h-6z" />
+    <path d="M7 5h6a3.5 3.5 0 0 1 0 7h-6l0 -7" />
     <path d="M13 12h1a3.5 3.5 0 0 1 0 7h-7v-7" />
   </svg>
   );

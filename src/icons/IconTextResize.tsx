@@ -24,10 +24,10 @@ const IconTextResize: React.FC<IconTextResizeProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M5 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-    <path d="M19 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-    <path d="M5 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-    <path d="M19 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M3 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M17 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M3 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M17 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
     <path d="M5 7v10" />
     <path d="M7 5h10" />
     <path d="M7 19h10" />

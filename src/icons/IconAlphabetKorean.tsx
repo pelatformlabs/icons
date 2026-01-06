@@ -25,7 +25,7 @@ const IconAlphabetKorean: React.FC<IconAlphabetKoreanProps> = (props) => {
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M7 7h6c0 2.5 -1.593 8.474 -6 10" />
-    <path d="M16 5v14z" />
+    <path d="M16 5v14l0 -14" />
     <path d="M16 12h2" />
   </svg>
   );

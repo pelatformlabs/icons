@@ -24,7 +24,7 @@ const IconBrandBandcamp: React.FC<IconBrandBandcampProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M8.5 6h13.5l-7 12h-13z" />
+    <path d="M8.5 6h13.5l-7 12h-13l6.5 -12" />
   </svg>
   );
 };

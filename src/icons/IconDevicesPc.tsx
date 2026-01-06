@@ -24,8 +24,8 @@ const IconDevicesPc: React.FC<IconDevicesPcProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 5h6v14h-6z" />
-    <path d="M12 9h10v7h-10z" />
+    <path d="M3 5h6v14h-6l0 -14" />
+    <path d="M12 9h10v7h-10l0 -7" />
     <path d="M14 19h6" />
     <path d="M17 16v3" />
     <path d="M6 13v.01" />

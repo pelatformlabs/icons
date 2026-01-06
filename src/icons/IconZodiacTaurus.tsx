@@ -25,7 +25,7 @@ const IconZodiacTaurus: React.FC<IconZodiacTaurusProps> = (props) => {
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M6 3a6 6 0 0 0 12 0" />
-    <path d="M12 15m-6 0a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" />
+    <path d="M6 15a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" />
   </svg>
   );
 };

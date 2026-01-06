@@ -25,7 +25,7 @@ const IconDeviceTabletCancel: React.FC<IconDeviceTabletCancelProps> = (props) =>
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M12.5 21h-6.5a1 1 0 0 1 -1 -1v-16a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8" />
-    <path d="M19 19m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+    <path d="M16 19a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
     <path d="M17 21l4 -4" />
     <path d="M11 17a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
   </svg>

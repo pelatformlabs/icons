@@ -24,7 +24,10 @@ const IconAerialLift: React.FC<IconAerialLiftProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 5l16 -2m-8 1v10m-5.106 -6h10.306c2.45 3 2.45 9 -.2 12h-10.106c-2.544 -3 -2.544 -9 0 -12zm-1.894 6h14" />
+    <path d="M4 5l16 -2" />
+    <path d="M12 4v10" />
+    <path d="M6.894 8h10.306c2.45 3 2.45 9 -.2 12h-10.106c-2.544 -3 -2.544 -9 0 -12" />
+    <path d="M5 14h14" />
   </svg>
   );
 };

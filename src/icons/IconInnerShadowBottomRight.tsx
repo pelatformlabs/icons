@@ -24,7 +24,7 @@ const IconInnerShadowBottomRight: React.FC<IconInnerShadowBottomRightProps> = (p
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" />
+    <path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18" />
     <path d="M18 12a6 6 0 0 1 -6 6" />
   </svg>
   );

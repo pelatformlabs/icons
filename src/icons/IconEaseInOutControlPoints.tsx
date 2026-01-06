@@ -24,9 +24,9 @@ const IconEaseInOutControlPoints: React.FC<IconEaseInOutControlPointsProps> = (p
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M17 20a2 2 0 1 0 4 0a2 2 0 0 0 -4 0z" />
+    <path d="M17 20a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
     <path d="M17 20h-2" />
-    <path d="M7 4a2 2 0 1 1 -4 0a2 2 0 0 1 4 0z" />
+    <path d="M7 4a2 2 0 1 1 -4 0a2 2 0 0 1 4 0" />
     <path d="M7 4h2" />
     <path d="M14 4h-2" />
     <path d="M12 20h-2" />

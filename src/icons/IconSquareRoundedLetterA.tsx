@@ -26,7 +26,7 @@ const IconSquareRoundedLetterA: React.FC<IconSquareRoundedLetterAProps> = (props
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M10 16v-6a2 2 0 1 1 4 0v6" />
     <path d="M10 13h4" />
-    <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
+    <path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" />
   </svg>
   );
 };

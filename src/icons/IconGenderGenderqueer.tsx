@@ -24,7 +24,7 @@ const IconGenderGenderqueer: React.FC<IconGenderGenderqueerProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 11a5 5 0 1 1 0 10a5 5 0 0 1 0 -10z" />
+    <path d="M12 11a5 5 0 1 1 0 10a5 5 0 0 1 0 -10" />
     <path d="M12 11v-8" />
     <path d="M14.5 4.5l-5 3" />
     <path d="M9.5 4.5l5 3" />

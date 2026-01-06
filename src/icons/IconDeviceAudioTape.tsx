@@ -24,10 +24,10 @@ const IconDeviceAudioTape: React.FC<IconDeviceAudioTapeProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+    <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
     <path d="M3 17l4 -3h10l4 3" />
-    <circle cx={7.5} cy={9.5} r={0.5} fill="currentColor" />
-    <circle cx={16.5} cy={9.5} r={0.5} fill="currentColor" />
+    <path d="M7 9.5a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0" fill="currentColor" />
+    <path d="M16 9.5a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0" fill="currentColor" />
   </svg>
   );
 };

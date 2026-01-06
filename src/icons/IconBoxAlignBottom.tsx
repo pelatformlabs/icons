@@ -24,7 +24,7 @@ const IconBoxAlignBottom: React.FC<IconBoxAlignBottomProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 14h16v5a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1v-5z" />
+    <path d="M4 14h16v5a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1v-5" />
     <path d="M4 9v.01" />
     <path d="M4 4v.01" />
     <path d="M9 4v.01" />

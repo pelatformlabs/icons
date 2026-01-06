@@ -24,7 +24,7 @@ const IconChartInfographic: React.FC<IconChartInfographicProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+    <path d="M3 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
     <path d="M7 3v4h4" />
     <path d="M9 17l0 4" />
     <path d="M17 14l0 7" />

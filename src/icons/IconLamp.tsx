@@ -26,7 +26,7 @@ const IconLamp: React.FC<IconLampProps> = (props) => {
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M9 20h6" />
     <path d="M12 20v-8" />
-    <path d="M5 12h14l-4 -8h-6z" />
+    <path d="M5 12h14l-4 -8h-6l-4 8" />
   </svg>
   );
 };

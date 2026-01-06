@@ -26,7 +26,7 @@ const IconArrowLeftRhombus: React.FC<IconArrowLeftRhombusProps> = (props) => {
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M16 12h-13" />
     <path d="M6 9l-3 3l3 3" />
-    <path d="M18.5 9.5l2.5 2.5l-2.5 2.5l-2.5 -2.5z" />
+    <path d="M18.5 9.5l2.5 2.5l-2.5 2.5l-2.5 -2.5l2.5 -2.5" />
   </svg>
   );
 };

@@ -24,7 +24,7 @@ const IconPoint: React.FC<IconPointProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+    <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
   </svg>
   );
 };

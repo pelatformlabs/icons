@@ -24,7 +24,7 @@ const IconBrandAlpineJs: React.FC<IconBrandAlpineJsProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 11.5l4.5 4.5h9l-9 -9z" />
+    <path d="M3 11.5l4.5 4.5h9l-9 -9l-4.5 4.5" />
     <path d="M16.5 16l4.5 -4.5l-4.5 -4.5l-4.5 4.5" />
   </svg>
   );

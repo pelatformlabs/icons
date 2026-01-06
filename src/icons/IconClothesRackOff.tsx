@@ -24,7 +24,7 @@ const IconClothesRackOff: React.FC<IconClothesRackOffProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
     <path d="M12 7v1m0 4v9" />
     <path d="M9 21h6" />
     <path d="M7.757 9.243a6 6 0 0 0 3.129 1.653m3.578 -.424a6 6 0 0 0 1.779 -1.229" />

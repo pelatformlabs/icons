@@ -24,7 +24,7 @@ const IconBrandCodesandbox: React.FC<IconBrandCodesandboxProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M20 7.5v9l-4 2.25l-4 2.25l-4 -2.25l-4 -2.25v-9l4 -2.25l4 -2.25l4 2.25z" />
+    <path d="M20 7.5v9l-4 2.25l-4 2.25l-4 -2.25l-4 -2.25v-9l4 -2.25l4 -2.25l4 2.25l4 2.25" />
     <path d="M12 12l4 -2.25l4 -2.25" />
     <path d="M12 12l0 9" />
     <path d="M12 12l-4 -2.25l-4 -2.25" />

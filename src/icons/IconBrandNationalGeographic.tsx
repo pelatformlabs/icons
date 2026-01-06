@@ -24,7 +24,7 @@ const IconBrandNationalGeographic: React.FC<IconBrandNationalGeographicProps> = 
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M7 3h10v18h-10z" />
+    <path d="M7 3h10v18h-10l0 -18" />
   </svg>
   );
 };

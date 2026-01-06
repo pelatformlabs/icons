@@ -24,8 +24,8 @@ const IconForklift: React.FC<IconForkliftProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M5 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-    <path d="M14 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M3 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M12 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
     <path d="M7 17l5 0" />
     <path d="M3 17v-6h13v6" />
     <path d="M5 11v-4h4" />

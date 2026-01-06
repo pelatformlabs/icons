@@ -88,6 +88,7 @@ The build system uses these environment variables (set automatically by scripts)
 - `NODE_OPTIONS` - Set to '--max-old-space-size=8192' for memory management
 
 You can manually build specific entries:
+
 ```bash
 ENTRY=aliases NODE_ENV=production bun x rollup -c rollup.config.mjs
 ```
@@ -216,6 +217,7 @@ To add new icons to the library:
 5. Run `bun run build` to build the distribution files
 
 **Workflow**:
+
 - `bun run pre` - Regenerates everything (fastest for development iterations)
 - `bun run build` - Full clean build from scratch (use before publishing)
 - Individual scripts can be run for specific tasks (e.g., `bun scripts/prepare/buildCategory.ts`)
@@ -236,6 +238,7 @@ The library supports icon name aliases for backward compatibility. Aliases are d
 ```
 
 When aliases are added:
+
 1. Update `sources/aliases.json`
 2. Run `bun run pre` to regenerate `src/aliases.ts`
 3. The generated aliases.ts will export old names pointing to new icon components
@@ -243,6 +246,7 @@ When aliases are added:
 ## Component Template
 
 Generated icon components follow this template:
+
 - Apply CSS classes: `pelatform-icons pelatform-icon-[name] size-4`
 - Support custom `className` prop (appended to default classes)
 - Include `data-slot` attribute for component identification
@@ -250,6 +254,7 @@ Generated icon components follow this template:
 - All props are passed through to the SVG element
 
 Example usage:
+
 ```tsx
 import { IconDeviceMobile } from '@pelatform/icons';
 
@@ -298,19 +303,25 @@ import { IconDeviceMobile } from '@pelatform/icons';
 ## Troubleshooting
 
 ### Build Memory Issues
+
 If builds fail with out-of-memory errors:
+
 - The build system already uses sequential builds and increased Node.js heap size
 - Close other memory-intensive applications
 - Check that `NODE_OPTIONS=--max-old-space-size=8192` is set (handled automatically by build-js.ts)
 
 ### Type Errors After Icon Generation
+
 After running `bun run pre`, if you see type errors:
+
 - Run `bun run types:check` to see detailed TypeScript errors
 - Ensure all generated files in `src/icons/` are properly formatted
 - Check that `src/icons/index.ts` exports all components
 
 ### Missing Icons After Build
+
 If icons don't appear in the build output:
+
 - Verify source SVGs exist in `sources/outline/` and/or `sources/filled/`
 - Check that SVG files have proper `.svg` extension
 - Ensure category metadata format is correct (if using categories)

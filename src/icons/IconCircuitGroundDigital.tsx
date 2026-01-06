@@ -25,7 +25,7 @@ const IconCircuitGroundDigital: React.FC<IconCircuitGroundDigitalProps> = (props
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M12 13v-10" />
-    <path d="M12 21l-6 -8h12z" />
+    <path d="M12 21l-6 -8h12l-6 8" />
   </svg>
   );
 };

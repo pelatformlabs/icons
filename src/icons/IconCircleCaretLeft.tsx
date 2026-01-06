@@ -24,8 +24,8 @@ const IconCircleCaretLeft: React.FC<IconCircleCaretLeftProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M9 12l4 -4v8z" />
-    <path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" />
+    <path d="M9 12l4 -4v8l-4 -4" />
+    <path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18" />
   </svg>
   );
 };

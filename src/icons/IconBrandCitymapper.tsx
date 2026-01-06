@@ -24,8 +24,8 @@ const IconBrandCitymapper: React.FC<IconBrandCitymapperProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 11a1 1 0 1 1 -1 1.013a1 1 0 0 1 1 -1v-.013z" />
-    <path d="M21 11a1 1 0 1 1 -1 1.013a1 1 0 0 1 1 -1v-.013z" />
+    <path d="M3 11a1 1 0 1 1 -1 1.013a1 1 0 0 1 1 -1v-.013" />
+    <path d="M21 11a1 1 0 1 1 -1 1.013a1 1 0 0 1 1 -1v-.013" />
     <path d="M8 12h8" />
     <path d="M13 9l3 3l-3 3" />
   </svg>

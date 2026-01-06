@@ -24,7 +24,7 @@ const IconBrandVercel: React.FC<IconBrandVercelProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 19h18l-9 -15z" />
+    <path d="M3 19h18l-9 -15l-9 15" />
   </svg>
   );
 };

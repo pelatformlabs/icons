@@ -26,7 +26,7 @@ const IconSquareChevronsLeft: React.FC<IconSquareChevronsLeftProps> = (props) =>
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M16 15l-3 -3l3 -3" />
     <path d="M11 15l-3 -3l3 -3" />
-    <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+    <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14" />
   </svg>
   );
 };

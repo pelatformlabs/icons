@@ -24,7 +24,7 @@ const IconBrandZhihu: React.FC<IconBrandZhihuProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M14 6h6v12h-2l-2 2l-1 -2h-1z" />
+    <path d="M14 6h6v12h-2l-2 2l-1 -2h-1l0 -12" />
     <path d="M4 12h6.5" />
     <path d="M10.5 6h-5" />
     <path d="M6 4c-.5 2.5 -1.5 3.5 -2.5 4.5" />

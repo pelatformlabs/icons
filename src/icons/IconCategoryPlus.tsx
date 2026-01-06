@@ -24,7 +24,10 @@ const IconCategoryPlus: React.FC<IconCategoryPlusProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M4 4h6v6h-6zm10 0h6v6h-6zm-10 10h6v6h-6zm10 3h6m-3 -3v6" />
+    <path d="M4 4h6v6h-6v-6" />
+    <path d="M14 4h6v6h-6v-6" />
+    <path d="M4 14h6v6h-6v-6" />
+    <path d="M14 17h6m-3 -3v6" />
   </svg>
   );
 };

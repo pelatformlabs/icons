@@ -24,7 +24,7 @@ const IconViewfinder: React.FC<IconViewfinderProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
     <path d="M12 3l0 4" />
     <path d="M12 21l0 -3" />
     <path d="M3 12l4 0" />

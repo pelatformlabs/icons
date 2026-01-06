@@ -24,7 +24,7 @@ const IconBrandZeit: React.FC<IconBrandZeitProps> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M3 20h18l-9 -16z" />
+    <path d="M3 20h18l-9 -16l-9 16" />
   </svg>
   );
 };

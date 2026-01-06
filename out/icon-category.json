@@ -2655,8 +2655,8 @@
     "name": "brand-adobe-photoshop",
     "category": "Brand"
   },
-  "brand-adobe-premier": {
-    "name": "brand-adobe-premier",
+  "brand-adobe-premiere": {
+    "name": "brand-adobe-premiere",
     "category": "Brand"
   },
   "brand-adobe-xd": {
@@ -7104,7 +7104,8 @@
   },
   "crown": {
     "name": "crown",
-    "category": "Design"
+    "category": "Design",
+    "filled": true
   },
   "crown-off": {
     "name": "crown-off",
@@ -10159,7 +10160,8 @@
   },
   "folder-open": {
     "name": "folder-open",
-    "category": "Document"
+    "category": "Document",
+    "filled": true
   },
   "folder-pause": {
     "name": "folder-pause",

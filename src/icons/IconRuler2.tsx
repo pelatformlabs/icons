@@ -24,7 +24,7 @@ const IconRuler2: React.FC<IconRuler2Props> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M17 3l4 4l-14 14l-4 -4z" />
+    <path d="M17 3l4 4l-14 14l-4 -4l14 -14" />
     <path d="M16 7l-1.5 -1.5" />
     <path d="M13 10l-1.5 -1.5" />
     <path d="M10 13l-1.5 -1.5" />
