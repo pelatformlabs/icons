@@ -303,11 +303,11 @@ function TailwindExample() {
   return (
     <IconHeart
       className="
-      w-6 h-6 
-      text-red-500 
-      hover:text-red-700 
-      transition-colors 
-      duration-200 
+      w-6 h-6
+      text-red-500
+      hover:text-red-700
+      transition-colors
+      duration-200
       cursor-pointer
     "
     />

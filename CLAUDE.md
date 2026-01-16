@@ -53,6 +53,7 @@ bun scripts/generateIconList.ts          # Creates src/icon-list.ts
 
 ```bash
 bun run clean      # Remove generated directories (icons/, out/, sources/filled-suffix/)
+bun run clean:all  # Clean everything + remove node_modules and bun.lock
 bun run format     # Format code with Prettier
 bun run bump       # Bump package version (uses bumpp)
 ```
@@ -68,6 +69,30 @@ The build system produces five separate entry points:
 - `dynamic-imports` - Chunked dynamic import map for code-splitting
 - `icon-list` - Array of all available icon names (kebab-case)
 - `types` - TypeScript type definitions
+
+### Package Exports
+
+The `package.json` defines conditional exports for all entry points, supporting:
+
+```bash
+# Main entry (all icons)
+import { IconHeart } from '@pelatform/icons'
+
+# Aliases for backward compatibility
+import { IconOldName } from '@pelatform/icons/aliases'
+
+# Dynamic imports for code-splitting
+import iconMap from '@pelatform/icons/dynamic-imports'
+const IconComponent = await iconMap['heart']
+
+# List of all available icon names
+import iconList from '@pelatform/icons/icon-list'
+
+# TypeScript types
+import type { IconProps } from '@pelatform/icons/types'
+```
+
+Each entry point supports ESM (`import`), CJS (`require`), and TypeScript (`types`).
 
 ### Build System
 
@@ -103,6 +128,16 @@ ENTRY=aliases NODE_ENV=production bun x rollup -c rollup.config.mjs
 
 ## Icon Generation Pipeline
 
+### Build Artifacts
+
+The preparation pipeline generates several metadata files in the `out/` directory:
+
+- `icon-category.json` - Maps each icon name to its category and whether it has a filled variant
+- `icon-sources.json` - Complete catalog of all icon sources with metadata
+- `icon-stats.json` - Statistics about icons organized by category
+
+These files are used during the React component generation and for documentation purposes.
+
 ### Source Structure
 
 ```
@@ -134,6 +169,8 @@ sources/
    - `generateAliases.ts` - Creates alias exports from `sources/aliases.json`
    - `generateDynamicImports.ts` - Creates chunked dynamic import map (100 icons per chunk)
    - `generateIconList.ts` - Creates kebab-case icon name array
+
+The dynamic imports are chunked into groups of 100 icons per chunk for better IDE performance and reduced memory consumption during development. Each chunk is a separate object that gets merged into the final export.
 
 ### Icon Naming Convention
 
@@ -299,6 +336,8 @@ import { IconDeviceMobile } from '@pelatform/icons';
 - Dynamic imports are chunked (100 icons per chunk) for better IDE performance
 - Filled variants automatically get `Filled` suffix in component names
 - Build process uses `NODE_OPTIONS=--max-old-space-size=8192` to handle large icon sets
+- The library supports both React 18 and React 19 (via peer dependencies `>=18.0.0 || >=19.0.0-rc.0`)
+- TypeScript configuration targets ES2020 with strict mode enabled
 
 ## Troubleshooting
 
