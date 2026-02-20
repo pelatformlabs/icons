@@ -307,10 +307,12 @@ import { IconDeviceMobile } from '@pelatform/icons';
 
 ## TypeScript Configuration
 
-- `target: ES2020`, `module: ESNext`
+- `target: ES2020`, `module: ESNext`, `moduleResolution: node`
 - `jsx: react-jsx` (automatic JSX runtime)
 - Strict mode enabled
 - Declarations and source maps enabled
+- `resolveJsonModule: true` for importing JSON files
+- Excludes: `node_modules`, `dist`, `out`, `scripts`
 
 ## Dependencies
 
@@ -338,6 +340,9 @@ import { IconDeviceMobile } from '@pelatform/icons';
 - Build process uses `NODE_OPTIONS=--max-old-space-size=8192` to handle large icon sets
 - The library supports both React 18 and React 19 (via peer dependencies `>=18.0.0 || >=19.0.0-rc.0`)
 - TypeScript configuration targets ES2020 with strict mode enabled
+- Tree-shaking is configured with `moduleSideEffects: false` for optimal bundle size
+- UMD build is only generated for the `index` entry point (not for aliases, dynamic-imports, etc.)
+- The `sideEffects: false` in package.json enables better tree-shaking by bundlers
 
 ## Troubleshooting
 
@@ -366,3 +371,12 @@ If icons don't appear in the build output:
 - Ensure category metadata format is correct (if using categories)
 - Run `bun run pre` again to regenerate all intermediate files
 - Check `out/icon-category.json` was generated successfully
+
+### Import Errors in Consumer Projects
+
+If consumers see import errors:
+
+- Verify the package exports in `package.json` match the built files
+- Check that `dist/` directory contains all expected entry points
+- Ensure `sideEffects: false` is set in package.json for optimal tree-shaking
+- For UMD builds, only the `index` entry is available (no UMD for aliases, dynamic-imports, etc.)

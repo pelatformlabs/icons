@@ -1653,7 +1653,8 @@
   },
   "ball-bowling": {
     "name": "ball-bowling",
-    "category": "Sport"
+    "category": "Sport",
+    "filled": true
   },
   "ball-football": {
     "name": "ball-football",
@@ -12185,7 +12186,8 @@
   },
   "leaf": {
     "name": "leaf",
-    "category": "Nature"
+    "category": "Nature",
+    "filled": true
   },
   "leaf-2": {
     "name": "leaf-2",
@@ -15134,7 +15136,8 @@
   },
   "pacman": {
     "name": "pacman",
-    "category": "Games"
+    "category": "Games",
+    "filled": true
   },
   "page-break": {
     "name": "page-break",
@@ -15512,15 +15515,18 @@
   },
   "phone-call": {
     "name": "phone-call",
-    "category": "Devices"
+    "category": "Devices",
+    "filled": true
   },
   "phone-calling": {
     "name": "phone-calling",
-    "category": "Devices"
+    "category": "Devices",
+    "filled": true
   },
   "phone-check": {
     "name": "phone-check",
-    "category": "Devices"
+    "category": "Devices",
+    "filled": true
   },
   "phone-done": {
     "name": "phone-done",
@@ -15560,7 +15566,8 @@
   },
   "phone-x": {
     "name": "phone-x",
-    "category": "Devices"
+    "category": "Devices",
+    "filled": true
   },
   "photo": {
     "name": "photo",
@@ -15824,15 +15831,18 @@
   },
   "plane": {
     "name": "plane",
-    "category": "Vehicles"
+    "category": "Vehicles",
+    "filled": true
   },
   "plane-arrival": {
     "name": "plane-arrival",
-    "category": "Vehicles"
+    "category": "Vehicles",
+    "filled": true
   },
   "plane-departure": {
     "name": "plane-departure",
-    "category": "Vehicles"
+    "category": "Vehicles",
+    "filled": true
   },
   "plane-inflight": {
     "name": "plane-inflight",
@@ -15844,7 +15854,8 @@
   },
   "plane-tilt": {
     "name": "plane-tilt",
-    "category": "Vehicles"
+    "category": "Vehicles",
+    "filled": true
   },
   "planet": {
     "name": "planet",
@@ -15876,7 +15887,8 @@
   },
   "play-card": {
     "name": "play-card",
-    "category": "Games"
+    "category": "Games",
+    "filled": true
   },
   "play-card-1": {
     "name": "play-card-1",
@@ -16016,7 +16028,8 @@
   },
   "playlist": {
     "name": "playlist",
-    "category": "Media"
+    "category": "Media",
+    "filled": true
   },
   "playlist-add": {
     "name": "playlist-add",
@@ -16652,7 +16665,8 @@
   },
   "report-analytics": {
     "name": "report-analytics",
-    "category": "Document"
+    "category": "Document",
+    "filled": true
   },
   "report-medical": {
     "name": "report-medical",
@@ -16660,7 +16674,8 @@
   },
   "report-money": {
     "name": "report-money",
-    "category": "Document"
+    "category": "Document",
+    "filled": true
   },
   "report-off": {
     "name": "report-off",
@@ -17065,7 +17080,8 @@
   },
   "satellite": {
     "name": "satellite",
-    "category": "Map"
+    "category": "Map",
+    "filled": true
   },
   "satellite-off": {
     "name": "satellite-off",
@@ -18017,11 +18033,13 @@
   },
   "sparkles": {
     "name": "sparkles",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "sparkles-2": {
     "name": "sparkles-2",
-    "category": "Design"
+    "category": "Design",
+    "filled": true
   },
   "speakerphone": {
     "name": "speakerphone",

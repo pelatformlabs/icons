@@ -1,7 +1,7 @@
 {
   "summary": {
-    "totalIcons": 5987,
-    "totalFilled": 1001,
+    "totalIcons": 6005,
+    "totalFilled": 1019,
     "totalOutline": 4986,
     "totalCategories": 42
   },
@@ -1423,8 +1423,8 @@
       ]
     },
     "Design": {
-      "total": 429,
-      "filled": 99,
+      "total": 430,
+      "filled": 100,
       "outline": 330,
       "filledIcons": [
         "ad-filled.svg",
@@ -1521,6 +1521,7 @@
         "paint-filled.svg",
         "palette-filled.svg",
         "section-filled.svg",
+        "sparkles-2-filled.svg",
         "squares-filled.svg",
         "stack-2-filled.svg",
         "stack-3-filled.svg",
@@ -1913,8 +1914,8 @@
       ]
     },
     "Devices": {
-      "total": 388,
-      "filled": 39,
+      "total": 392,
+      "filled": 43,
       "outline": 349,
       "filledIcons": [
         "battery-1-filled.svg",
@@ -1951,7 +1952,11 @@
         "dual-screen-filled.svg",
         "keyboard-filled.svg",
         "mouse-filled.svg",
+        "phone-call-filled.svg",
+        "phone-calling-filled.svg",
+        "phone-check-filled.svg",
         "phone-filled.svg",
+        "phone-x-filled.svg",
         "xbox-a-filled.svg",
         "xbox-b-filled.svg",
         "xbox-x-filled.svg",
@@ -2310,8 +2315,8 @@
       ]
     },
     "Document": {
-      "total": 266,
-      "filled": 63,
+      "total": 268,
+      "filled": 65,
       "outline": 203,
       "filledIcons": [
         "archive-filled.svg",
@@ -2376,7 +2381,9 @@
         "presentation-analytics-filled.svg",
         "presentation-filled.svg",
         "receipt-dollar-filled.svg",
-        "receipt-filled.svg"
+        "receipt-filled.svg",
+        "report-analytics-filled.svg",
+        "report-money-filled.svg"
       ],
       "outlineIcons": [
         "archive-off.svg",
@@ -2946,8 +2953,8 @@
       ]
     },
     "Games": {
-      "total": 73,
-      "filled": 27,
+      "total": 75,
+      "filled": 29,
       "outline": 46,
       "filledIcons": [
         "dice-1-filled.svg",
@@ -2960,6 +2967,7 @@
         "ghost-2-filled.svg",
         "ghost-3-filled.svg",
         "ghost-filled.svg",
+        "pacman-filled.svg",
         "play-card-1-filled.svg",
         "play-card-10-filled.svg",
         "play-card-2-filled.svg",
@@ -2971,6 +2979,7 @@
         "play-card-8-filled.svg",
         "play-card-9-filled.svg",
         "play-card-a-filled.svg",
+        "play-card-filled.svg",
         "play-card-j-filled.svg",
         "play-card-k-filled.svg",
         "play-card-q-filled.svg",
@@ -3584,8 +3593,8 @@
       ]
     },
     "Map": {
-      "total": 298,
-      "filled": 40,
+      "total": 299,
+      "filled": 41,
       "outline": 258,
       "filledIcons": [
         "bed-filled.svg",
@@ -3612,6 +3621,7 @@
         "pin-filled.svg",
         "pinned-filled.svg",
         "radar-filled.svg",
+        "satellite-filled.svg",
         "sign-left-filled.svg",
         "sign-right-filled.svg",
         "windmill-filled.svg",
@@ -3987,8 +3997,8 @@
       ]
     },
     "Media": {
-      "total": 177,
-      "filled": 25,
+      "total": 178,
+      "filled": 26,
       "outline": 152,
       "filledIcons": [
         "aspect-ratio-filled.svg",
@@ -4013,6 +4023,7 @@
         "player-stop-filled.svg",
         "player-track-next-filled.svg",
         "player-track-prev-filled.svg",
+        "playlist-filled.svg",
         "video-filled.svg",
         "video-minus-filled.svg",
         "video-plus-filled.svg"
@@ -4244,8 +4255,8 @@
       ]
     },
     "Nature": {
-      "total": 60,
-      "filled": 17,
+      "total": 61,
+      "filled": 18,
       "outline": 43,
       "filledIcons": [
         "alien-filled.svg",
@@ -4262,6 +4273,7 @@
         "feather-filled.svg",
         "flame-filled.svg",
         "flower-filled.svg",
+        "leaf-filled.svg",
         "meteor-filled.svg",
         "mountain-filled.svg",
         "seedling-filled.svg"
@@ -4876,10 +4888,11 @@
       ]
     },
     "Sport": {
-      "total": 80,
-      "filled": 12,
+      "total": 81,
+      "filled": 13,
       "outline": 68,
       "filledIcons": [
+        "ball-bowling-filled.svg",
         "barbell-filled.svg",
         "bow-filled.svg",
         "chess-bishop-filled.svg",
@@ -5019,8 +5032,8 @@
       ]
     },
     "System": {
-      "total": 881,
-      "filled": 119,
+      "total": 882,
+      "filled": 120,
       "outline": 762,
       "filledIcons": [
         "ad-circle-filled.svg",
@@ -5117,6 +5130,7 @@
         "shield-lock-filled.svg",
         "sort-ascending-shapes-filled.svg",
         "sort-descending-shapes-filled.svg",
+        "sparkles-filled.svg",
         "square-f0-filled.svg",
         "square-f1-filled.svg",
         "square-f2-filled.svg",
@@ -6125,8 +6139,8 @@
       ]
     },
     "Vehicles": {
-      "total": 110,
-      "filled": 27,
+      "total": 114,
+      "filled": 31,
       "outline": 83,
       "filledIcons": [
         "aerial-lift-filled.svg",
@@ -6149,6 +6163,10 @@
         "helicopter-filled.svg",
         "helicopter-landing-filled.svg",
         "motorbike-filled.svg",
+        "plane-arrival-filled.svg",
+        "plane-departure-filled.svg",
+        "plane-filled.svg",
+        "plane-tilt-filled.svg",
         "rollercoaster-filled.svg",
         "speedboat-filled.svg",
         "steering-wheel-filled.svg",
