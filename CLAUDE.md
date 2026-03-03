@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-`@pelatform/icons` is a React icon library built from SVG sources. The library transforms raw SVG icons (stored in `sources/`) into React components (generated in `src/icons/`) and builds multiple output formats (ESM, CJS, UMD, TypeScript declarations).
+`@pelatform/icons` is a React icon library built from SVG sources. The library transforms raw SVG icons (stored in `sources/`, not published) into React components (generated in `src/icons/`) and builds multiple output formats (ESM, CJS, UMD, TypeScript declarations).
+
+**Note**: The `sources/` directory is gitignored and contains private source SVG files. Only the generated React components and distribution files are published.
 
 ## Development Commands
 
@@ -314,6 +316,19 @@ import { IconDeviceMobile } from '@pelatform/icons';
 - `resolveJsonModule: true` for importing JSON files
 - Excludes: `node_modules`, `dist`, `out`, `scripts`
 
+## Code Style
+
+The project uses Prettier for code formatting with these settings:
+
+- Print width: 80 characters
+- 2 spaces for indentation
+- Single quotes for strings
+- Trailing commas: all
+- Semicolons: required
+- LF line endings
+
+Run `bun run format` to format code before committing.
+
 ## Dependencies
 
 ### Runtime
@@ -329,9 +344,26 @@ import { IconDeviceMobile } from '@pelatform/icons';
 - `esbuild` (via rollup plugin) - Minification/transpilation
 - `prettier` - Code formatting
 
+## Documentation
+
+User-facing documentation is located in the `docs/` directory:
+
+- `docs/README.md` - Main documentation index
+- `docs/getting-started.md` - Installation and setup
+- `docs/basic-usage.md` - Basic usage examples
+- `docs/advanced-usage.md` - Advanced patterns
+- `docs/types.md` - TypeScript support
+- `docs/aliases.md` - Icon name aliases
+- `docs/dynamic-imports.md` - Dynamic loading patterns
+- `docs/api-reference.md` - Complete API reference
+- `docs/examples.md` - Usage examples
+
+When updating icon behavior or adding new features, update the relevant documentation files.
+
 ## Important Notes
 
 - All preparation scripts use **Bun** for execution (not npm/pnpm)
+- The `sources/` directory is gitignored and contains private source SVG files - do not commit these files
 - Builds are sequential (not parallel) to avoid memory issues with large icon sets
 - Source SVGs are organized by category into `icons/` directory before React conversion
 - Icon components use automatic JSX runtime - no `import React` needed in components

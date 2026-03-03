@@ -125,7 +125,8 @@
   },
   "adjustments-horizontal": {
     "name": "adjustments-horizontal",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "adjustments-minus": {
     "name": "adjustments-minus",
@@ -5282,7 +5283,8 @@
   },
   "check": {
     "name": "check",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "checkbox": {
     "name": "checkbox",
@@ -5366,7 +5368,8 @@
   },
   "chevron-down": {
     "name": "chevron-down",
-    "category": "Arrows"
+    "category": "Arrows",
+    "filled": true
   },
   "chevron-down-left": {
     "name": "chevron-down-left",
@@ -5386,7 +5389,8 @@
   },
   "chevron-right": {
     "name": "chevron-right",
-    "category": "Arrows"
+    "category": "Arrows",
+    "filled": true
   },
   "chevron-right-pipe": {
     "name": "chevron-right-pipe",
@@ -6188,7 +6192,8 @@
   },
   "click": {
     "name": "click",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "cliff-jumping": {
     "name": "cliff-jumping",
@@ -6874,7 +6879,8 @@
   },
   "copy": {
     "name": "copy",
-    "category": "Text"
+    "category": "Text",
+    "filled": true
   },
   "copy-check": {
     "name": "copy-check",
@@ -7488,7 +7494,8 @@
   },
   "database": {
     "name": "database",
-    "category": "Database"
+    "category": "Database",
+    "filled": true
   },
   "database-cog": {
     "name": "database-cog",
@@ -7730,7 +7737,8 @@
   },
   "device-floppy": {
     "name": "device-floppy",
-    "category": "Devices"
+    "category": "Devices",
+    "filled": true
   },
   "device-gamepad": {
     "name": "device-gamepad",
@@ -7739,7 +7747,8 @@
   },
   "device-gamepad-2": {
     "name": "device-gamepad-2",
-    "category": "Devices"
+    "category": "Devices",
+    "filled": true
   },
   "device-gamepad-3": {
     "name": "device-gamepad-3",
@@ -8656,7 +8665,8 @@
   },
   "dots": {
     "name": "dots",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "dots-circle-horizontal": {
     "name": "dots-circle-horizontal",
@@ -8672,11 +8682,13 @@
   },
   "dots-vertical": {
     "name": "dots-vertical",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "download": {
     "name": "download",
-    "category": "Arrows"
+    "category": "Arrows",
+    "filled": true
   },
   "download-off": {
     "name": "download-off",
@@ -8858,7 +8870,8 @@
   },
   "edit": {
     "name": "edit",
-    "category": "Design"
+    "category": "Design",
+    "filled": true
   },
   "edit-circle": {
     "name": "edit-circle",
@@ -9034,7 +9047,8 @@
   },
   "external-link": {
     "name": "external-link",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "external-link-off": {
     "name": "external-link-off",
@@ -10789,7 +10803,8 @@
   },
   "headset": {
     "name": "headset",
-    "category": "Media"
+    "category": "Media",
+    "filled": true
   },
   "headset-off": {
     "name": "headset-off",
@@ -10937,7 +10952,8 @@
   },
   "help": {
     "name": "help",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "help-circle": {
     "name": "help-circle",
@@ -11279,7 +11295,8 @@
   },
   "home-2": {
     "name": "home-2",
-    "category": "Buildings"
+    "category": "Buildings",
+    "filled": true
   },
   "home-bitcoin": {
     "name": "home-bitcoin",
@@ -11566,7 +11583,8 @@
   },
   "id": {
     "name": "id",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "id-badge": {
     "name": "id-badge",
@@ -12504,7 +12522,8 @@
   },
   "link": {
     "name": "link",
-    "category": "Text"
+    "category": "Text",
+    "filled": true
   },
   "link-minus": {
     "name": "link-minus",
@@ -12520,15 +12539,18 @@
   },
   "list": {
     "name": "list",
-    "category": "Text"
+    "category": "Text",
+    "filled": true
   },
   "list-check": {
     "name": "list-check",
-    "category": "Text"
+    "category": "Text",
+    "filled": true
   },
   "list-details": {
     "name": "list-details",
-    "category": "Text"
+    "category": "Text",
+    "filled": true
   },
   "list-letters": {
     "name": "list-letters",
@@ -13488,7 +13510,8 @@
   },
   "menu-2": {
     "name": "menu-2",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "menu-3": {
     "name": "menu-3",
@@ -13797,7 +13820,8 @@
   },
   "messages": {
     "name": "messages",
-    "category": "Communication"
+    "category": "Communication",
+    "filled": true
   },
   "messages-off": {
     "name": "messages-off",
@@ -15259,7 +15283,8 @@
   },
   "pencil": {
     "name": "pencil",
-    "category": "Design"
+    "category": "Design",
+    "filled": true
   },
   "pencil-bolt": {
     "name": "pencil-bolt",
@@ -16081,7 +16106,8 @@
   },
   "plus": {
     "name": "plus",
-    "category": "Math"
+    "category": "Math",
+    "filled": true
   },
   "plus-equal": {
     "name": "plus-equal",
@@ -17093,7 +17119,8 @@
   },
   "scale": {
     "name": "scale",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "scale-off": {
     "name": "scale-off",
@@ -17129,7 +17156,8 @@
   },
   "school": {
     "name": "school",
-    "category": "Map"
+    "category": "Map",
+    "filled": true
   },
   "school-bell": {
     "name": "school-bell",
@@ -17218,7 +17246,8 @@
   },
   "search": {
     "name": "search",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "search-off": {
     "name": "search-off",
@@ -17256,7 +17285,8 @@
   },
   "send": {
     "name": "send",
-    "category": "Communication"
+    "category": "Communication",
+    "filled": true
   },
   "send-2": {
     "name": "send-2",
@@ -19419,7 +19449,8 @@
   },
   "ticket": {
     "name": "ticket",
-    "category": "Document"
+    "category": "Document",
+    "filled": true
   },
   "ticket-off": {
     "name": "ticket-off",
@@ -19563,7 +19594,8 @@
   },
   "tools-kitchen-2": {
     "name": "tools-kitchen-2",
-    "category": "Food"
+    "category": "Food",
+    "filled": true
   },
   "tools-kitchen-2-off": {
     "name": "tools-kitchen-2-off",
@@ -20647,7 +20679,8 @@
   },
   "world": {
     "name": "world",
-    "category": "Map"
+    "category": "Map",
+    "filled": true
   },
   "world-bolt": {
     "name": "world-bolt",
@@ -20773,7 +20806,8 @@
   },
   "x": {
     "name": "x",
-    "category": "System"
+    "category": "System",
+    "filled": true
   },
   "x-power-y": {
     "name": "x-power-y",
