@@ -112,7 +112,7 @@ The build system uses these environment variables (set automatically by scripts)
 
 - `ENTRY` - Which entry point to build (index, aliases, dynamic-imports, icon-list, types)
 - `NODE_ENV` - Set to 'production' for minified builds
-- `NODE_OPTIONS` - Set to '--max-old-space-size=8192' for memory management
+- `NODE_OPTIONS` - Set to '--max-old-space-size=8192' for memory management (critical for large icon sets)
 
 You can manually build specific entries:
 
@@ -120,12 +120,26 @@ You can manually build specific entries:
 ENTRY=aliases NODE_ENV=production bun x rollup -c rollup.config.mjs
 ```
 
+### Build Process Details
+
+The `scripts/build-js.ts` script orchestrates the build process:
+
+- **Sequential builds**: Builds each entry point one at a time to prevent memory issues
+- **Error handling**: Stops immediately if any entry fails
+- **Performance tracking**: Reports build time for each entry and total duration
+- **Cross-platform support**: Detects Windows vs Unix for proper shell execution
+- **Summary report**: Shows success/failure count and timings after completion
+
 ### Rollup Configuration
 
 - `rollup.config.mjs` - JavaScript bundle configuration
   - External: React and ReactDOM are peer dependencies
-  - Advanced tree-shaking enabled
+  - Advanced tree-shaking enabled with `moduleSideEffects: false`
   - Outputs: ESM, CJS, and UMD (for index entry only)
+  - ESBuild target: `es2018` for modern browser support
+  - Performance optimizations: `maxParallelFileOps: 20`, cache enabled
+  - Inlines dynamic imports for `dynamic-imports` entry
+  - UMD build only for `index` entry (named `PelatformIcons`)
 - `rollup.dts.config.mjs` - TypeScript declaration generation
 
 ## Icon Generation Pipeline
@@ -229,7 +243,7 @@ scripts/
 ├── build-ts.ts            # Generate TypeScript declarations
 ├── clean.ts               # Clean generated files
 └── utils/
-    └── shared.ts          # Shared utilities (naming, path helpers)
+    └── shared.ts          # Shared utilities (naming, path helpers, chunking)
 
 icons/                     # Generated: organized SVG files by category
 out/                       # Generated: build artifacts (icon-category.json)
@@ -239,6 +253,17 @@ dist/                      # Build output
     ├── umd/               # UMD bundles
     └── types/             # TypeScript declarations
 ```
+
+### Utility Functions
+
+The `scripts/utils/shared.ts` file provides reusable utilities used across the pipeline:
+
+- `ensureDirectoryExists()` - Creates directories recursively
+- `componentNameToKebabCase()` - Converts PascalCase to kebab-case (e.g., `IconCatDog` → `cat-dog`)
+- `getComponentName()` - Converts kebab-case to PascalCase with Icon prefix (e.g., `cat-dog` → `IconCatDog`)
+- `chunkArray()` - Splits arrays into smaller chunks (used for dynamic import chunking)
+- `formatItemsInGroups()` - Formats items for readable file output
+- `runWithConcurrency()` - Executes async tasks with concurrency control
 
 ## Adding New Icons
 
@@ -310,22 +335,37 @@ import { IconDeviceMobile } from '@pelatform/icons';
 ## TypeScript Configuration
 
 - `target: ES2020`, `module: ESNext`, `moduleResolution: node`
+- `lib: ["ES2020", "DOM"]` for browser APIs
 - `jsx: react-jsx` (automatic JSX runtime)
-- Strict mode enabled
+- `strict: true` with consistent casing and synthetic default imports
 - Declarations and source maps enabled
 - `resolveJsonModule: true` for importing JSON files
+- `esModuleInterop: true` for better interop
+- `skipLibCheck: true` to skip type checking of dependencies
 - Excludes: `node_modules`, `dist`, `out`, `scripts`
 
 ## Code Style
 
 The project uses Prettier for code formatting with these settings:
 
-- Print width: 80 characters
-- 2 spaces for indentation
-- Single quotes for strings
-- Trailing commas: all
-- Semicolons: required
-- LF line endings
+- **Print width**: 80 characters
+- **Tab width**: 2 spaces
+- **Quotes**: Single quotes (except JSX uses double quotes)
+- **Trailing commas**: All
+- **Semicolons**: Required
+- **Line endings**: LF
+- **Bracket spacing**: Enabled
+- **Bracket same line**: False (hanging brackets)
+
+### Files Excluded from Formatting
+
+The `.prettierignore` file excludes auto-generated files from formatting:
+
+- Generated source directories: `dist/`, `out/`, `sources/`, `icons/`
+- Generated icon files: `src/icons/`
+- Generated exports: `src/aliases.ts`, `src/dynamic-imports.ts`, `src/icon-list.ts`
+
+This ensures that manually-written source files are formatted, while auto-generated files maintain their generator's formatting.
 
 Run `bun run format` to format code before committing.
 
@@ -360,9 +400,94 @@ User-facing documentation is located in the `docs/` directory:
 
 When updating icon behavior or adding new features, update the relevant documentation files.
 
+## CI/CD & Release Process
+
+The project uses GitHub Actions for automated releases triggered by version tags:
+
+### Release Workflow
+
+`.github/workflows/release.yml` handles the release process:
+
+- **Triggers**: Push to `v*` tags or manual workflow dispatch
+- **Build process**: Separates JS and TS builds (same as local `build:js` and `build:types`)
+- **Changelog**: Automatically generates changelog using `changelogithub` on tag push
+- **NPM publishing**:
+  - Checks if version already exists on NPM (skips if published)
+  - Publishes with public access
+  - Uses `NPM_TOKEN` secret for authentication
+  - Sets `NODE_OPTIONS=--max-old-space-size=8192` for large builds
+
+### Publishing a New Release
+
+```bash
+# 1. Bump version (uses bumpp)
+bun run bump
+
+# 2. Commit the version changes
+git add package.json bun.lock
+git commit -m "chore: bump version to x.x.x"
+
+# 3. Create and push tag
+git tag vx.x.x
+git push origin vx.x.x
+
+# 4. GitHub Actions will automatically:
+#    - Generate changelog
+#    - Build packages
+#    - Publish to NPM
+```
+
+**Note**: The workflow uses `bun install --frozen-lockfile` to ensure consistent dependencies.
+
+## Git Workflow
+
+### Gitignore Configuration
+
+The `.gitignore` file excludes these directories from version control:
+
+- `dist/` - Build output (generated during build)
+- `node_modules/` - Dependencies
+- `sources/` - Private source SVG files (not published)
+
+**Important**: The `sources/` directory contains private source SVG files that are never committed to git. Only the generated React components and distribution files are published.
+
+### Typical Git Workflow
+
+```bash
+# 1. Add new icons to sources/outline/ and sources/filled/
+# 2. Run preparation pipeline
+bun run pre
+
+# 3. Build and format everything
+bun run build
+
+# 4. Check changes (should only show generated files and config)
+git status
+
+# 5. Commit the changes
+git add .
+git commit -m "feat: add new icons"
+
+# 6. For releases, use version tags
+git tag vx.x.x
+git push origin vx.x.x
+```
+
 ## Important Notes
 
-- All preparation scripts use **Bun** for execution (not npm/pnpm)
+- **Package manager**: Always use **Bun** (not npm/pnpm) for all preparation and build scripts
+- **Private sources**: The `sources/` directory is gitignored and contains private source SVG files - do not commit these files
+- **Build optimization**: Builds are sequential (not parallel) to avoid memory issues with large icon sets (5926+ icons)
+- **Source organization**: Source SVGs are organized by category into `icons/` directory before React conversion
+- **JSX runtime**: Icon components use automatic JSX runtime - no `import React` needed in components
+- **Dynamic imports**: Chunked into groups of 100 icons per chunk for better IDE performance and reduced memory consumption
+- **Filled variants**: Automatically get `Filled` suffix in component names (e.g., `IconHeartFilled`)
+- **Memory management**: Build process uses `NODE_OPTIONS=--max-old-space-size=8192` to handle large icon sets
+- **React support**: The library supports both React 18 and React 19 (via peer dependencies `>=18.0.0 || >=19.0.0-rc.0`)
+- **TypeScript targets**: ES2020 with strict mode enabled for modern JavaScript features
+- **Tree-shaking**: Configured with `moduleSideEffects: false` in both Rollup and package.json for optimal bundle size
+- **UMD builds**: Only generated for the `index` entry point (not available for aliases, dynamic-imports, etc.)
+- **Package exports**: All entry points support ESM (`import`), CJS (`require`), and TypeScript (`types`) for maximum compatibility
 - The `sources/` directory is gitignored and contains private source SVG files - do not commit these files
 - Builds are sequential (not parallel) to avoid memory issues with large icon sets
 - Source SVGs are organized by category into `icons/` directory before React conversion

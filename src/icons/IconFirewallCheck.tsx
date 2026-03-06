@@ -1,17 +1,17 @@
 import React from 'react';
 
-interface IconSortDescending2Props {
+interface IconFirewallCheckProps {
   className?: string;
   'data-slot'?: string;
   [key: string]: any;
 }
 
-const IconSortDescending2: React.FC<IconSortDescending2Props> = (props) => {
+const IconFirewallCheck: React.FC<IconFirewallCheckProps> = (props) => {
   // Handle size classes - if user provides size-* class, use it, otherwise default to size-4
   const userClassName = props.className || '';
   const hasSizeClass = /\bsize-\w+\b/.test(userClassName);
   const defaultSize = hasSizeClass ? '' : 'size-4';
-  const finalClassName = `pelatform-icons pelatform-icon-sort-descending-2 ${defaultSize} ${userClassName}`.trim();
+  const finalClassName = `pelatform-icons pelatform-icon-firewall-check ${defaultSize} ${userClassName}`.trim();
 
   return (
     <svg
@@ -24,12 +24,14 @@ const IconSortDescending2: React.FC<IconSortDescending2Props> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M5 5.5a.5 .5 0 0 1 .5 -.5h4a.5 .5 0 0 1 .5 .5v4a.5 .5 0 0 1 -.5 .5h-4a.5 .5 0 0 1 -.5 -.5l0 -4" />
-    <path d="M5 14.5a.5 .5 0 0 1 .5 -.5h4a.5 .5 0 0 1 .5 .5v4a.5 .5 0 0 1 -.5 .5h-4a.5 .5 0 0 1 -.5 -.5l0 -4" />
-    <path d="M14 15l3 3l3 -3" />
-    <path d="M17 18v-12" />
+    <path d="M9 3v18" />
+    <path d="M3 9h18" />
+    <path d="M3 15h10" />
+    <path d="M15 3v10" />
+    <path d="M11 21h-6a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v8" />
+    <path d="M15 19l2 2l4 -4" />
   </svg>
   );
 };
 
-export default IconSortDescending2;
+export default IconFirewallCheck;

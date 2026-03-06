@@ -1,17 +1,17 @@
 import React from 'react';
 
-interface IconSortDescending2Props {
+interface IconMicrofrontendsProps {
   className?: string;
   'data-slot'?: string;
   [key: string]: any;
 }
 
-const IconSortDescending2: React.FC<IconSortDescending2Props> = (props) => {
+const IconMicrofrontends: React.FC<IconMicrofrontendsProps> = (props) => {
   // Handle size classes - if user provides size-* class, use it, otherwise default to size-4
   const userClassName = props.className || '';
   const hasSizeClass = /\bsize-\w+\b/.test(userClassName);
   const defaultSize = hasSizeClass ? '' : 'size-4';
-  const finalClassName = `pelatform-icons pelatform-icon-sort-descending-2 ${defaultSize} ${userClassName}`.trim();
+  const finalClassName = `pelatform-icons pelatform-icon-microfrontends ${defaultSize} ${userClassName}`.trim();
 
   return (
     <svg
@@ -24,12 +24,15 @@ const IconSortDescending2: React.FC<IconSortDescending2Props> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M5 5.5a.5 .5 0 0 1 .5 -.5h4a.5 .5 0 0 1 .5 .5v4a.5 .5 0 0 1 -.5 .5h-4a.5 .5 0 0 1 -.5 -.5l0 -4" />
-    <path d="M5 14.5a.5 .5 0 0 1 .5 -.5h4a.5 .5 0 0 1 .5 .5v4a.5 .5 0 0 1 -.5 .5h-4a.5 .5 0 0 1 -.5 -.5l0 -4" />
-    <path d="M14 15l3 3l3 -3" />
-    <path d="M17 18v-12" />
+    <path d="M7.5 7.5l4.5 4.5l4.5 -4.5" />
+    <path d="M6 16v-4" />
+    <path d="M18 16v-4" />
+    <path d="M16 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M16 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M4 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M4 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
   </svg>
   );
 };
 
-export default IconSortDescending2;
+export default IconMicrofrontends;

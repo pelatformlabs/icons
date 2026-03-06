@@ -190,6 +190,18 @@
     "name": "ai",
     "category": "Development"
   },
+  "ai-agent": {
+    "name": "ai-agent",
+    "category": "Development"
+  },
+  "ai-agents": {
+    "name": "ai-agents",
+    "category": "Development"
+  },
+  "ai-gateway": {
+    "name": "ai-gateway",
+    "category": "Development"
+  },
   "air-balloon": {
     "name": "air-balloon",
     "category": "Vehicles",
@@ -2424,6 +2436,10 @@
   "border-vertical": {
     "name": "border-vertical",
     "category": "Design"
+  },
+  "bot-id": {
+    "name": "bot-id",
+    "category": "Development"
   },
   "bottle": {
     "name": "bottle",
@@ -4758,6 +4774,10 @@
     "category": "Map",
     "filled": true
   },
+  "canary": {
+    "name": "canary",
+    "category": "Development"
+  },
   "cancel": {
     "name": "cancel",
     "category": "Shapes"
@@ -6644,6 +6664,10 @@
     "name": "code-variable-plus",
     "category": "System"
   },
+  "codeblock": {
+    "name": "codeblock",
+    "category": "Development"
+  },
   "coffee": {
     "name": "coffee",
     "category": "Food"
@@ -6827,6 +6851,10 @@
   "congruent-to": {
     "name": "congruent-to",
     "category": "System"
+  },
+  "connection": {
+    "name": "connection",
+    "category": "Development"
   },
   "container": {
     "name": "container",
@@ -7052,6 +7080,10 @@
   "credit-card-refund": {
     "name": "credit-card-refund",
     "category": "E-commerce"
+  },
+  "credits": {
+    "name": "credits",
+    "category": "System"
   },
   "cricket": {
     "name": "cricket",
@@ -9883,6 +9915,14 @@
     "name": "firetruck",
     "category": "Vehicles"
   },
+  "firewall-check": {
+    "name": "firewall-check",
+    "category": "Development"
+  },
+  "firewall-flame": {
+    "name": "firewall-flame",
+    "category": "Development"
+  },
   "first-aid-kit": {
     "name": "first-aid-kit",
     "category": "Health"
@@ -11605,6 +11645,10 @@
   "ikosaedr": {
     "name": "ikosaedr",
     "category": "Design"
+  },
+  "image-generation": {
+    "name": "image-generation",
+    "category": "Development"
   },
   "image-in-picture": {
     "name": "image-in-picture",
@@ -13866,6 +13910,10 @@
     "category": "Design",
     "filled": true
   },
+  "microfrontends": {
+    "name": "microfrontends",
+    "category": "Development"
+  },
   "microphone": {
     "name": "microphone",
     "category": "Media",
@@ -13900,6 +13948,10 @@
   "microwave-off": {
     "name": "microwave-off",
     "category": "Food"
+  },
+  "middleware": {
+    "name": "middleware",
+    "category": "Development"
   },
   "military-award": {
     "name": "military-award",
@@ -17146,6 +17198,10 @@
     "name": "scan-position",
     "category": "System"
   },
+  "scan-traces": {
+    "name": "scan-traces",
+    "category": "Development"
+  },
   "schema": {
     "name": "schema",
     "category": "Database"
@@ -17335,6 +17391,10 @@
   "server-spark": {
     "name": "server-spark",
     "category": "Devices"
+  },
+  "serverless": {
+    "name": "serverless",
+    "category": "Development"
   },
   "servicemark": {
     "name": "servicemark",
@@ -20086,6 +20146,10 @@
     "name": "user-hexagon",
     "category": "System"
   },
+  "user-key": {
+    "name": "user-key",
+    "category": "Development"
+  },
   "user-minus": {
     "name": "user-minus",
     "category": "System"
@@ -20730,6 +20794,10 @@
     "name": "world-longitude",
     "category": "Map"
   },
+  "world-map": {
+    "name": "world-map",
+    "category": "Map"
+  },
   "world-minus": {
     "name": "world-minus",
     "category": "Map"
@@ -20858,6 +20926,10 @@
   "zeppelin-off": {
     "name": "zeppelin-off",
     "category": "Vehicles"
+  },
+  "zero-config": {
+    "name": "zero-config",
+    "category": "Development"
   },
   "zip": {
     "name": "zip",

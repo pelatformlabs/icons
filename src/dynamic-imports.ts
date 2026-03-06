@@ -55,6 +55,9 @@ const iconChunk1 = {
   'affiliate': () => import('./icons/IconAffiliate'),
   'affiliate-filled': () => import('./icons/IconAffiliateFilled'),
   'ai': () => import('./icons/IconAi'),
+  'ai-agent': () => import('./icons/IconAiAgent'),
+  'ai-agents': () => import('./icons/IconAiAgents'),
+  'ai-gateway': () => import('./icons/IconAiGateway'),
   'air-balloon': () => import('./icons/IconAirBalloon'),
   'air-balloon-filled': () => import('./icons/IconAirBalloonFilled'),
   'air-conditioning': () => import('./icons/IconAirConditioning'),
@@ -98,13 +101,13 @@ const iconChunk1 = {
   'align-box-bottom-left': () => import('./icons/IconAlignBoxBottomLeft'),
   'align-box-bottom-left-filled': () => import('./icons/IconAlignBoxBottomLeftFilled'),
   'align-box-bottom-right': () => import('./icons/IconAlignBoxBottomRight'),
-  'align-box-bottom-right-filled': () => import('./icons/IconAlignBoxBottomRightFilled'),
-  'align-box-center-bottom': () => import('./icons/IconAlignBoxCenterBottom'),
-  'align-box-center-middle': () => import('./icons/IconAlignBoxCenterMiddle'),
-  'align-box-center-middle-filled': () => import('./icons/IconAlignBoxCenterMiddleFilled')
+  'align-box-bottom-right-filled': () => import('./icons/IconAlignBoxBottomRightFilled')
 };
 
 const iconChunk2 = {
+  'align-box-center-bottom': () => import('./icons/IconAlignBoxCenterBottom'),
+  'align-box-center-middle': () => import('./icons/IconAlignBoxCenterMiddle'),
+  'align-box-center-middle-filled': () => import('./icons/IconAlignBoxCenterMiddleFilled'),
   'align-box-center-stretch': () => import('./icons/IconAlignBoxCenterStretch'),
   'align-box-center-top': () => import('./icons/IconAlignBoxCenterTop'),
   'align-box-left-bottom': () => import('./icons/IconAlignBoxLeftBottom'),
@@ -201,13 +204,13 @@ const iconChunk2 = {
   'arrow-back-up': () => import('./icons/IconArrowBackUp'),
   'arrow-back-up-double': () => import('./icons/IconArrowBackUpDouble'),
   'arrow-badge-down': () => import('./icons/IconArrowBadgeDown'),
-  'arrow-badge-down-filled': () => import('./icons/IconArrowBadgeDownFilled'),
-  'arrow-badge-left': () => import('./icons/IconArrowBadgeLeft'),
-  'arrow-badge-left-filled': () => import('./icons/IconArrowBadgeLeftFilled'),
-  'arrow-badge-right': () => import('./icons/IconArrowBadgeRight')
+  'arrow-badge-down-filled': () => import('./icons/IconArrowBadgeDownFilled')
 };
 
 const iconChunk3 = {
+  'arrow-badge-left': () => import('./icons/IconArrowBadgeLeft'),
+  'arrow-badge-left-filled': () => import('./icons/IconArrowBadgeLeftFilled'),
+  'arrow-badge-right': () => import('./icons/IconArrowBadgeRight'),
   'arrow-badge-right-filled': () => import('./icons/IconArrowBadgeRightFilled'),
   'arrow-badge-up': () => import('./icons/IconArrowBadgeUp'),
   'arrow-badge-up-filled': () => import('./icons/IconArrowBadgeUpFilled'),
@@ -304,13 +307,13 @@ const iconChunk3 = {
   'arrow-merge-both': () => import('./icons/IconArrowMergeBoth'),
   'arrow-merge-left': () => import('./icons/IconArrowMergeLeft'),
   'arrow-merge-right': () => import('./icons/IconArrowMergeRight'),
-  'arrow-move-down': () => import('./icons/IconArrowMoveDown'),
-  'arrow-move-down-filled': () => import('./icons/IconArrowMoveDownFilled'),
-  'arrow-move-left': () => import('./icons/IconArrowMoveLeft'),
-  'arrow-move-left-filled': () => import('./icons/IconArrowMoveLeftFilled')
+  'arrow-move-down': () => import('./icons/IconArrowMoveDown')
 };
 
 const iconChunk4 = {
+  'arrow-move-down-filled': () => import('./icons/IconArrowMoveDownFilled'),
+  'arrow-move-left': () => import('./icons/IconArrowMoveLeft'),
+  'arrow-move-left-filled': () => import('./icons/IconArrowMoveLeftFilled'),
   'arrow-move-right': () => import('./icons/IconArrowMoveRight'),
   'arrow-move-right-filled': () => import('./icons/IconArrowMoveRightFilled'),
   'arrow-move-up': () => import('./icons/IconArrowMoveUp'),
@@ -407,13 +410,13 @@ const iconChunk4 = {
   'arrows-sort': () => import('./icons/IconArrowsSort'),
   'arrows-split': () => import('./icons/IconArrowsSplit'),
   'arrows-split2': () => import('./icons/IconArrowsSplit2'),
-  'arrows-transfer-down': () => import('./icons/IconArrowsTransferDown'),
-  'arrows-transfer-up': () => import('./icons/IconArrowsTransferUp'),
-  'arrows-transfer-up-down': () => import('./icons/IconArrowsTransferUpDown'),
-  'arrows-up': () => import('./icons/IconArrowsUp')
+  'arrows-transfer-down': () => import('./icons/IconArrowsTransferDown')
 };
 
 const iconChunk5 = {
+  'arrows-transfer-up': () => import('./icons/IconArrowsTransferUp'),
+  'arrows-transfer-up-down': () => import('./icons/IconArrowsTransferUpDown'),
+  'arrows-up': () => import('./icons/IconArrowsUp'),
   'arrows-up-down': () => import('./icons/IconArrowsUpDown'),
   'arrows-up-left': () => import('./icons/IconArrowsUpLeft'),
   'arrows-up-right': () => import('./icons/IconArrowsUpRight'),
@@ -510,13 +513,13 @@ const iconChunk5 = {
   'ball-tennis': () => import('./icons/IconBallTennis'),
   'ball-volleyball': () => import('./icons/IconBallVolleyball'),
   'balloon': () => import('./icons/IconBalloon'),
-  'balloon-filled': () => import('./icons/IconBalloonFilled'),
-  'balloon-off': () => import('./icons/IconBalloonOff'),
-  'ballpen': () => import('./icons/IconBallpen'),
-  'ballpen-filled': () => import('./icons/IconBallpenFilled')
+  'balloon-filled': () => import('./icons/IconBalloonFilled')
 };
 
 const iconChunk6 = {
+  'balloon-off': () => import('./icons/IconBalloonOff'),
+  'ballpen': () => import('./icons/IconBallpen'),
+  'ballpen-filled': () => import('./icons/IconBallpenFilled'),
   'ballpen-off': () => import('./icons/IconBallpenOff'),
   'ban': () => import('./icons/IconBan'),
   'bandage': () => import('./icons/IconBandage'),
@@ -613,13 +616,13 @@ const iconChunk6 = {
   'bell-code': () => import('./icons/IconBellCode'),
   'bell-cog': () => import('./icons/IconBellCog'),
   'bell-dollar': () => import('./icons/IconBellDollar'),
-  'bell-down': () => import('./icons/IconBellDown'),
-  'bell-exclamation': () => import('./icons/IconBellExclamation'),
-  'bell-filled': () => import('./icons/IconBellFilled'),
-  'bell-heart': () => import('./icons/IconBellHeart')
+  'bell-down': () => import('./icons/IconBellDown')
 };
 
 const iconChunk7 = {
+  'bell-exclamation': () => import('./icons/IconBellExclamation'),
+  'bell-filled': () => import('./icons/IconBellFilled'),
+  'bell-heart': () => import('./icons/IconBellHeart'),
   'bell-minus': () => import('./icons/IconBellMinus'),
   'bell-minus-filled': () => import('./icons/IconBellMinusFilled'),
   'bell-off': () => import('./icons/IconBellOff'),
@@ -716,13 +719,13 @@ const iconChunk7 = {
   'border-all': () => import('./icons/IconBorderAll'),
   'border-bottom': () => import('./icons/IconBorderBottom'),
   'border-bottom-plus': () => import('./icons/IconBorderBottomPlus'),
-  'border-corner-ios': () => import('./icons/IconBorderCornerIos'),
-  'border-corner-pill': () => import('./icons/IconBorderCornerPill'),
-  'border-corner-rounded': () => import('./icons/IconBorderCornerRounded'),
-  'border-corner-square': () => import('./icons/IconBorderCornerSquare')
+  'border-corner-ios': () => import('./icons/IconBorderCornerIos')
 };
 
 const iconChunk8 = {
+  'border-corner-pill': () => import('./icons/IconBorderCornerPill'),
+  'border-corner-rounded': () => import('./icons/IconBorderCornerRounded'),
+  'border-corner-square': () => import('./icons/IconBorderCornerSquare'),
   'border-corners': () => import('./icons/IconBorderCorners'),
   'border-horizontal': () => import('./icons/IconBorderHorizontal'),
   'border-inner': () => import('./icons/IconBorderInner'),
@@ -739,6 +742,7 @@ const iconChunk8 = {
   'border-top': () => import('./icons/IconBorderTop'),
   'border-top-plus': () => import('./icons/IconBorderTopPlus'),
   'border-vertical': () => import('./icons/IconBorderVertical'),
+  'bot-id': () => import('./icons/IconBotId'),
   'bottle': () => import('./icons/IconBottle'),
   'bottle-filled': () => import('./icons/IconBottleFilled'),
   'bottle-off': () => import('./icons/IconBottleOff'),
@@ -818,14 +822,14 @@ const iconChunk8 = {
   'brand-alipay': () => import('./icons/IconBrandAlipay'),
   'brand-alpine-js': () => import('./icons/IconBrandAlpineJs'),
   'brand-amazon': () => import('./icons/IconBrandAmazon'),
-  'brand-amd': () => import('./icons/IconBrandAmd'),
-  'brand-amie': () => import('./icons/IconBrandAmie'),
-  'brand-amigo': () => import('./icons/IconBrandAmigo'),
-  'brand-among-us': () => import('./icons/IconBrandAmongUs'),
-  'brand-android': () => import('./icons/IconBrandAndroid')
+  'brand-amd': () => import('./icons/IconBrandAmd')
 };
 
 const iconChunk9 = {
+  'brand-amie': () => import('./icons/IconBrandAmie'),
+  'brand-amigo': () => import('./icons/IconBrandAmigo'),
+  'brand-among-us': () => import('./icons/IconBrandAmongUs'),
+  'brand-android': () => import('./icons/IconBrandAndroid'),
   'brand-angular': () => import('./icons/IconBrandAngular'),
   'brand-angular-filled': () => import('./icons/IconBrandAngularFilled'),
   'brand-ansible': () => import('./icons/IconBrandAnsible'),
@@ -921,14 +925,14 @@ const iconChunk9 = {
   'brand-edge': () => import('./icons/IconBrandEdge'),
   'brand-elastic': () => import('./icons/IconBrandElastic'),
   'brand-electronic-arts': () => import('./icons/IconBrandElectronicArts'),
-  'brand-ember': () => import('./icons/IconBrandEmber'),
-  'brand-envato': () => import('./icons/IconBrandEnvato'),
-  'brand-etsy': () => import('./icons/IconBrandEtsy'),
-  'brand-evernote': () => import('./icons/IconBrandEvernote'),
-  'brand-facebook': () => import('./icons/IconBrandFacebook')
+  'brand-ember': () => import('./icons/IconBrandEmber')
 };
 
 const iconChunk10 = {
+  'brand-envato': () => import('./icons/IconBrandEnvato'),
+  'brand-etsy': () => import('./icons/IconBrandEtsy'),
+  'brand-evernote': () => import('./icons/IconBrandEvernote'),
+  'brand-facebook': () => import('./icons/IconBrandFacebook'),
   'brand-facebook-filled': () => import('./icons/IconBrandFacebookFilled'),
   'brand-feedly': () => import('./icons/IconBrandFeedly'),
   'brand-figma': () => import('./icons/IconBrandFigma'),
@@ -1024,14 +1028,14 @@ const iconChunk10 = {
   'brand-mysql': () => import('./icons/IconBrandMysql'),
   'brand-national-geographic': () => import('./icons/IconBrandNationalGeographic'),
   'brand-nem': () => import('./icons/IconBrandNem'),
-  'brand-netbeans': () => import('./icons/IconBrandNetbeans'),
-  'brand-netease-music': () => import('./icons/IconBrandNeteaseMusic'),
-  'brand-netflix': () => import('./icons/IconBrandNetflix'),
-  'brand-nexo': () => import('./icons/IconBrandNexo'),
-  'brand-nextcloud': () => import('./icons/IconBrandNextcloud')
+  'brand-netbeans': () => import('./icons/IconBrandNetbeans')
 };
 
 const iconChunk11 = {
+  'brand-netease-music': () => import('./icons/IconBrandNeteaseMusic'),
+  'brand-netflix': () => import('./icons/IconBrandNetflix'),
+  'brand-nexo': () => import('./icons/IconBrandNexo'),
+  'brand-nextcloud': () => import('./icons/IconBrandNextcloud'),
   'brand-nextjs': () => import('./icons/IconBrandNextjs'),
   'brand-nodejs': () => import('./icons/IconBrandNodejs'),
   'brand-nord-vpn': () => import('./icons/IconBrandNordVpn'),
@@ -1127,14 +1131,14 @@ const iconChunk11 = {
   'brand-surfshark': () => import('./icons/IconBrandSurfshark'),
   'brand-svelte': () => import('./icons/IconBrandSvelte'),
   'brand-swift': () => import('./icons/IconBrandSwift'),
-  'brand-symfony': () => import('./icons/IconBrandSymfony'),
-  'brand-tabler': () => import('./icons/IconBrandTabler'),
-  'brand-tabler-filled': () => import('./icons/IconBrandTablerFilled'),
-  'brand-tabnine': () => import('./icons/IconBrandTabnine'),
-  'brand-tailwind': () => import('./icons/IconBrandTailwind')
+  'brand-symfony': () => import('./icons/IconBrandSymfony')
 };
 
 const iconChunk12 = {
+  'brand-tabler': () => import('./icons/IconBrandTabler'),
+  'brand-tabler-filled': () => import('./icons/IconBrandTablerFilled'),
+  'brand-tabnine': () => import('./icons/IconBrandTabnine'),
+  'brand-tailwind': () => import('./icons/IconBrandTailwind'),
   'brand-taobao': () => import('./icons/IconBrandTaobao'),
   'brand-teams': () => import('./icons/IconBrandTeams'),
   'brand-ted': () => import('./icons/IconBrandTed'),
@@ -1230,14 +1234,14 @@ const iconChunk12 = {
   'brightness': () => import('./icons/IconBrightness'),
   'brightness2': () => import('./icons/IconBrightness2'),
   'brightness-auto': () => import('./icons/IconBrightnessAuto'),
-  'brightness-auto-filled': () => import('./icons/IconBrightnessAutoFilled'),
-  'brightness-down': () => import('./icons/IconBrightnessDown'),
-  'brightness-down-filled': () => import('./icons/IconBrightnessDownFilled'),
-  'brightness-filled': () => import('./icons/IconBrightnessFilled'),
-  'brightness-half': () => import('./icons/IconBrightnessHalf')
+  'brightness-auto-filled': () => import('./icons/IconBrightnessAutoFilled')
 };
 
 const iconChunk13 = {
+  'brightness-down': () => import('./icons/IconBrightnessDown'),
+  'brightness-down-filled': () => import('./icons/IconBrightnessDownFilled'),
+  'brightness-filled': () => import('./icons/IconBrightnessFilled'),
+  'brightness-half': () => import('./icons/IconBrightnessHalf'),
   'brightness-off': () => import('./icons/IconBrightnessOff'),
   'brightness-up': () => import('./icons/IconBrightnessUp'),
   'brightness-up-filled': () => import('./icons/IconBrightnessUpFilled'),
@@ -1333,14 +1337,14 @@ const iconChunk13 = {
   'calendar-code': () => import('./icons/IconCalendarCode'),
   'calendar-cog': () => import('./icons/IconCalendarCog'),
   'calendar-dollar': () => import('./icons/IconCalendarDollar'),
-  'calendar-dot': () => import('./icons/IconCalendarDot'),
-  'calendar-down': () => import('./icons/IconCalendarDown'),
-  'calendar-due': () => import('./icons/IconCalendarDue'),
-  'calendar-event': () => import('./icons/IconCalendarEvent'),
-  'calendar-event-filled': () => import('./icons/IconCalendarEventFilled')
+  'calendar-dot': () => import('./icons/IconCalendarDot')
 };
 
 const iconChunk14 = {
+  'calendar-down': () => import('./icons/IconCalendarDown'),
+  'calendar-due': () => import('./icons/IconCalendarDue'),
+  'calendar-event': () => import('./icons/IconCalendarEvent'),
+  'calendar-event-filled': () => import('./icons/IconCalendarEventFilled'),
   'calendar-exclamation': () => import('./icons/IconCalendarExclamation'),
   'calendar-filled': () => import('./icons/IconCalendarFilled'),
   'calendar-heart': () => import('./icons/IconCalendarHeart'),
@@ -1396,6 +1400,7 @@ const iconChunk14 = {
   'camper': () => import('./icons/IconCamper'),
   'campfire': () => import('./icons/IconCampfire'),
   'campfire-filled': () => import('./icons/IconCampfireFilled'),
+  'canary': () => import('./icons/IconCanary'),
   'cancel': () => import('./icons/IconCancel'),
   'candle': () => import('./icons/IconCandle'),
   'candle-filled': () => import('./icons/IconCandleFilled'),
@@ -1435,15 +1440,15 @@ const iconChunk14 = {
   'carambola': () => import('./icons/IconCarambola'),
   'carambola-filled': () => import('./icons/IconCarambolaFilled'),
   'caravan': () => import('./icons/IconCaravan'),
-  'caravan-filled': () => import('./icons/IconCaravanFilled'),
+  'caravan-filled': () => import('./icons/IconCaravanFilled')
+};
+
+const iconChunk15 = {
   'cardboards': () => import('./icons/IconCardboards'),
   'cardboards-filled': () => import('./icons/IconCardboardsFilled'),
   'cardboards-off': () => import('./icons/IconCardboardsOff'),
   'cards': () => import('./icons/IconCards'),
-  'cards-filled': () => import('./icons/IconCardsFilled')
-};
-
-const iconChunk15 = {
+  'cards-filled': () => import('./icons/IconCardsFilled'),
   'caret-down': () => import('./icons/IconCaretDown'),
   'caret-down-filled': () => import('./icons/IconCaretDownFilled'),
   'caret-left': () => import('./icons/IconCaretLeft'),
@@ -1538,15 +1543,15 @@ const iconChunk15 = {
   'chart-dots3-filled': () => import('./icons/IconChartDots3Filled'),
   'chart-dots-filled': () => import('./icons/IconChartDotsFilled'),
   'chart-funnel': () => import('./icons/IconChartFunnel'),
-  'chart-funnel-filled': () => import('./icons/IconChartFunnelFilled'),
+  'chart-funnel-filled': () => import('./icons/IconChartFunnelFilled')
+};
+
+const iconChunk16 = {
   'chart-grid-dots': () => import('./icons/IconChartGridDots'),
   'chart-grid-dots-filled': () => import('./icons/IconChartGridDotsFilled'),
   'chart-histogram': () => import('./icons/IconChartHistogram'),
   'chart-infographic': () => import('./icons/IconChartInfographic'),
-  'chart-line': () => import('./icons/IconChartLine')
-};
-
-const iconChunk16 = {
+  'chart-line': () => import('./icons/IconChartLine'),
   'chart-pie': () => import('./icons/IconChartPie'),
   'chart-pie2': () => import('./icons/IconChartPie2'),
   'chart-pie2-filled': () => import('./icons/IconChartPie2Filled'),
@@ -1641,15 +1646,15 @@ const iconChunk16 = {
   'circle-caret-right-filled': () => import('./icons/IconCircleCaretRightFilled'),
   'circle-caret-up': () => import('./icons/IconCircleCaretUp'),
   'circle-caret-up-filled': () => import('./icons/IconCircleCaretUpFilled'),
-  'circle-check': () => import('./icons/IconCircleCheck'),
+  'circle-check': () => import('./icons/IconCircleCheck')
+};
+
+const iconChunk17 = {
   'circle-check-filled': () => import('./icons/IconCircleCheckFilled'),
   'circle-chevron-down': () => import('./icons/IconCircleChevronDown'),
   'circle-chevron-down-filled': () => import('./icons/IconCircleChevronDownFilled'),
   'circle-chevron-left': () => import('./icons/IconCircleChevronLeft'),
-  'circle-chevron-left-filled': () => import('./icons/IconCircleChevronLeftFilled')
-};
-
-const iconChunk17 = {
+  'circle-chevron-left-filled': () => import('./icons/IconCircleChevronLeftFilled'),
   'circle-chevron-right': () => import('./icons/IconCircleChevronRight'),
   'circle-chevron-right-filled': () => import('./icons/IconCircleChevronRightFilled'),
   'circle-chevron-up': () => import('./icons/IconCircleChevronUp'),
@@ -1744,15 +1749,15 @@ const iconChunk17 = {
   'circle-letter-b': () => import('./icons/IconCircleLetterB'),
   'circle-letter-b-filled': () => import('./icons/IconCircleLetterBFilled'),
   'circle-letter-c': () => import('./icons/IconCircleLetterC'),
-  'circle-letter-c-filled': () => import('./icons/IconCircleLetterCFilled'),
+  'circle-letter-c-filled': () => import('./icons/IconCircleLetterCFilled')
+};
+
+const iconChunk18 = {
   'circle-letter-d': () => import('./icons/IconCircleLetterD'),
   'circle-letter-d-filled': () => import('./icons/IconCircleLetterDFilled'),
   'circle-letter-e': () => import('./icons/IconCircleLetterE'),
   'circle-letter-e-filled': () => import('./icons/IconCircleLetterEFilled'),
-  'circle-letter-f': () => import('./icons/IconCircleLetterF')
-};
-
-const iconChunk18 = {
+  'circle-letter-f': () => import('./icons/IconCircleLetterF'),
   'circle-letter-f-filled': () => import('./icons/IconCircleLetterFFilled'),
   'circle-letter-g': () => import('./icons/IconCircleLetterG'),
   'circle-letter-g-filled': () => import('./icons/IconCircleLetterGFilled'),
@@ -1847,15 +1852,15 @@ const iconChunk18 = {
   'circuit-inductor': () => import('./icons/IconCircuitInductor'),
   'circuit-motor': () => import('./icons/IconCircuitMotor'),
   'circuit-pushbutton': () => import('./icons/IconCircuitPushbutton'),
-  'circuit-resistor': () => import('./icons/IconCircuitResistor'),
+  'circuit-resistor': () => import('./icons/IconCircuitResistor')
+};
+
+const iconChunk19 = {
   'circuit-switch-closed': () => import('./icons/IconCircuitSwitchClosed'),
   'circuit-switch-open': () => import('./icons/IconCircuitSwitchOpen'),
   'circuit-voltmeter': () => import('./icons/IconCircuitVoltmeter'),
   'clear-all': () => import('./icons/IconClearAll'),
-  'clear-formatting': () => import('./icons/IconClearFormatting')
-};
-
-const iconChunk19 = {
+  'clear-formatting': () => import('./icons/IconClearFormatting'),
   'click': () => import('./icons/IconClick'),
   'click-filled': () => import('./icons/IconClickFilled'),
   'cliff-jumping': () => import('./icons/IconCliffJumping'),
@@ -1950,15 +1955,15 @@ const iconChunk19 = {
   'cloud-data-connection': () => import('./icons/IconCloudDataConnection'),
   'cloud-data-connection-filled': () => import('./icons/IconCloudDataConnectionFilled'),
   'cloud-dollar': () => import('./icons/IconCloudDollar'),
-  'cloud-down': () => import('./icons/IconCloudDown'),
+  'cloud-down': () => import('./icons/IconCloudDown')
+};
+
+const iconChunk20 = {
   'cloud-download': () => import('./icons/IconCloudDownload'),
   'cloud-exclamation': () => import('./icons/IconCloudExclamation'),
   'cloud-filled': () => import('./icons/IconCloudFilled'),
   'cloud-fog': () => import('./icons/IconCloudFog'),
-  'cloud-heart': () => import('./icons/IconCloudHeart')
-};
-
-const iconChunk20 = {
+  'cloud-heart': () => import('./icons/IconCloudHeart'),
   'cloud-lock': () => import('./icons/IconCloudLock'),
   'cloud-lock-open': () => import('./icons/IconCloudLockOpen'),
   'cloud-minus': () => import('./icons/IconCloudMinus'),
@@ -1995,6 +2000,7 @@ const iconChunk20 = {
   'code-variable': () => import('./icons/IconCodeVariable'),
   'code-variable-minus': () => import('./icons/IconCodeVariableMinus'),
   'code-variable-plus': () => import('./icons/IconCodeVariablePlus'),
+  'codeblock': () => import('./icons/IconCodeblock'),
   'coffee': () => import('./icons/IconCoffee'),
   'coffee-off': () => import('./icons/IconCoffeeOff'),
   'coffin': () => import('./icons/IconCoffin'),
@@ -2052,16 +2058,17 @@ const iconChunk20 = {
   'confetti-filled': () => import('./icons/IconConfettiFilled'),
   'confetti-off': () => import('./icons/IconConfettiOff'),
   'confucius': () => import('./icons/IconConfucius'),
-  'congruent-to': () => import('./icons/IconCongruentTo'),
+  'congruent-to': () => import('./icons/IconCongruentTo')
+};
+
+const iconChunk21 = {
+  'connection': () => import('./icons/IconConnection'),
   'container': () => import('./icons/IconContainer'),
   'container-filled': () => import('./icons/IconContainerFilled'),
   'container-off': () => import('./icons/IconContainerOff'),
   'contract': () => import('./icons/IconContract'),
   'contrast': () => import('./icons/IconContrast'),
-  'contrast2': () => import('./icons/IconContrast2')
-};
-
-const iconChunk21 = {
+  'contrast2': () => import('./icons/IconContrast2'),
   'contrast2-filled': () => import('./icons/IconContrast2Filled'),
   'contrast2-off': () => import('./icons/IconContrast2Off'),
   'contrast-filled': () => import('./icons/IconContrastFilled'),
@@ -2122,6 +2129,7 @@ const iconChunk21 = {
   'credit-card-off': () => import('./icons/IconCreditCardOff'),
   'credit-card-pay': () => import('./icons/IconCreditCardPay'),
   'credit-card-refund': () => import('./icons/IconCreditCardRefund'),
+  'credits': () => import('./icons/IconCredits'),
   'cricket': () => import('./icons/IconCricket'),
   'crop': () => import('./icons/IconCrop'),
   'crop11': () => import('./icons/IconCrop11'),
@@ -2153,7 +2161,10 @@ const iconChunk21 = {
   'cube3d-sphere': () => import('./icons/IconCube3dSphere'),
   'cube3d-sphere-off': () => import('./icons/IconCube3dSphereOff'),
   'cube-off': () => import('./icons/IconCubeOff'),
-  'cube-plus': () => import('./icons/IconCubePlus'),
+  'cube-plus': () => import('./icons/IconCubePlus')
+};
+
+const iconChunk22 = {
   'cube-send': () => import('./icons/IconCubeSend'),
   'cube-spark': () => import('./icons/IconCubeSpark'),
   'cube-unfolded': () => import('./icons/IconCubeUnfolded'),
@@ -2161,10 +2172,7 @@ const iconChunk21 = {
   'cup-off': () => import('./icons/IconCupOff'),
   'curling': () => import('./icons/IconCurling'),
   'curly-loop': () => import('./icons/IconCurlyLoop'),
-  'currency': () => import('./icons/IconCurrency')
-};
-
-const iconChunk22 = {
+  'currency': () => import('./icons/IconCurrency'),
   'currency-afghani': () => import('./icons/IconCurrencyAfghani'),
   'currency-bahraini': () => import('./icons/IconCurrencyBahraini'),
   'currency-baht': () => import('./icons/IconCurrencyBaht'),
@@ -2256,7 +2264,10 @@ const iconChunk22 = {
   'database-minus': () => import('./icons/IconDatabaseMinus'),
   'database-off': () => import('./icons/IconDatabaseOff'),
   'database-plus': () => import('./icons/IconDatabasePlus'),
-  'database-search': () => import('./icons/IconDatabaseSearch'),
+  'database-search': () => import('./icons/IconDatabaseSearch')
+};
+
+const iconChunk23 = {
   'database-share': () => import('./icons/IconDatabaseShare'),
   'database-smile': () => import('./icons/IconDatabaseSmile'),
   'database-star': () => import('./icons/IconDatabaseStar'),
@@ -2264,10 +2275,7 @@ const iconChunk22 = {
   'deaf': () => import('./icons/IconDeaf'),
   'decimal': () => import('./icons/IconDecimal'),
   'deer': () => import('./icons/IconDeer'),
-  'delta': () => import('./icons/IconDelta')
-};
-
-const iconChunk23 = {
+  'delta': () => import('./icons/IconDelta'),
   'dental': () => import('./icons/IconDental'),
   'dental-broken': () => import('./icons/IconDentalBroken'),
   'dental-off': () => import('./icons/IconDentalOff'),
@@ -2359,7 +2367,10 @@ const iconChunk23 = {
   'device-ipad-horizontal-code': () => import('./icons/IconDeviceIpadHorizontalCode'),
   'device-ipad-horizontal-cog': () => import('./icons/IconDeviceIpadHorizontalCog'),
   'device-ipad-horizontal-dollar': () => import('./icons/IconDeviceIpadHorizontalDollar'),
-  'device-ipad-horizontal-down': () => import('./icons/IconDeviceIpadHorizontalDown'),
+  'device-ipad-horizontal-down': () => import('./icons/IconDeviceIpadHorizontalDown')
+};
+
+const iconChunk24 = {
   'device-ipad-horizontal-exclamation': () => import('./icons/IconDeviceIpadHorizontalExclamation'),
   'device-ipad-horizontal-heart': () => import('./icons/IconDeviceIpadHorizontalHeart'),
   'device-ipad-horizontal-minus': () => import('./icons/IconDeviceIpadHorizontalMinus'),
@@ -2367,10 +2378,7 @@ const iconChunk23 = {
   'device-ipad-horizontal-pause': () => import('./icons/IconDeviceIpadHorizontalPause'),
   'device-ipad-horizontal-pin': () => import('./icons/IconDeviceIpadHorizontalPin'),
   'device-ipad-horizontal-plus': () => import('./icons/IconDeviceIpadHorizontalPlus'),
-  'device-ipad-horizontal-question': () => import('./icons/IconDeviceIpadHorizontalQuestion')
-};
-
-const iconChunk24 = {
+  'device-ipad-horizontal-question': () => import('./icons/IconDeviceIpadHorizontalQuestion'),
   'device-ipad-horizontal-search': () => import('./icons/IconDeviceIpadHorizontalSearch'),
   'device-ipad-horizontal-share': () => import('./icons/IconDeviceIpadHorizontalShare'),
   'device-ipad-horizontal-star': () => import('./icons/IconDeviceIpadHorizontalStar'),
@@ -2462,7 +2470,10 @@ const iconChunk24 = {
   'device-usb-filled': () => import('./icons/IconDeviceUsbFilled'),
   'device-vision-pro': () => import('./icons/IconDeviceVisionPro'),
   'device-vision-pro-filled': () => import('./icons/IconDeviceVisionProFilled'),
-  'device-watch': () => import('./icons/IconDeviceWatch'),
+  'device-watch': () => import('./icons/IconDeviceWatch')
+};
+
+const iconChunk25 = {
   'device-watch-bolt': () => import('./icons/IconDeviceWatchBolt'),
   'device-watch-cancel': () => import('./icons/IconDeviceWatchCancel'),
   'device-watch-check': () => import('./icons/IconDeviceWatchCheck'),
@@ -2470,10 +2481,7 @@ const iconChunk24 = {
   'device-watch-cog': () => import('./icons/IconDeviceWatchCog'),
   'device-watch-dollar': () => import('./icons/IconDeviceWatchDollar'),
   'device-watch-down': () => import('./icons/IconDeviceWatchDown'),
-  'device-watch-exclamation': () => import('./icons/IconDeviceWatchExclamation')
-};
-
-const iconChunk25 = {
+  'device-watch-exclamation': () => import('./icons/IconDeviceWatchExclamation'),
   'device-watch-filled': () => import('./icons/IconDeviceWatchFilled'),
   'device-watch-heart': () => import('./icons/IconDeviceWatchHeart'),
   'device-watch-minus': () => import('./icons/IconDeviceWatchMinus'),
@@ -2565,7 +2573,10 @@ const iconChunk25 = {
   'dna2': () => import('./icons/IconDna2'),
   'dna2-off': () => import('./icons/IconDna2Off'),
   'dna-off': () => import('./icons/IconDnaOff'),
-  'dog': () => import('./icons/IconDog'),
+  'dog': () => import('./icons/IconDog')
+};
+
+const iconChunk26 = {
   'dog-bowl': () => import('./icons/IconDogBowl'),
   'door': () => import('./icons/IconDoor'),
   'door-enter': () => import('./icons/IconDoorEnter'),
@@ -2573,10 +2584,7 @@ const iconChunk25 = {
   'door-off': () => import('./icons/IconDoorOff'),
   'dots': () => import('./icons/IconDots'),
   'dots-circle-horizontal': () => import('./icons/IconDotsCircleHorizontal'),
-  'dots-diagonal': () => import('./icons/IconDotsDiagonal')
-};
-
-const iconChunk26 = {
+  'dots-diagonal': () => import('./icons/IconDotsDiagonal'),
   'dots-diagonal2': () => import('./icons/IconDotsDiagonal2'),
   'dots-filled': () => import('./icons/IconDotsFilled'),
   'dots-vertical': () => import('./icons/IconDotsVertical'),
@@ -2668,7 +2676,10 @@ const iconChunk26 = {
   'escalator': () => import('./icons/IconEscalator'),
   'escalator-down': () => import('./icons/IconEscalatorDown'),
   'escalator-down-filled': () => import('./icons/IconEscalatorDownFilled'),
-  'escalator-filled': () => import('./icons/IconEscalatorFilled'),
+  'escalator-filled': () => import('./icons/IconEscalatorFilled')
+};
+
+const iconChunk27 = {
   'escalator-up': () => import('./icons/IconEscalatorUp'),
   'escalator-up-filled': () => import('./icons/IconEscalatorUpFilled'),
   'exchange': () => import('./icons/IconExchange'),
@@ -2676,10 +2687,7 @@ const iconChunk26 = {
   'exchange-off': () => import('./icons/IconExchangeOff'),
   'exclamation-circle': () => import('./icons/IconExclamationCircle'),
   'exclamation-circle-filled': () => import('./icons/IconExclamationCircleFilled'),
-  'exclamation-mark': () => import('./icons/IconExclamationMark')
-};
-
-const iconChunk27 = {
+  'exclamation-mark': () => import('./icons/IconExclamationMark'),
   'exclamation-mark-off': () => import('./icons/IconExclamationMarkOff'),
   'explicit': () => import('./icons/IconExplicit'),
   'explicit-filled': () => import('./icons/IconExplicitFilled'),
@@ -2771,7 +2779,10 @@ const iconChunk27 = {
   'file-cv-filled': () => import('./icons/IconFileCvFilled'),
   'file-database': () => import('./icons/IconFileDatabase'),
   'file-delta': () => import('./icons/IconFileDelta'),
-  'file-delta-filled': () => import('./icons/IconFileDeltaFilled'),
+  'file-delta-filled': () => import('./icons/IconFileDeltaFilled')
+};
+
+const iconChunk28 = {
   'file-description': () => import('./icons/IconFileDescription'),
   'file-description-filled': () => import('./icons/IconFileDescriptionFilled'),
   'file-diff': () => import('./icons/IconFileDiff'),
@@ -2779,10 +2790,7 @@ const iconChunk27 = {
   'file-digit': () => import('./icons/IconFileDigit'),
   'file-digit-filled': () => import('./icons/IconFileDigitFilled'),
   'file-dislike': () => import('./icons/IconFileDislike'),
-  'file-dollar': () => import('./icons/IconFileDollar')
-};
-
-const iconChunk28 = {
+  'file-dollar': () => import('./icons/IconFileDollar'),
   'file-dollar-filled': () => import('./icons/IconFileDollarFilled'),
   'file-dots': () => import('./icons/IconFileDots'),
   'file-dots-filled': () => import('./icons/IconFileDotsFilled'),
@@ -2874,7 +2882,10 @@ const iconChunk28 = {
   'file-type-vue': () => import('./icons/IconFileTypeVue'),
   'file-type-xls': () => import('./icons/IconFileTypeXls'),
   'file-type-xml': () => import('./icons/IconFileTypeXml'),
-  'file-type-zip': () => import('./icons/IconFileTypeZip'),
+  'file-type-zip': () => import('./icons/IconFileTypeZip')
+};
+
+const iconChunk29 = {
   'file-typography': () => import('./icons/IconFileTypography'),
   'file-typography-filled': () => import('./icons/IconFileTypographyFilled'),
   'file-unknown': () => import('./icons/IconFileUnknown'),
@@ -2882,10 +2893,7 @@ const iconChunk28 = {
   'file-upload': () => import('./icons/IconFileUpload'),
   'file-upload-filled': () => import('./icons/IconFileUploadFilled'),
   'file-vector': () => import('./icons/IconFileVector'),
-  'file-vector-filled': () => import('./icons/IconFileVectorFilled')
-};
-
-const iconChunk29 = {
+  'file-vector-filled': () => import('./icons/IconFileVectorFilled'),
   'file-word': () => import('./icons/IconFileWord'),
   'file-x': () => import('./icons/IconFileX'),
   'file-x-filled': () => import('./icons/IconFileXFilled'),
@@ -2948,6 +2956,8 @@ const iconChunk29 = {
   'fire-hydrant': () => import('./icons/IconFireHydrant'),
   'fire-hydrant-off': () => import('./icons/IconFireHydrantOff'),
   'firetruck': () => import('./icons/IconFiretruck'),
+  'firewall-check': () => import('./icons/IconFirewallCheck'),
+  'firewall-flame': () => import('./icons/IconFirewallFlame'),
   'first-aid-kit': () => import('./icons/IconFirstAidKit'),
   'first-aid-kit-off': () => import('./icons/IconFirstAidKitOff'),
   'fish': () => import('./icons/IconFish'),
@@ -2975,7 +2985,10 @@ const iconChunk29 = {
   'flag-exclamation': () => import('./icons/IconFlagExclamation'),
   'flag-filled': () => import('./icons/IconFlagFilled'),
   'flag-heart': () => import('./icons/IconFlagHeart'),
-  'flag-minus': () => import('./icons/IconFlagMinus'),
+  'flag-minus': () => import('./icons/IconFlagMinus')
+};
+
+const iconChunk30 = {
   'flag-off': () => import('./icons/IconFlagOff'),
   'flag-pause': () => import('./icons/IconFlagPause'),
   'flag-pin': () => import('./icons/IconFlagPin'),
@@ -2985,10 +2998,7 @@ const iconChunk29 = {
   'flag-share': () => import('./icons/IconFlagShare'),
   'flag-spark': () => import('./icons/IconFlagSpark'),
   'flag-star': () => import('./icons/IconFlagStar'),
-  'flag-up': () => import('./icons/IconFlagUp')
-};
-
-const iconChunk30 = {
+  'flag-up': () => import('./icons/IconFlagUp'),
   'flag-x': () => import('./icons/IconFlagX'),
   'flame': () => import('./icons/IconFlame'),
   'flame-filled': () => import('./icons/IconFlameFilled'),
@@ -3078,7 +3088,10 @@ const iconChunk30 = {
   'garden-cart-off': () => import('./icons/IconGardenCartOff'),
   'gas-station': () => import('./icons/IconGasStation'),
   'gas-station-filled': () => import('./icons/IconGasStationFilled'),
-  'gas-station-off': () => import('./icons/IconGasStationOff'),
+  'gas-station-off': () => import('./icons/IconGasStationOff')
+};
+
+const iconChunk31 = {
   'gauge': () => import('./icons/IconGauge'),
   'gauge-filled': () => import('./icons/IconGaugeFilled'),
   'gauge-off': () => import('./icons/IconGaugeOff'),
@@ -3088,10 +3101,7 @@ const iconChunk30 = {
   'gender-bigender': () => import('./icons/IconGenderBigender'),
   'gender-demiboy': () => import('./icons/IconGenderDemiboy'),
   'gender-demigirl': () => import('./icons/IconGenderDemigirl'),
-  'gender-epicene': () => import('./icons/IconGenderEpicene')
-};
-
-const iconChunk31 = {
+  'gender-epicene': () => import('./icons/IconGenderEpicene'),
   'gender-female': () => import('./icons/IconGenderFemale'),
   'gender-femme': () => import('./icons/IconGenderFemme'),
   'gender-genderfluid': () => import('./icons/IconGenderGenderfluid'),
@@ -3181,7 +3191,10 @@ const iconChunk31 = {
   'hand-click': () => import('./icons/IconHandClick'),
   'hand-click-off': () => import('./icons/IconHandClickOff'),
   'hand-finger': () => import('./icons/IconHandFinger'),
-  'hand-finger-down': () => import('./icons/IconHandFingerDown'),
+  'hand-finger-down': () => import('./icons/IconHandFingerDown')
+};
+
+const iconChunk32 = {
   'hand-finger-left': () => import('./icons/IconHandFingerLeft'),
   'hand-finger-off': () => import('./icons/IconHandFingerOff'),
   'hand-finger-right': () => import('./icons/IconHandFingerRight'),
@@ -3191,10 +3204,7 @@ const iconChunk31 = {
   'hand-middle-finger': () => import('./icons/IconHandMiddleFinger'),
   'hand-move': () => import('./icons/IconHandMove'),
   'hand-off': () => import('./icons/IconHandOff'),
-  'hand-ring-finger': () => import('./icons/IconHandRingFinger')
-};
-
-const iconChunk32 = {
+  'hand-ring-finger': () => import('./icons/IconHandRingFinger'),
   'hand-sanitizer': () => import('./icons/IconHandSanitizer'),
   'hand-stop': () => import('./icons/IconHandStop'),
   'hand-three-fingers': () => import('./icons/IconHandThreeFingers'),
@@ -3284,7 +3294,10 @@ const iconChunk32 = {
   'hexagon-letter-c-filled': () => import('./icons/IconHexagonLetterCFilled'),
   'hexagon-letter-d': () => import('./icons/IconHexagonLetterD'),
   'hexagon-letter-d-filled': () => import('./icons/IconHexagonLetterDFilled'),
-  'hexagon-letter-e': () => import('./icons/IconHexagonLetterE'),
+  'hexagon-letter-e': () => import('./icons/IconHexagonLetterE')
+};
+
+const iconChunk33 = {
   'hexagon-letter-e-filled': () => import('./icons/IconHexagonLetterEFilled'),
   'hexagon-letter-f': () => import('./icons/IconHexagonLetterF'),
   'hexagon-letter-f-filled': () => import('./icons/IconHexagonLetterFFilled'),
@@ -3294,10 +3307,7 @@ const iconChunk32 = {
   'hexagon-letter-h-filled': () => import('./icons/IconHexagonLetterHFilled'),
   'hexagon-letter-i': () => import('./icons/IconHexagonLetterI'),
   'hexagon-letter-i-filled': () => import('./icons/IconHexagonLetterIFilled'),
-  'hexagon-letter-j': () => import('./icons/IconHexagonLetterJ')
-};
-
-const iconChunk33 = {
+  'hexagon-letter-j': () => import('./icons/IconHexagonLetterJ'),
   'hexagon-letter-j-filled': () => import('./icons/IconHexagonLetterJFilled'),
   'hexagon-letter-k': () => import('./icons/IconHexagonLetterK'),
   'hexagon-letter-k-filled': () => import('./icons/IconHexagonLetterKFilled'),
@@ -3387,7 +3397,10 @@ const iconChunk33 = {
   'home-dot': () => import('./icons/IconHomeDot'),
   'home-down': () => import('./icons/IconHomeDown'),
   'home-eco': () => import('./icons/IconHomeEco'),
-  'home-edit': () => import('./icons/IconHomeEdit'),
+  'home-edit': () => import('./icons/IconHomeEdit')
+};
+
+const iconChunk34 = {
   'home-exclamation': () => import('./icons/IconHomeExclamation'),
   'home-filled': () => import('./icons/IconHomeFilled'),
   'home-hand': () => import('./icons/IconHomeHand'),
@@ -3397,10 +3410,7 @@ const iconChunk33 = {
   'home-minus': () => import('./icons/IconHomeMinus'),
   'home-move': () => import('./icons/IconHomeMove'),
   'home-off': () => import('./icons/IconHomeOff'),
-  'home-plus': () => import('./icons/IconHomePlus')
-};
-
-const iconChunk34 = {
+  'home-plus': () => import('./icons/IconHomePlus'),
   'home-question': () => import('./icons/IconHomeQuestion'),
   'home-ribbon': () => import('./icons/IconHomeRibbon'),
   'home-search': () => import('./icons/IconHomeSearch'),
@@ -3462,6 +3472,7 @@ const iconChunk34 = {
   'id-filled': () => import('./icons/IconIdFilled'),
   'id-off': () => import('./icons/IconIdOff'),
   'ikosaedr': () => import('./icons/IconIkosaedr'),
+  'image-generation': () => import('./icons/IconImageGeneration'),
   'image-in-picture': () => import('./icons/IconImageInPicture'),
   'inbox': () => import('./icons/IconInbox'),
   'inbox-off': () => import('./icons/IconInboxOff'),
@@ -3489,7 +3500,10 @@ const iconChunk34 = {
   'inner-shadow-bottom-right': () => import('./icons/IconInnerShadowBottomRight'),
   'inner-shadow-bottom-right-filled': () => import('./icons/IconInnerShadowBottomRightFilled'),
   'inner-shadow-left': () => import('./icons/IconInnerShadowLeft'),
-  'inner-shadow-left-filled': () => import('./icons/IconInnerShadowLeftFilled'),
+  'inner-shadow-left-filled': () => import('./icons/IconInnerShadowLeftFilled')
+};
+
+const iconChunk35 = {
   'inner-shadow-right': () => import('./icons/IconInnerShadowRight'),
   'inner-shadow-right-filled': () => import('./icons/IconInnerShadowRightFilled'),
   'inner-shadow-top': () => import('./icons/IconInnerShadowTop'),
@@ -3500,10 +3514,7 @@ const iconChunk34 = {
   'inner-shadow-top-right-filled': () => import('./icons/IconInnerShadowTopRightFilled'),
   'input-ai': () => import('./icons/IconInputAi'),
   'input-check': () => import('./icons/IconInputCheck'),
-  'input-search': () => import('./icons/IconInputSearch')
-};
-
-const iconChunk35 = {
+  'input-search': () => import('./icons/IconInputSearch'),
   'input-spark': () => import('./icons/IconInputSpark'),
   'input-x': () => import('./icons/IconInputX'),
   'invoice': () => import('./icons/IconInvoice'),
@@ -3592,7 +3603,10 @@ const iconChunk35 = {
   'layers-off': () => import('./icons/IconLayersOff'),
   'layers-selected': () => import('./icons/IconLayersSelected'),
   'layers-selected-bottom': () => import('./icons/IconLayersSelectedBottom'),
-  'layers-subtract': () => import('./icons/IconLayersSubtract'),
+  'layers-subtract': () => import('./icons/IconLayersSubtract')
+};
+
+const iconChunk36 = {
   'layers-union': () => import('./icons/IconLayersUnion'),
   'layout': () => import('./icons/IconLayout'),
   'layout2': () => import('./icons/IconLayout2'),
@@ -3603,10 +3617,7 @@ const iconChunk35 = {
   'layout-align-center-filled': () => import('./icons/IconLayoutAlignCenterFilled'),
   'layout-align-left': () => import('./icons/IconLayoutAlignLeft'),
   'layout-align-left-filled': () => import('./icons/IconLayoutAlignLeftFilled'),
-  'layout-align-middle': () => import('./icons/IconLayoutAlignMiddle')
-};
-
-const iconChunk36 = {
+  'layout-align-middle': () => import('./icons/IconLayoutAlignMiddle'),
   'layout-align-middle-filled': () => import('./icons/IconLayoutAlignMiddleFilled'),
   'layout-align-right': () => import('./icons/IconLayoutAlignRight'),
   'layout-align-right-filled': () => import('./icons/IconLayoutAlignRightFilled'),
@@ -3695,7 +3706,10 @@ const iconChunk36 = {
   'letter-g-small': () => import('./icons/IconLetterGSmall'),
   'letter-h': () => import('./icons/IconLetterH'),
   'letter-h-small': () => import('./icons/IconLetterHSmall'),
-  'letter-i': () => import('./icons/IconLetterI'),
+  'letter-i': () => import('./icons/IconLetterI')
+};
+
+const iconChunk37 = {
   'letter-i-small': () => import('./icons/IconLetterISmall'),
   'letter-j': () => import('./icons/IconLetterJ'),
   'letter-j-small': () => import('./icons/IconLetterJSmall'),
@@ -3706,10 +3720,7 @@ const iconChunk36 = {
   'letter-m': () => import('./icons/IconLetterM'),
   'letter-m-small': () => import('./icons/IconLetterMSmall'),
   'letter-n': () => import('./icons/IconLetterN'),
-  'letter-n-small': () => import('./icons/IconLetterNSmall')
-};
-
-const iconChunk37 = {
+  'letter-n-small': () => import('./icons/IconLetterNSmall'),
   'letter-o': () => import('./icons/IconLetterO'),
   'letter-o-small': () => import('./icons/IconLetterOSmall'),
   'letter-p': () => import('./icons/IconLetterP'),
@@ -3798,7 +3809,10 @@ const iconChunk37 = {
   'location-question': () => import('./icons/IconLocationQuestion'),
   'location-search': () => import('./icons/IconLocationSearch'),
   'location-share': () => import('./icons/IconLocationShare'),
-  'location-star': () => import('./icons/IconLocationStar'),
+  'location-star': () => import('./icons/IconLocationStar')
+};
+
+const iconChunk38 = {
   'location-up': () => import('./icons/IconLocationUp'),
   'location-x': () => import('./icons/IconLocationX'),
   'lock': () => import('./icons/IconLock'),
@@ -3809,10 +3823,7 @@ const iconChunk37 = {
   'lock-cancel': () => import('./icons/IconLockCancel'),
   'lock-check': () => import('./icons/IconLockCheck'),
   'lock-code': () => import('./icons/IconLockCode'),
-  'lock-cog': () => import('./icons/IconLockCog')
-};
-
-const iconChunk38 = {
+  'lock-cog': () => import('./icons/IconLockCog'),
   'lock-dollar': () => import('./icons/IconLockDollar'),
   'lock-down': () => import('./icons/IconLockDown'),
   'lock-exclamation': () => import('./icons/IconLockExclamation'),
@@ -3901,7 +3912,10 @@ const iconChunk38 = {
   'map': () => import('./icons/IconMap'),
   'map2': () => import('./icons/IconMap2'),
   'map-bolt': () => import('./icons/IconMapBolt'),
-  'map-cancel': () => import('./icons/IconMapCancel'),
+  'map-cancel': () => import('./icons/IconMapCancel')
+};
+
+const iconChunk39 = {
   'map-check': () => import('./icons/IconMapCheck'),
   'map-code': () => import('./icons/IconMapCode'),
   'map-cog': () => import('./icons/IconMapCog'),
@@ -3912,10 +3926,7 @@ const iconChunk38 = {
   'map-exclamation': () => import('./icons/IconMapExclamation'),
   'map-heart': () => import('./icons/IconMapHeart'),
   'map-minus': () => import('./icons/IconMapMinus'),
-  'map-north': () => import('./icons/IconMapNorth')
-};
-
-const iconChunk39 = {
+  'map-north': () => import('./icons/IconMapNorth'),
   'map-off': () => import('./icons/IconMapOff'),
   'map-pause': () => import('./icons/IconMapPause'),
   'map-pin': () => import('./icons/IconMapPin'),
@@ -4004,7 +4015,10 @@ const iconChunk39 = {
   'math-y-plus-y': () => import('./icons/IconMathYPlusY'),
   'matrix': () => import('./icons/IconMatrix'),
   'maximize': () => import('./icons/IconMaximize'),
-  'maximize-off': () => import('./icons/IconMaximizeOff'),
+  'maximize-off': () => import('./icons/IconMaximizeOff')
+};
+
+const iconChunk40 = {
   'meat': () => import('./icons/IconMeat'),
   'meat-off': () => import('./icons/IconMeatOff'),
   'medal': () => import('./icons/IconMedal'),
@@ -4015,10 +4029,7 @@ const iconChunk39 = {
   'medical-cross-off': () => import('./icons/IconMedicalCrossOff'),
   'medicine-syrup': () => import('./icons/IconMedicineSyrup'),
   'meeple': () => import('./icons/IconMeeple'),
-  'meeple-filled': () => import('./icons/IconMeepleFilled')
-};
-
-const iconChunk40 = {
+  'meeple-filled': () => import('./icons/IconMeepleFilled'),
   'melon': () => import('./icons/IconMelon'),
   'melon-filled': () => import('./icons/IconMelonFilled'),
   'menorah': () => import('./icons/IconMenorah'),
@@ -4107,7 +4118,10 @@ const iconChunk40 = {
   'message-x': () => import('./icons/IconMessageX'),
   'messages': () => import('./icons/IconMessages'),
   'messages-filled': () => import('./icons/IconMessagesFilled'),
-  'messages-off': () => import('./icons/IconMessagesOff'),
+  'messages-off': () => import('./icons/IconMessagesOff')
+};
+
+const iconChunk41 = {
   'meteor': () => import('./icons/IconMeteor'),
   'meteor-filled': () => import('./icons/IconMeteorFilled'),
   'meteor-off': () => import('./icons/IconMeteorOff'),
@@ -4118,11 +4132,9 @@ const iconChunk40 = {
   'michelin-star': () => import('./icons/IconMichelinStar'),
   'michelin-star-filled': () => import('./icons/IconMichelinStarFilled'),
   'michelin-star-green': () => import('./icons/IconMichelinStarGreen'),
-  'mickey': () => import('./icons/IconMickey')
-};
-
-const iconChunk41 = {
+  'mickey': () => import('./icons/IconMickey'),
   'mickey-filled': () => import('./icons/IconMickeyFilled'),
+  'microfrontends': () => import('./icons/IconMicrofrontends'),
   'microphone': () => import('./icons/IconMicrophone'),
   'microphone2': () => import('./icons/IconMicrophone2'),
   'microphone2-off': () => import('./icons/IconMicrophone2Off'),
@@ -4134,6 +4146,7 @@ const iconChunk41 = {
   'microwave': () => import('./icons/IconMicrowave'),
   'microwave-filled': () => import('./icons/IconMicrowaveFilled'),
   'microwave-off': () => import('./icons/IconMicrowaveOff'),
+  'middleware': () => import('./icons/IconMiddleware'),
   'military-award': () => import('./icons/IconMilitaryAward'),
   'military-rank': () => import('./icons/IconMilitaryRank'),
   'military-rank-filled': () => import('./icons/IconMilitaryRankFilled'),
@@ -4208,7 +4221,10 @@ const iconChunk41 = {
   'mood-spark': () => import('./icons/IconMoodSpark'),
   'mood-surprised': () => import('./icons/IconMoodSurprised'),
   'mood-tongue': () => import('./icons/IconMoodTongue'),
-  'mood-tongue-wink': () => import('./icons/IconMoodTongueWink'),
+  'mood-tongue-wink': () => import('./icons/IconMoodTongueWink')
+};
+
+const iconChunk42 = {
   'mood-tongue-wink2': () => import('./icons/IconMoodTongueWink2'),
   'mood-unamused': () => import('./icons/IconMoodUnamused'),
   'mood-up': () => import('./icons/IconMoodUp'),
@@ -4221,10 +4237,7 @@ const iconChunk41 = {
   'moon': () => import('./icons/IconMoon'),
   'moon2': () => import('./icons/IconMoon2'),
   'moon-filled': () => import('./icons/IconMoonFilled'),
-  'moon-off': () => import('./icons/IconMoonOff')
-};
-
-const iconChunk42 = {
+  'moon-off': () => import('./icons/IconMoonOff'),
   'moon-stars': () => import('./icons/IconMoonStars'),
   'moped': () => import('./icons/IconMoped'),
   'motorbike': () => import('./icons/IconMotorbike'),
@@ -4311,7 +4324,10 @@ const iconChunk42 = {
   'no-copyright': () => import('./icons/IconNoCopyright'),
   'no-creative-commons': () => import('./icons/IconNoCreativeCommons'),
   'no-derivatives': () => import('./icons/IconNoDerivatives'),
-  'north-star': () => import('./icons/IconNorthStar'),
+  'north-star': () => import('./icons/IconNorthStar')
+};
+
+const iconChunk43 = {
   'note': () => import('./icons/IconNote'),
   'note-off': () => import('./icons/IconNoteOff'),
   'notebook': () => import('./icons/IconNotebook'),
@@ -4324,10 +4340,7 @@ const iconChunk42 = {
   'number0': () => import('./icons/IconNumber0'),
   'number0-small': () => import('./icons/IconNumber0Small'),
   'number1': () => import('./icons/IconNumber1'),
-  'number10': () => import('./icons/IconNumber10')
-};
-
-const iconChunk43 = {
+  'number10': () => import('./icons/IconNumber10'),
   'number100-small': () => import('./icons/IconNumber100Small'),
   'number10-small': () => import('./icons/IconNumber10Small'),
   'number11': () => import('./icons/IconNumber11'),
@@ -4414,7 +4427,10 @@ const iconChunk43 = {
   'number78-small': () => import('./icons/IconNumber78Small'),
   'number79-small': () => import('./icons/IconNumber79Small'),
   'number7-small': () => import('./icons/IconNumber7Small'),
-  'number8': () => import('./icons/IconNumber8'),
+  'number8': () => import('./icons/IconNumber8')
+};
+
+const iconChunk44 = {
   'number80-small': () => import('./icons/IconNumber80Small'),
   'number81-small': () => import('./icons/IconNumber81Small'),
   'number82-small': () => import('./icons/IconNumber82Small'),
@@ -4427,10 +4443,7 @@ const iconChunk43 = {
   'number89-small': () => import('./icons/IconNumber89Small'),
   'number8-small': () => import('./icons/IconNumber8Small'),
   'number9': () => import('./icons/IconNumber9'),
-  'number90-small': () => import('./icons/IconNumber90Small')
-};
-
-const iconChunk44 = {
+  'number90-small': () => import('./icons/IconNumber90Small'),
   'number91-small': () => import('./icons/IconNumber91Small'),
   'number92-small': () => import('./icons/IconNumber92Small'),
   'number93-small': () => import('./icons/IconNumber93Small'),
@@ -4517,7 +4530,10 @@ const iconChunk44 = {
   'pencil-cancel': () => import('./icons/IconPencilCancel'),
   'pencil-check': () => import('./icons/IconPencilCheck'),
   'pencil-code': () => import('./icons/IconPencilCode'),
-  'pencil-cog': () => import('./icons/IconPencilCog'),
+  'pencil-cog': () => import('./icons/IconPencilCog')
+};
+
+const iconChunk45 = {
   'pencil-discount': () => import('./icons/IconPencilDiscount'),
   'pencil-dollar': () => import('./icons/IconPencilDollar'),
   'pencil-down': () => import('./icons/IconPencilDown'),
@@ -4530,10 +4546,7 @@ const iconChunk44 = {
   'pencil-pin': () => import('./icons/IconPencilPin'),
   'pencil-plus': () => import('./icons/IconPencilPlus'),
   'pencil-question': () => import('./icons/IconPencilQuestion'),
-  'pencil-search': () => import('./icons/IconPencilSearch')
-};
-
-const iconChunk45 = {
+  'pencil-search': () => import('./icons/IconPencilSearch'),
   'pencil-share': () => import('./icons/IconPencilShare'),
   'pencil-star': () => import('./icons/IconPencilStar'),
   'pencil-up': () => import('./icons/IconPencilUp'),
@@ -4620,7 +4633,10 @@ const iconChunk45 = {
   'photo-hexagon': () => import('./icons/IconPhotoHexagon'),
   'photo-minus': () => import('./icons/IconPhotoMinus'),
   'photo-off': () => import('./icons/IconPhotoOff'),
-  'photo-pause': () => import('./icons/IconPhotoPause'),
+  'photo-pause': () => import('./icons/IconPhotoPause')
+};
+
+const iconChunk46 = {
   'photo-pentagon': () => import('./icons/IconPhotoPentagon'),
   'photo-pin': () => import('./icons/IconPhotoPin'),
   'photo-plus': () => import('./icons/IconPhotoPlus'),
@@ -4633,10 +4649,7 @@ const iconChunk45 = {
   'photo-share': () => import('./icons/IconPhotoShare'),
   'photo-shield': () => import('./icons/IconPhotoShield'),
   'photo-spark': () => import('./icons/IconPhotoSpark'),
-  'photo-square-rounded': () => import('./icons/IconPhotoSquareRounded')
-};
-
-const iconChunk46 = {
+  'photo-square-rounded': () => import('./icons/IconPhotoSquareRounded'),
   'photo-star': () => import('./icons/IconPhotoStar'),
   'photo-up': () => import('./icons/IconPhotoUp'),
   'photo-video': () => import('./icons/IconPhotoVideo'),
@@ -4723,7 +4736,10 @@ const iconChunk46 = {
   'play-card-q': () => import('./icons/IconPlayCardQ'),
   'play-card-q-filled': () => import('./icons/IconPlayCardQFilled'),
   'play-card-star': () => import('./icons/IconPlayCardStar'),
-  'play-card-star-filled': () => import('./icons/IconPlayCardStarFilled'),
+  'play-card-star-filled': () => import('./icons/IconPlayCardStarFilled')
+};
+
+const iconChunk47 = {
   'play-football': () => import('./icons/IconPlayFootball'),
   'play-handball': () => import('./icons/IconPlayHandball'),
   'play-volleyball': () => import('./icons/IconPlayVolleyball'),
@@ -4736,10 +4752,7 @@ const iconChunk46 = {
   'player-record': () => import('./icons/IconPlayerRecord'),
   'player-record-filled': () => import('./icons/IconPlayerRecordFilled'),
   'player-skip-back': () => import('./icons/IconPlayerSkipBack'),
-  'player-skip-back-filled': () => import('./icons/IconPlayerSkipBackFilled')
-};
-
-const iconChunk47 = {
+  'player-skip-back-filled': () => import('./icons/IconPlayerSkipBackFilled'),
   'player-skip-forward': () => import('./icons/IconPlayerSkipForward'),
   'player-skip-forward-filled': () => import('./icons/IconPlayerSkipForwardFilled'),
   'player-stop': () => import('./icons/IconPlayerStop'),
@@ -4826,7 +4839,10 @@ const iconChunk47 = {
   'progress-bolt': () => import('./icons/IconProgressBolt'),
   'progress-check': () => import('./icons/IconProgressCheck'),
   'progress-down': () => import('./icons/IconProgressDown'),
-  'progress-help': () => import('./icons/IconProgressHelp'),
+  'progress-help': () => import('./icons/IconProgressHelp')
+};
+
+const iconChunk48 = {
   'progress-x': () => import('./icons/IconProgressX'),
   'prompt': () => import('./icons/IconPrompt'),
   'prong': () => import('./icons/IconProng'),
@@ -4839,10 +4855,7 @@ const iconChunk47 = {
   'puzzle-filled': () => import('./icons/IconPuzzleFilled'),
   'puzzle-off': () => import('./icons/IconPuzzleOff'),
   'pyramid': () => import('./icons/IconPyramid'),
-  'pyramid-off': () => import('./icons/IconPyramidOff')
-};
-
-const iconChunk48 = {
+  'pyramid-off': () => import('./icons/IconPyramidOff'),
   'pyramid-plus': () => import('./icons/IconPyramidPlus'),
   'qrcode': () => import('./icons/IconQrcode'),
   'qrcode-off': () => import('./icons/IconQrcodeOff'),
@@ -4929,7 +4942,10 @@ const iconChunk48 = {
   'replace-filled': () => import('./icons/IconReplaceFilled'),
   'replace-off': () => import('./icons/IconReplaceOff'),
   'replace-user': () => import('./icons/IconReplaceUser'),
-  'report': () => import('./icons/IconReport'),
+  'report': () => import('./icons/IconReport')
+};
+
+const iconChunk49 = {
   'report-analytics': () => import('./icons/IconReportAnalytics'),
   'report-analytics-filled': () => import('./icons/IconReportAnalyticsFilled'),
   'report-medical': () => import('./icons/IconReportMedical'),
@@ -4942,10 +4958,7 @@ const iconChunk48 = {
   'restore': () => import('./icons/IconRestore'),
   'rewind-backward10': () => import('./icons/IconRewindBackward10'),
   'rewind-backward15': () => import('./icons/IconRewindBackward15'),
-  'rewind-backward20': () => import('./icons/IconRewindBackward20')
-};
-
-const iconChunk49 = {
+  'rewind-backward20': () => import('./icons/IconRewindBackward20'),
   'rewind-backward30': () => import('./icons/IconRewindBackward30'),
   'rewind-backward40': () => import('./icons/IconRewindBackward40'),
   'rewind-backward5': () => import('./icons/IconRewindBackward5'),
@@ -5032,7 +5045,10 @@ const iconChunk49 = {
   'run': () => import('./icons/IconRun'),
   'rv-truck': () => import('./icons/IconRvTruck'),
   's-turn-down': () => import('./icons/IconSTurnDown'),
-  's-turn-left': () => import('./icons/IconSTurnLeft'),
+  's-turn-left': () => import('./icons/IconSTurnLeft')
+};
+
+const iconChunk50 = {
   's-turn-right': () => import('./icons/IconSTurnRight'),
   's-turn-up': () => import('./icons/IconSTurnUp'),
   'sailboat': () => import('./icons/IconSailboat'),
@@ -5045,10 +5061,7 @@ const iconChunk49 = {
   'satellite': () => import('./icons/IconSatellite'),
   'satellite-filled': () => import('./icons/IconSatelliteFilled'),
   'satellite-off': () => import('./icons/IconSatelliteOff'),
-  'sausage': () => import('./icons/IconSausage')
-};
-
-const iconChunk50 = {
+  'sausage': () => import('./icons/IconSausage'),
   'scale': () => import('./icons/IconScale'),
   'scale-filled': () => import('./icons/IconScaleFilled'),
   'scale-off': () => import('./icons/IconScaleOff'),
@@ -5057,6 +5070,7 @@ const iconChunk50 = {
   'scan': () => import('./icons/IconScan'),
   'scan-eye': () => import('./icons/IconScanEye'),
   'scan-position': () => import('./icons/IconScanPosition'),
+  'scan-traces': () => import('./icons/IconScanTraces'),
   'schema': () => import('./icons/IconSchema'),
   'schema-off': () => import('./icons/IconSchemaOff'),
   'school': () => import('./icons/IconSchool'),
@@ -5109,6 +5123,7 @@ const iconChunk50 = {
   'server-cog': () => import('./icons/IconServerCog'),
   'server-off': () => import('./icons/IconServerOff'),
   'server-spark': () => import('./icons/IconServerSpark'),
+  'serverless': () => import('./icons/IconServerless'),
   'servicemark': () => import('./icons/IconServicemark'),
   'settings': () => import('./icons/IconSettings'),
   'settings2': () => import('./icons/IconSettings2'),
@@ -5133,7 +5148,10 @@ const iconChunk50 = {
   'settings-search': () => import('./icons/IconSettingsSearch'),
   'settings-share': () => import('./icons/IconSettingsShare'),
   'settings-spark': () => import('./icons/IconSettingsSpark'),
-  'settings-star': () => import('./icons/IconSettingsStar'),
+  'settings-star': () => import('./icons/IconSettingsStar')
+};
+
+const iconChunk51 = {
   'settings-up': () => import('./icons/IconSettingsUp'),
   'settings-x': () => import('./icons/IconSettingsX'),
   'shadow': () => import('./icons/IconShadow'),
@@ -5148,10 +5166,7 @@ const iconChunk50 = {
   'share-off': () => import('./icons/IconShareOff'),
   'shareplay': () => import('./icons/IconShareplay'),
   'shield': () => import('./icons/IconShield'),
-  'shield-bolt': () => import('./icons/IconShieldBolt')
-};
-
-const iconChunk51 = {
+  'shield-bolt': () => import('./icons/IconShieldBolt'),
   'shield-cancel': () => import('./icons/IconShieldCancel'),
   'shield-check': () => import('./icons/IconShieldCheck'),
   'shield-check-filled': () => import('./icons/IconShieldCheckFilled'),
@@ -5236,7 +5251,10 @@ const iconChunk51 = {
   'signal5g': () => import('./icons/IconSignal5g'),
   'signal6g': () => import('./icons/IconSignal6g'),
   'signal-e': () => import('./icons/IconSignalE'),
-  'signal-g': () => import('./icons/IconSignalG'),
+  'signal-g': () => import('./icons/IconSignalG')
+};
+
+const iconChunk52 = {
   'signal-h': () => import('./icons/IconSignalH'),
   'signal-h-plus': () => import('./icons/IconSignalHPlus'),
   'signal-lte': () => import('./icons/IconSignalLte'),
@@ -5251,10 +5269,7 @@ const iconChunk51 = {
   'skew-x': () => import('./icons/IconSkewX'),
   'skew-y': () => import('./icons/IconSkewY'),
   'ski-jumping': () => import('./icons/IconSkiJumping'),
-  'skull': () => import('./icons/IconSkull')
-};
-
-const iconChunk52 = {
+  'skull': () => import('./icons/IconSkull'),
   'slash': () => import('./icons/IconSlash'),
   'slashes': () => import('./icons/IconSlashes'),
   'sleigh': () => import('./icons/IconSleigh'),
@@ -5339,7 +5354,10 @@ const iconChunk52 = {
   'square-arrow-up-filled': () => import('./icons/IconSquareArrowUpFilled'),
   'square-asterisk': () => import('./icons/IconSquareAsterisk'),
   'square-asterisk-filled': () => import('./icons/IconSquareAsteriskFilled'),
-  'square-check': () => import('./icons/IconSquareCheck'),
+  'square-check': () => import('./icons/IconSquareCheck')
+};
+
+const iconChunk53 = {
   'square-check-filled': () => import('./icons/IconSquareCheckFilled'),
   'square-chevron-down': () => import('./icons/IconSquareChevronDown'),
   'square-chevron-down-filled': () => import('./icons/IconSquareChevronDownFilled'),
@@ -5354,10 +5372,7 @@ const iconChunk52 = {
   'square-chevrons-left': () => import('./icons/IconSquareChevronsLeft'),
   'square-chevrons-left-filled': () => import('./icons/IconSquareChevronsLeftFilled'),
   'square-chevrons-right': () => import('./icons/IconSquareChevronsRight'),
-  'square-chevrons-right-filled': () => import('./icons/IconSquareChevronsRightFilled')
-};
-
-const iconChunk53 = {
+  'square-chevrons-right-filled': () => import('./icons/IconSquareChevronsRightFilled'),
   'square-chevrons-up': () => import('./icons/IconSquareChevronsUp'),
   'square-chevrons-up-filled': () => import('./icons/IconSquareChevronsUpFilled'),
   'square-dashed': () => import('./icons/IconSquareDashed'),
@@ -5442,7 +5457,10 @@ const iconChunk53 = {
   'square-letter-z-filled': () => import('./icons/IconSquareLetterZFilled'),
   'square-minus': () => import('./icons/IconSquareMinus'),
   'square-minus2': () => import('./icons/IconSquareMinus2'),
-  'square-minus-filled': () => import('./icons/IconSquareMinusFilled'),
+  'square-minus-filled': () => import('./icons/IconSquareMinusFilled')
+};
+
+const iconChunk54 = {
   'square-number0': () => import('./icons/IconSquareNumber0'),
   'square-number0-filled': () => import('./icons/IconSquareNumber0Filled'),
   'square-number1': () => import('./icons/IconSquareNumber1'),
@@ -5457,10 +5475,7 @@ const iconChunk53 = {
   'square-number5-filled': () => import('./icons/IconSquareNumber5Filled'),
   'square-number6': () => import('./icons/IconSquareNumber6'),
   'square-number6-filled': () => import('./icons/IconSquareNumber6Filled'),
-  'square-number7': () => import('./icons/IconSquareNumber7')
-};
-
-const iconChunk54 = {
+  'square-number7': () => import('./icons/IconSquareNumber7'),
   'square-number7-filled': () => import('./icons/IconSquareNumber7Filled'),
   'square-number8': () => import('./icons/IconSquareNumber8'),
   'square-number8-filled': () => import('./icons/IconSquareNumber8Filled'),
@@ -5545,7 +5560,10 @@ const iconChunk54 = {
   'square-rounded-letter-s': () => import('./icons/IconSquareRoundedLetterS'),
   'square-rounded-letter-s-filled': () => import('./icons/IconSquareRoundedLetterSFilled'),
   'square-rounded-letter-t': () => import('./icons/IconSquareRoundedLetterT'),
-  'square-rounded-letter-t-filled': () => import('./icons/IconSquareRoundedLetterTFilled'),
+  'square-rounded-letter-t-filled': () => import('./icons/IconSquareRoundedLetterTFilled')
+};
+
+const iconChunk55 = {
   'square-rounded-letter-u': () => import('./icons/IconSquareRoundedLetterU'),
   'square-rounded-letter-u-filled': () => import('./icons/IconSquareRoundedLetterUFilled'),
   'square-rounded-letter-v': () => import('./icons/IconSquareRoundedLetterV'),
@@ -5560,10 +5578,7 @@ const iconChunk54 = {
   'square-rounded-letter-z-filled': () => import('./icons/IconSquareRoundedLetterZFilled'),
   'square-rounded-minus': () => import('./icons/IconSquareRoundedMinus'),
   'square-rounded-minus2': () => import('./icons/IconSquareRoundedMinus2'),
-  'square-rounded-minus-filled': () => import('./icons/IconSquareRoundedMinusFilled')
-};
-
-const iconChunk55 = {
+  'square-rounded-minus-filled': () => import('./icons/IconSquareRoundedMinusFilled'),
   'square-rounded-number0': () => import('./icons/IconSquareRoundedNumber0'),
   'square-rounded-number0-filled': () => import('./icons/IconSquareRoundedNumber0Filled'),
   'square-rounded-number1': () => import('./icons/IconSquareRoundedNumber1'),
@@ -5648,7 +5663,10 @@ const iconChunk55 = {
   'subtitles-edit': () => import('./icons/IconSubtitlesEdit'),
   'subtitles-off': () => import('./icons/IconSubtitlesOff'),
   'sum': () => import('./icons/IconSum'),
-  'sum-off': () => import('./icons/IconSumOff'),
+  'sum-off': () => import('./icons/IconSumOff')
+};
+
+const iconChunk56 = {
   'sun': () => import('./icons/IconSun'),
   'sun-electricity': () => import('./icons/IconSunElectricity'),
   'sun-filled': () => import('./icons/IconSunFilled'),
@@ -5663,10 +5681,7 @@ const iconChunk55 = {
   'sunglasses-filled': () => import('./icons/IconSunglassesFilled'),
   'sunrise': () => import('./icons/IconSunrise'),
   'sunrise-filled': () => import('./icons/IconSunriseFilled'),
-  'sunset': () => import('./icons/IconSunset')
-};
-
-const iconChunk56 = {
+  'sunset': () => import('./icons/IconSunset'),
   'sunset2': () => import('./icons/IconSunset2'),
   'sunset2-filled': () => import('./icons/IconSunset2Filled'),
   'sunset-filled': () => import('./icons/IconSunsetFilled'),
@@ -5751,7 +5766,10 @@ const iconChunk56 = {
   'test-pipe': () => import('./icons/IconTestPipe'),
   'test-pipe2': () => import('./icons/IconTestPipe2'),
   'test-pipe2-filled': () => import('./icons/IconTestPipe2Filled'),
-  'test-pipe-off': () => import('./icons/IconTestPipeOff'),
+  'test-pipe-off': () => import('./icons/IconTestPipeOff')
+};
+
+const iconChunk57 = {
   'tex': () => import('./icons/IconTex'),
   'text-caption': () => import('./icons/IconTextCaption'),
   'text-color': () => import('./icons/IconTextColor'),
@@ -5766,10 +5784,7 @@ const iconChunk56 = {
   'text-resize': () => import('./icons/IconTextResize'),
   'text-scan2': () => import('./icons/IconTextScan2'),
   'text-size': () => import('./icons/IconTextSize'),
-  'text-spellcheck': () => import('./icons/IconTextSpellcheck')
-};
-
-const iconChunk57 = {
+  'text-spellcheck': () => import('./icons/IconTextSpellcheck'),
   'text-wrap': () => import('./icons/IconTextWrap'),
   'text-wrap-column': () => import('./icons/IconTextWrapColumn'),
   'text-wrap-disabled': () => import('./icons/IconTextWrapDisabled'),
@@ -5854,7 +5869,10 @@ const iconChunk57 = {
   'traffic-cone': () => import('./icons/IconTrafficCone'),
   'traffic-cone-off': () => import('./icons/IconTrafficConeOff'),
   'traffic-lights': () => import('./icons/IconTrafficLights'),
-  'traffic-lights-off': () => import('./icons/IconTrafficLightsOff'),
+  'traffic-lights-off': () => import('./icons/IconTrafficLightsOff')
+};
+
+const iconChunk58 = {
   'train': () => import('./icons/IconTrain'),
   'train-filled': () => import('./icons/IconTrainFilled'),
   'transaction-bitcoin': () => import('./icons/IconTransactionBitcoin'),
@@ -5869,10 +5887,7 @@ const iconChunk57 = {
   'transfer-out': () => import('./icons/IconTransferOut'),
   'transfer-vertical': () => import('./icons/IconTransferVertical'),
   'transform': () => import('./icons/IconTransform'),
-  'transform-filled': () => import('./icons/IconTransformFilled')
-};
-
-const iconChunk58 = {
+  'transform-filled': () => import('./icons/IconTransformFilled'),
   'transform-point': () => import('./icons/IconTransformPoint'),
   'transform-point-bottom-left': () => import('./icons/IconTransformPointBottomLeft'),
   'transform-point-bottom-right': () => import('./icons/IconTransformPointBottomRight'),
@@ -5957,12 +5972,16 @@ const iconChunk58 = {
   'user-code': () => import('./icons/IconUserCode'),
   'user-cog': () => import('./icons/IconUserCog'),
   'user-dollar': () => import('./icons/IconUserDollar'),
-  'user-down': () => import('./icons/IconUserDown'),
+  'user-down': () => import('./icons/IconUserDown')
+};
+
+const iconChunk59 = {
   'user-edit': () => import('./icons/IconUserEdit'),
   'user-exclamation': () => import('./icons/IconUserExclamation'),
   'user-filled': () => import('./icons/IconUserFilled'),
   'user-heart': () => import('./icons/IconUserHeart'),
   'user-hexagon': () => import('./icons/IconUserHexagon'),
+  'user-key': () => import('./icons/IconUserKey'),
   'user-minus': () => import('./icons/IconUserMinus'),
   'user-off': () => import('./icons/IconUserOff'),
   'user-pause': () => import('./icons/IconUserPause'),
@@ -5972,10 +5991,7 @@ const iconChunk58 = {
   'user-question': () => import('./icons/IconUserQuestion'),
   'user-scan': () => import('./icons/IconUserScan'),
   'user-screen': () => import('./icons/IconUserScreen'),
-  'user-search': () => import('./icons/IconUserSearch')
-};
-
-const iconChunk59 = {
+  'user-search': () => import('./icons/IconUserSearch'),
   'user-share': () => import('./icons/IconUserShare'),
   'user-shield': () => import('./icons/IconUserShield'),
   'user-square': () => import('./icons/IconUserSquare'),
@@ -6059,7 +6075,10 @@ const iconChunk59 = {
   'wash-dry3': () => import('./icons/IconWashDry3'),
   'wash-dry-a': () => import('./icons/IconWashDryA'),
   'wash-dry-dip': () => import('./icons/IconWashDryDip'),
-  'wash-dry-f': () => import('./icons/IconWashDryF'),
+  'wash-dry-f': () => import('./icons/IconWashDryF')
+};
+
+const iconChunk60 = {
   'wash-dry-flat': () => import('./icons/IconWashDryFlat'),
   'wash-dry-hang': () => import('./icons/IconWashDryHang'),
   'wash-dry-off': () => import('./icons/IconWashDryOff'),
@@ -6075,10 +6094,7 @@ const iconChunk59 = {
   'wash-off': () => import('./icons/IconWashOff'),
   'wash-press': () => import('./icons/IconWashPress'),
   'wash-temperature1': () => import('./icons/IconWashTemperature1'),
-  'wash-temperature2': () => import('./icons/IconWashTemperature2')
-};
-
-const iconChunk60 = {
+  'wash-temperature2': () => import('./icons/IconWashTemperature2'),
   'wash-temperature3': () => import('./icons/IconWashTemperature3'),
   'wash-temperature4': () => import('./icons/IconWashTemperature4'),
   'wash-temperature5': () => import('./icons/IconWashTemperature5'),
@@ -6136,6 +6152,7 @@ const iconChunk60 = {
   'world-heart': () => import('./icons/IconWorldHeart'),
   'world-latitude': () => import('./icons/IconWorldLatitude'),
   'world-longitude': () => import('./icons/IconWorldLongitude'),
+  'world-map': () => import('./icons/IconWorldMap'),
   'world-minus': () => import('./icons/IconWorldMinus'),
   'world-off': () => import('./icons/IconWorldOff'),
   'world-pause': () => import('./icons/IconWorldPause'),
@@ -6161,7 +6178,10 @@ const iconChunk60 = {
   'x-power-y': () => import('./icons/IconXPowerY'),
   'xbox-a': () => import('./icons/IconXboxA'),
   'xbox-a-filled': () => import('./icons/IconXboxAFilled'),
-  'xbox-b': () => import('./icons/IconXboxB'),
+  'xbox-b': () => import('./icons/IconXboxB')
+};
+
+const iconChunk61 = {
   'xbox-b-filled': () => import('./icons/IconXboxBFilled'),
   'xbox-x': () => import('./icons/IconXboxX'),
   'xbox-x-filled': () => import('./icons/IconXboxXFilled'),
@@ -6175,13 +6195,11 @@ const iconChunk60 = {
   'zeppelin': () => import('./icons/IconZeppelin'),
   'zeppelin-filled': () => import('./icons/IconZeppelinFilled'),
   'zeppelin-off': () => import('./icons/IconZeppelinOff'),
+  'zero-config': () => import('./icons/IconZeroConfig'),
   'zip': () => import('./icons/IconZip'),
   'zodiac-aquarius': () => import('./icons/IconZodiacAquarius'),
   'zodiac-aries': () => import('./icons/IconZodiacAries'),
-  'zodiac-cancer': () => import('./icons/IconZodiacCancer')
-};
-
-const iconChunk61 = {
+  'zodiac-cancer': () => import('./icons/IconZodiacCancer'),
   'zodiac-capricorn': () => import('./icons/IconZodiacCapricorn'),
   'zodiac-gemini': () => import('./icons/IconZodiacGemini'),
   'zodiac-leo': () => import('./icons/IconZodiacLeo'),

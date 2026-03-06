@@ -1,8 +1,8 @@
 {
   "summary": {
-    "totalIcons": 6039,
+    "totalIcons": 6057,
     "totalFilled": 1053,
-    "totalOutline": 4986,
+    "totalOutline": 5004,
     "totalCategories": 42
   },
   "categories": {
@@ -1871,9 +1871,9 @@
       ]
     },
     "Development": {
-      "total": 43,
+      "total": 59,
       "filled": 7,
-      "outline": 36,
+      "outline": 52,
       "filledIcons": [
         "apps-filled.svg",
         "assembly-filled.svg",
@@ -1885,6 +1885,9 @@
       ],
       "outlineIcons": [
         "a-b.svg",
+        "ai-agent.svg",
+        "ai-agents.svg",
+        "ai-gateway.svg",
         "ai.svg",
         "alt.svg",
         "api-app-off.svg",
@@ -1897,15 +1900,26 @@
         "assembly.svg",
         "asset.svg",
         "auth-2fa.svg",
+        "bot-id.svg",
         "bug-off.svg",
         "bug.svg",
+        "canary.svg",
+        "codeblock.svg",
+        "connection.svg",
+        "firewall-check.svg",
+        "firewall-flame.svg",
+        "image-generation.svg",
         "logs.svg",
+        "microfrontends.svg",
+        "middleware.svg",
         "package-export.svg",
         "package-import.svg",
         "packages.svg",
         "prompt.svg",
+        "scan-traces.svg",
         "sdk.svg",
         "seo.svg",
+        "serverless.svg",
         "sitemap-off.svg",
         "sitemap.svg",
         "source-code.svg",
@@ -1916,10 +1930,12 @@
         "timeline-event-text.svg",
         "timeline-event-x.svg",
         "timeline-event.svg",
+        "user-key.svg",
         "versions-off.svg",
         "versions.svg",
         "webhook-off.svg",
-        "webhook.svg"
+        "webhook.svg",
+        "zero-config.svg"
       ]
     },
     "Devices": {
@@ -3606,9 +3622,9 @@
       ]
     },
     "Map": {
-      "total": 301,
+      "total": 302,
       "filled": 43,
-      "outline": 258,
+      "outline": 259,
       "filledIcons": [
         "bed-filled.svg",
         "campfire-filled.svg",
@@ -3885,6 +3901,7 @@
         "world-heart.svg",
         "world-latitude.svg",
         "world-longitude.svg",
+        "world-map.svg",
         "world-minus.svg",
         "world-off.svg",
         "world-pause.svg",
@@ -5049,9 +5066,9 @@
       ]
     },
     "System": {
-      "total": 894,
+      "total": 895,
       "filled": 132,
-      "outline": 762,
+      "outline": 763,
       "filledIcons": [
         "ad-circle-filled.svg",
         "adjustments-filled.svg",
@@ -5367,6 +5384,7 @@
         "creative-commons-sa.svg",
         "creative-commons-zero.svg",
         "creative-commons.svg",
+        "credits.svg",
         "crosshair.svg",
         "cube-3d-sphere-off.svg",
         "cube-3d-sphere.svg",

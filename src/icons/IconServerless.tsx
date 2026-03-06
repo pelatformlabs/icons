@@ -1,17 +1,17 @@
 import React from 'react';
 
-interface IconSortDescending2Props {
+interface IconServerlessProps {
   className?: string;
   'data-slot'?: string;
   [key: string]: any;
 }
 
-const IconSortDescending2: React.FC<IconSortDescending2Props> = (props) => {
+const IconServerless: React.FC<IconServerlessProps> = (props) => {
   // Handle size classes - if user provides size-* class, use it, otherwise default to size-4
   const userClassName = props.className || '';
   const hasSizeClass = /\bsize-\w+\b/.test(userClassName);
   const defaultSize = hasSizeClass ? '' : 'size-4';
-  const finalClassName = `pelatform-icons pelatform-icon-sort-descending-2 ${defaultSize} ${userClassName}`.trim();
+  const finalClassName = `pelatform-icons pelatform-icon-serverless ${defaultSize} ${userClassName}`.trim();
 
   return (
     <svg
@@ -24,12 +24,9 @@ const IconSortDescending2: React.FC<IconSortDescending2Props> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M5 5.5a.5 .5 0 0 1 .5 -.5h4a.5 .5 0 0 1 .5 .5v4a.5 .5 0 0 1 -.5 .5h-4a.5 .5 0 0 1 -.5 -.5l0 -4" />
-    <path d="M5 14.5a.5 .5 0 0 1 .5 -.5h4a.5 .5 0 0 1 .5 .5v4a.5 .5 0 0 1 -.5 .5h-4a.5 .5 0 0 1 -.5 -.5l0 -4" />
-    <path d="M14 15l3 3l3 -3" />
-    <path d="M17 18v-12" />
+    <path d="M8 19l3.03 1.748a2 2 0 0 0 1.94 0l6 -3.843a2 2 0 0 0 1.03 -1.753v-6.152l-8 3l-8 3v-6.405c0 -.728 .394 -1.399 1.03 -1.752l6 -3.582a2.05 2.05 0 0 1 2 0l2.97 1.739" />
   </svg>
   );
 };
 
-export default IconSortDescending2;
+export default IconServerless;
