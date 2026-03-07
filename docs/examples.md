@@ -583,47 +583,36 @@ function Card({ title, description, image, author, date }: CardProps) {
 
 ```tsx
 import { icons } from '@pelatform/icons';
-import { iconNames } from '@pelatform/icons/icon-list';
-import { aliases } from '@pelatform/icons/aliases';
+import iconList from '@pelatform/icons/icon-list';
+import { categories, type Category } from '@pelatform/icons/categories';
+import iconCategoryMap from '@pelatform/icons/out/icon-category.json';
 import { useState, useMemo } from 'react';
 
 function IconPicker({ onSelect }: { onSelect: (iconName: string) => void }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = {
-    all: iconNames,
-    arrows: iconNames.filter((name) => name.toLowerCase().includes('arrow')),
-    interface: iconNames.filter((name) =>
-      ['button', 'menu', 'close', 'settings'].some(
-        (keyword) =>
-          name.toLowerCase().includes(keyword) ||
-          (aliases[name] || []).some((alias) => alias.includes(keyword)),
-      ),
-    ),
-    communication: iconNames.filter((name) =>
-      ['mail', 'message', 'phone', 'chat'].some(
-        (keyword) =>
-          name.toLowerCase().includes(keyword) ||
-          (aliases[name] || []).some((alias) => alias.includes(keyword)),
-      ),
-    ),
-  };
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const filteredIcons = useMemo(() => {
-    let iconsToFilter =
-      categories[selectedCategory as keyof typeof categories] || iconNames;
+    let results = iconList;
 
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      results = results.filter((iconName) => {
+        const iconData = iconCategoryMap[iconName];
+        if (!iconData) return false;
+        return iconData.category.toLowerCase() === selectedCategory;
+      });
+    }
+
+    // Filter by search term
     if (searchTerm) {
       const term = searchTerm.toLowerCase();
-      iconsToFilter = iconsToFilter.filter(
-        (iconName) =>
-          iconName.toLowerCase().includes(term) ||
-          (aliases[iconName] || []).some((alias) => alias.includes(term)),
+      results = results.filter((iconName) =>
+        iconName.toLowerCase().includes(term),
       );
     }
 
-    return iconsToFilter.slice(0, 100); // Limit for performance
+    return results.slice(0, 100); // Limit for performance
   }, [searchTerm, selectedCategory]);
 
   return (
@@ -638,17 +627,17 @@ function IconPicker({ onSelect }: { onSelect: (iconName: string) => void }) {
         />
 
         <div className="flex space-x-2">
-          {Object.keys(categories).map((category) => (
+          {categories.map((category: Category) => (
             <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
               className={`px-4 py-2 rounded-lg text-sm font-medium ${
-                selectedCategory === category
+                selectedCategory === category.id
                   ? 'bg-blue-500 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              {category.title}
             </button>
           ))}
         </div>

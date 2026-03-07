@@ -10,6 +10,7 @@ export { default as Icon3dCubeSphere } from './icons/IconCube3dSphere';
 export { default as Icon3dCubeSphereOff } from './icons/IconCube3dSphereOff';
 export { default as Icon3dRotate } from './icons/IconRotate3d';
 export { default as IconBoxSeam } from './icons/IconPackage';
+export { default as IconBrandAdobePremier } from './icons/IconBrandAdobePremiere';
 export { default as IconCircle0 } from './icons/IconCircleNumber0';
 export { default as IconCircle1 } from './icons/IconCircleNumber1';
 export { default as IconCircle2 } from './icons/IconCircleNumber2';

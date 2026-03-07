@@ -2,437 +2,530 @@
 
 Complete TypeScript support and type definitions for @pelatform/icons.
 
-## 📝 Type Definitions
+## 📝 Available Types
 
-### 1. Icon Component Types
+The package exports comprehensive TypeScript types with full JSDoc documentation:
 
 ```tsx
-import { ComponentType, SVGProps } from 'react';
-
-// Base icon component type
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
-
-// All icons are of this type
-import { IconHeart } from '@pelatform/icons';
-// IconHeart: IconComponent
+import type {
+  IconProps,
+  IconComponent,
+  IconName,
+  IconCategory,
+  IconVariant,
+  IconMetadata,
+  IconSearchOptions,
+  IconNameToComponent,
+  ComponentNameToIcon,
+} from '@pelatform/icons/types';
 ```
 
-### 2. Icon Names Type
+## 🎯 Core Types
+
+### IconProps
+
+Props accepted by every icon component:
 
 ```tsx
-import { icons } from '@pelatform/icons';
-
-// Get all icon names as a union type
-type IconName = keyof typeof icons;
+interface IconProps {
+  /** Additional CSS classes appended to default classes */
+  className?: string;
+  /** Component identifier (useful for testing, debugging, or styling) */
+  'data-slot'?: string;
+  /** Other props passed-through to SVG element */
+  [key: string]: any;
+}
 
 // Usage
-function renderIcon(iconName: IconName) {
-  const IconComponent = icons[iconName];
-  return <IconComponent />;
-}
+import type { IconProps } from '@pelatform/icons/types';
 
-// TypeScript will provide autocomplete for all icon names
-renderIcon('IconHeart'); // ✅ Valid
-renderIcon('IconStar'); // ✅ Valid
-renderIcon('InvalidIcon'); // ❌ TypeScript error
+const MyIcon = (props: IconProps) => <IconHeart {...props} />;
 ```
 
-### 3. Icon Props Type
+### IconComponent
+
+Type for icon function components:
 
 ```tsx
-import { SVGProps } from 'react';
+type IconComponent = React.FC<IconProps>;
 
-// Standard SVG props that all icons accept
-type IconProps = SVGProps<SVGSVGElement>;
+// Usage
+import type { IconComponent } from '@pelatform/icons/types';
 
-// Extended icon props with custom properties
-interface ExtendedIconProps extends IconProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'success' | 'danger';
+const createIcon = (name: string): IconComponent => {
+  return (props) => <svg {...props}>{/* ... */}</svg>;
+};
+```
+
+### IconName
+
+Union type of all available icon names (kebab-case):
+
+```tsx
+type IconName = 'heart' | 'star' | 'user' | ... // 5000+ icon names
+
+// Auto-generated from icon-list.ts
+// Usage
+import type { IconName } from '@pelatform/icons/types';
+
+const iconName: IconName = 'heart'; // ✅ Valid
+const invalid: IconName = 'invalid-icon'; // ❌ Type error
+
+// Type-safe icon function
+function renderIcon(name: IconName) {
+  const iconComponent = iconMap[name];
+  return <iconComponent />;
+}
+```
+
+### IconCategory
+
+Union type of all available categories:
+
+```tsx
+type IconCategory = 'all' | 'animals' | 'arrows' | ... // 42 categories
+
+// Auto-generated from categories.ts
+// Usage
+import type { IconCategory } from '@pelatform/icons/types';
+
+const category: IconCategory = 'animals'; // ✅ Valid
+const invalid: IconCategory = 'invalid'; // ❌ Type error
+
+// Type-safe filter function
+function filterByCategory(iconList: string[], category: IconCategory) {
+  if (category === 'all') return iconList;
+  // Filter logic here
+}
+```
+
+### IconVariant
+
+Available icon variants:
+
+```tsx
+type IconVariant = 'outline' | 'filled';
+
+// Usage
+import type { IconVariant } from '@pelatform/icons/types';
+
+const variant: IconVariant = 'filled';
+```
+
+## 🔧 Utility Types
+
+### IconNameToComponent
+
+Convert icon name (kebab-case) to component name (PascalCase):
+
+```tsx
+import type { IconNameToComponent } from '@pelatform/icons/types';
+
+type HeartComponent = IconNameToComponent<'heart'>; // 'IconHeart'
+type HeartFilledComponent = IconNameToComponent<'heart-filled'>; // 'IconHeartFilled'
+
+// Usage in function
+function getComponentName<T extends IconName>(
+  iconName: T,
+): IconNameToComponent<T> {
+  // Type-safe component name conversion
+}
+```
+
+### ComponentNameToIcon
+
+Convert component name (PascalCase) to icon name (kebab-case):
+
+```tsx
+import type { ComponentNameToIcon } from '@pelatform/icons/types';
+
+type HeartIcon = ComponentNameToIcon<'IconHeart'>; // 'heart'
+type HeartFilledIcon = ComponentNameToIcon<'IconHeartFilled'>; // 'heart-filled'
+
+// Usage
+function toKebabCase<T extends string>(
+  componentName: T,
+): ComponentNameToIcon<T> {
+  // Type-safe conversion
+}
+```
+
+### IconMetadata
+
+Icon metadata structure (internal usage):
+
+```tsx
+import type { IconMetadata } from '@pelatform/icons/types';
+
+interface IconMetadata {
+  name: IconName; // Icon name in kebab-case
+  component: string; // Component name in PascalCase
+  category: IconCategory; // Icon category
+  variant: IconVariant; // Icon variant (outline/filled)
+  tags?: string[]; // Tags for searching (optional)
 }
 
-function CustomIcon({ size = 'md', color, ...props }: ExtendedIconProps) {
-  // Implementation
+// Usage
+const metadata: IconMetadata = {
+  name: 'heart',
+  component: 'IconHeart',
+  category: 'health',
+  variant: 'outline',
+  tags: ['love', 'favorite', 'romance'],
+};
+```
+
+### IconSearchOptions
+
+Search/filter options interface:
+
+```tsx
+import type { IconSearchOptions } from '@pelatform/icons/types';
+
+interface IconSearchOptions {
+  category?: IconCategory; // Filter by category
+  variant?: IconVariant; // Filter by variant
+  query?: string; // Search query string
+  limit?: number; // Limit number of results
 }
+
+// Usage
+import type { IconSearchOptions } from '@pelatform/icons/types';
+
+const searchOptions: IconSearchOptions = {
+  category: 'animals',
+  variant: 'outline',
+  query: 'cat',
+  limit: 10,
+};
+
+const icons = searchIcons(searchOptions);
 ```
 
 ## 🎯 Type-Safe Icon Usage
 
-### 1. Dynamic Icon Loading with Types
+### 1. Type-Safe Icon Names
 
 ```tsx
+import type { IconName } from '@pelatform/icons/types';
 import { icons } from '@pelatform/icons';
-import { createElement, ComponentType, SVGProps } from 'react';
 
-type IconName = keyof typeof icons;
-type IconProps = SVGProps<SVGSVGElement>;
+function renderIcon(iconName: IconName) {
+  const IconComponent =
+    icons[
+      `Icon${iconName.charAt(0).toUpperCase()}${iconName.slice(1)}` as keyof typeof icons
+    ];
+  return <IconComponent />;
+}
 
-interface DynamicIconProps extends IconProps {
+// Usage
+renderIcon('heart'); // ✅ Type-safe
+renderIcon('invalid-icon'); // ❌ TypeScript error
+```
+
+### 2. Type-Safe Icon Component
+
+```tsx
+import type { IconProps, IconName } from '@pelatform/icons/types';
+import { icons } from '@pelatform/icons';
+
+interface TypedIconProps extends IconProps {
   name: IconName;
 }
 
-function DynamicIcon({ name, ...props }: DynamicIconProps): JSX.Element | null {
-  if (name in icons) {
-    return createElement(icons[name], props);
-  }
-  return null;
+function TypedIcon({ name, ...props }: TypedIconProps) {
+  const IconComponent =
+    icons[
+      `Icon${name.charAt(0).toUpperCase()}${name.slice(1)}` as keyof typeof icons
+    ];
+  return <IconComponent {...props} />;
 }
 
-// Usage with full type safety
+// Usage
 function App() {
   return (
     <div>
-      <DynamicIcon name="IconHeart" className="w-6 h-6" /> {/* ✅ Type-safe */}
-      <DynamicIcon name="InvalidIcon" /> {/* ❌ TypeScript error */}
+      <TypedIcon name="heart" className="text-red-500" /> {/* ✅ Type-safe */}
+      <TypedIcon name="invalid-icon" /> {/* ❌ TypeScript error */}
     </div>
   );
 }
 ```
 
-### 2. Icon Registry with Types
+### 3. Type-Safe Category Filter
 
 ```tsx
-import { icons } from '@pelatform/icons';
-import { ComponentType, SVGProps } from 'react';
+import type { IconCategory, IconName } from '@pelatform/icons/types';
+import iconList from '@pelatform/icons/icon-list';
+import iconCategoryMap from '@pelatform/icons/out/icon-category.json';
 
-type IconName = keyof typeof icons;
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+function filterByCategory(
+  iconList: IconName[],
+  category: IconCategory,
+): IconName[] {
+  if (category === 'all') return iconList;
+
+  return iconList.filter((iconName) => {
+    const iconData = iconCategoryMap[iconName];
+    if (!iconData) return false;
+
+    const categoryLower = iconData.category.toLowerCase();
+    return categoryLower === category;
+  });
+}
+
+// Usage
+const healthIcons = filterByCategory(allIcons, 'health'); // ✅ Type-safe
+const invalid = filterByCategory(allIcons, 'invalid'); // ❌ TypeScript error
+```
+
+### 4. Type-Safe Icon Registry
+
+```tsx
+import type { IconName } from '@pelatform/icons/types';
+import { icons } from '@pelatform/icons';
 
 class TypedIconRegistry {
-  private iconMap = new Map<string, IconComponent>();
+  private registry = new Map<string, IconName>();
 
   register(alias: string, iconName: IconName): void {
-    this.iconMap.set(alias, icons[iconName]);
+    this.registry.set(alias, iconName);
   }
 
-  get(alias: string): IconComponent | undefined {
-    return this.iconMap.get(alias);
+  get(alias: string): IconName | undefined {
+    return this.registry.get(alias);
   }
 
   has(alias: string): boolean {
-    return this.iconMap.has(alias);
-  }
-
-  getAll(): Record<string, IconComponent> {
-    return Object.fromEntries(this.iconMap);
+    return this.registry.has(alias);
   }
 }
 
 // Usage
 const registry = new TypedIconRegistry();
-registry.register('heart', 'IconHeart'); // ✅ Type-safe
-registry.register('star', 'IconStar'); // ✅ Type-safe
-registry.register('invalid', 'InvalidIcon'); // ❌ TypeScript error
+registry.register('like', 'heart'); // ✅ Type-safe
+registry.register('invalid', 'invalid-icon'); // ❌ TypeScript error
 ```
 
-### 3. Icon Component Factory
+## 🔍 Advanced Type Patterns
+
+### 1. Icon Component Factory
 
 ```tsx
+import type { IconProps, IconName } from '@pelatform/icons/types';
 import { icons } from '@pelatform/icons';
-import { forwardRef, ComponentType, SVGProps } from 'react';
-
-type IconName = keyof typeof icons;
+import { forwardRef } from 'react';
 
 interface IconFactoryOptions {
-  defaultSize?: string;
   defaultClassName?: string;
-  displayName?: string;
 }
 
 function createIconComponent(
   iconName: IconName,
   options: IconFactoryOptions = {},
-): ComponentType<SVGProps<SVGSVGElement>> {
-  const { defaultSize = '24', defaultClassName = '', displayName } = options;
+) {
+  const { defaultClassName = '' } = options;
 
-  const IconComponent = forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
-    (
-      { className = '', width = defaultSize, height = defaultSize, ...props },
-      ref,
-    ) => {
-      const IconElement = icons[iconName];
+  return forwardRef<SVGSVGElement, IconProps>(
+    ({ className = '', ...props }, ref) => {
+      const IconElement =
+        icons[
+          `Icon${iconName.charAt(0).toUpperCase()}${iconName.slice(1)}` as keyof typeof icons
+        ];
       return (
         <IconElement
           ref={ref}
           className={`${defaultClassName} ${className}`.trim()}
-          width={width}
-          height={height}
           {...props}
         />
       );
     },
   );
-
-  IconComponent.displayName = displayName || `Icon(${iconName})`;
-
-  return IconComponent;
 }
 
 // Usage
-const HeartIcon = createIconComponent('IconHeart', {
-  defaultSize: '20',
+const HeartIcon = createIconComponent('heart', {
   defaultClassName: 'text-red-500',
-  displayName: 'HeartIcon',
 });
-
-const StarIcon = createIconComponent('IconStar', {
-  defaultSize: '16',
-  defaultClassName: 'text-yellow-500',
-});
-```
-
-## 🔍 Type Utilities
-
-### 1. Icon Name Utilities
-
-```tsx
-import { icons } from '@pelatform/icons';
-
-type IconName = keyof typeof icons;
-
-// Get icon names by category (if you have category info)
-type ArrowIconNames = Extract<IconName, `IconArrow${string}`>;
-type UserIconNames = Extract<IconName, `IconUser${string}`>;
-
-// Filter icon names
-type FilterIconNames<T extends string> = Extract<IconName, `Icon${T}${string}`>;
-
-// Usage
-type HeartIcons = FilterIconNames<'Heart'>; // 'IconHeart', 'IconHeartFilled', etc.
-type StarIcons = FilterIconNames<'Star'>; // 'IconStar', 'IconStarFilled', etc.
-```
-
-### 2. Icon Props Utilities
-
-```tsx
-import { SVGProps, ComponentProps } from 'react';
-import { IconHeart } from '@pelatform/icons';
-
-// Get props type for a specific icon
-type HeartIconProps = ComponentProps<typeof IconHeart>;
-
-// Create a union of common props
-type CommonIconProps = Pick<
-  SVGProps<SVGSVGElement>,
-  'className' | 'style' | 'width' | 'height' | 'fill' | 'stroke'
->;
-
-// Extended props with custom properties
-interface StyledIconProps extends CommonIconProps {
-  variant?: 'solid' | 'outline';
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'accent';
-}
-```
-
-### 3. Icon Collection Types
-
-```tsx
-import { icons } from '@pelatform/icons';
-import { ComponentType, SVGProps } from 'react';
-
-type IconName = keyof typeof icons;
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
-
-// Type for icon collections
-interface IconCollection {
-  [key: string]: IconComponent;
-}
-
-// Type for icon mapping
-type IconMapping = Record<string, IconName>;
-
-// Type for icon categories
-interface IconCategory {
-  name: string;
-  icons: IconName[];
-  description?: string;
-}
-
-// Usage
-const navigationIcons: IconCollection = {
-  home: icons.IconHome,
-  user: icons.IconUser,
-  settings: icons.IconSettings,
-};
-
-const iconMapping: IconMapping = {
-  home: 'IconHome',
-  profile: 'IconUser',
-  config: 'IconSettings',
-};
-
-const categories: IconCategory[] = [
-  {
-    name: 'Navigation',
-    icons: ['IconHome', 'IconUser', 'IconSettings'],
-    description: 'Icons for navigation elements',
-  },
-];
-```
-
-## 🎨 Advanced Type Patterns
-
-### 1. Conditional Icon Rendering
-
-```tsx
-import { icons } from '@pelatform/icons';
-import { ReactElement } from 'react';
-
-type IconName = keyof typeof icons;
-
-interface ConditionalIconProps {
-  condition: boolean;
-  trueIcon: IconName;
-  falseIcon: IconName;
-  className?: string;
-}
-
-function ConditionalIcon({
-  condition,
-  trueIcon,
-  falseIcon,
-  ...props
-}: ConditionalIconProps): ReactElement {
-  const iconName = condition ? trueIcon : falseIcon;
-  const IconComponent = icons[iconName];
-  return <IconComponent {...props} />;
-}
-
-// Usage
-function ToggleButton({ isOn }: { isOn: boolean }) {
-  return (
-    <ConditionalIcon
-      condition={isOn}
-      trueIcon="IconEye"
-      falseIcon="IconEyeOff"
-      className="w-5 h-5"
-    />
-  );
-}
 ```
 
 ### 2. Icon Variant System
 
 ```tsx
-import { icons } from '@pelatform/icons';
-import { ComponentType, SVGProps } from 'react';
+import type { IconName, IconVariant } from '@pelatform/icons/types';
 
-type IconName = keyof typeof icons;
-
-interface IconVariant {
-  solid?: IconName;
+interface IconVariants {
   outline?: IconName;
   filled?: IconName;
 }
 
-type VariantType = keyof IconVariant;
+type VariantType = keyof IconVariants;
 
-interface VariantIconProps extends SVGProps<SVGSVGElement> {
-  variant: VariantType;
-  iconSet: IconVariant;
-}
-
-function VariantIcon({ variant, iconSet, ...props }: VariantIconProps) {
-  const iconName = iconSet[variant];
-  if (!iconName || !(iconName in icons)) return null;
-
-  const IconComponent = icons[iconName];
-  return <IconComponent {...props} />;
+function getIconVariant(baseName: string, variant: IconVariant): IconName {
+  if (variant === 'filled') {
+    return `${baseName}-filled` as IconName;
+  }
+  return baseName as IconName;
 }
 
 // Usage
-const heartVariants: IconVariant = {
-  solid: 'IconHeart',
-  outline: 'IconHeartOutline',
-  filled: 'IconHeartFilled',
-};
-
-function App() {
-  return (
-    <div>
-      <VariantIcon variant="solid" iconSet={heartVariants} />
-      <VariantIcon variant="outline" iconSet={heartVariants} />
-      <VariantIcon variant="filled" iconSet={heartVariants} />
-    </div>
-  );
-}
+const heartIcon: IconName = getIconVariant('heart', 'outline'); // 'heart'
+const heartFilled: IconName = getIconVariant('heart', 'filled'); // 'heart-filled'
 ```
 
 ### 3. Type-Safe Icon Builder
 
 ```tsx
+import type { IconProps, IconName } from '@pelatform/icons/types';
 import { icons } from '@pelatform/icons';
-import { createElement, SVGProps } from 'react';
-
-type IconName = keyof typeof icons;
+import { createElement } from 'react';
 
 class IconBuilder {
   private iconName: IconName;
-  private props: SVGProps<SVGSVGElement> = {};
+  private props: IconProps = {};
 
   constructor(iconName: IconName) {
     this.iconName = iconName;
   }
 
-  size(width: number | string, height?: number | string) {
-    this.props.width = width;
-    this.props.height = height || width;
-    return this;
-  }
-
-  className(className: string) {
+  className(className: string): this {
     this.props.className = className;
     return this;
   }
 
-  color(color: string) {
-    this.props.fill = color;
-    return this;
-  }
-
-  style(style: React.CSSProperties) {
-    this.props.style = { ...this.props.style, ...style };
+  style(style: React.CSSProperties): this {
+    this.props.style = style;
     return this;
   }
 
   build() {
-    return createElement(icons[this.iconName], this.props);
+    const IconComponent =
+      icons[
+        `Icon${this.iconName.charAt(0).toUpperCase()}${this.iconName.slice(1)}` as keyof typeof icons
+      ];
+    return createElement(IconComponent, this.props);
   }
 }
 
 // Usage
-function App() {
-  const heartIcon = new IconBuilder('IconHeart')
-    .size(24)
-    .className('text-red-500')
-    .style({ cursor: 'pointer' })
-    .build();
+const heartIcon = new IconBuilder('heart')
+  .className('text-red-500')
+  .style({ cursor: 'pointer' })
+  .build();
+```
 
-  return <div>{heartIcon}</div>;
+## 🎨 Type Guards
+
+### 1. Icon Name Validation
+
+```tsx
+import type { IconName } from '@pelatform/icons/types';
+import iconList from '@pelatform/icons/icon-list';
+
+function isIconName(name: string): name is IconName {
+  return iconList.includes(name);
+}
+
+// Usage
+const iconName = 'heart';
+if (isIconName(iconName)) {
+  // iconName is typed as IconName here
+  console.log('Valid icon:', iconName);
 }
 ```
 
-## 📚 Type Exports
-
-The package exports these types for your use:
+### 2. Category Validation
 
 ```tsx
-// Import types from the package
+import type { IconCategory } from '@pelatform/icons/types';
+import { categories } from '@pelatform/icons/categories';
+
+function isIconCategory(category: string): category is IconCategory {
+  return categories.some((cat) => cat.id === category);
+}
+
+// Usage
+const category = 'animals';
+if (isIconCategory(category)) {
+  // category is typed as IconCategory here
+  console.log('Valid category:', category);
+}
+```
+
+## 📚 Type Exports Summary
+
+```tsx
+// Core Types
 import type {
-  IconComponent,
-  IconName,
-  IconProps,
+  IconProps, // Props for icon components
+  IconComponent, // Icon component type
+  IconName, // Union type of all icon names
+  IconCategory, // Union type of all categories
+  IconVariant, // 'outline' | 'filled'
 } from '@pelatform/icons/types';
 
-// Use in your components
-function MyComponent({ iconName }: { iconName: IconName }) {
+// Utility Types
+import type {
+  IconNameToComponent, // Convert icon name to component name
+  ComponentNameToIcon, // Convert component name to icon name
+} from '@pelatform/icons/types';
+
+// Advanced Types
+import type {
+  IconMetadata, // Icon metadata structure
+  IconSearchOptions, // Search/filter options
+} from '@pelatform/icons/types';
+```
+
+## 💡 Best Practices
+
+### 1. Use IconName for Type Safety
+
+```tsx
+// ✅ Good - Type-safe
+import type { IconName } from '@pelatform/icons/types';
+
+function getIcon(name: IconName) {
+  // Implementation
+}
+
+// ❌ Avoid - Not type-safe
+function getIcon(name: string) {
   // Implementation
 }
 ```
 
+### 2. Use IconCategory for Filters
+
+```tsx
+// ✅ Good - Type-safe categories
+import type { IconCategory } from '@pelatform/icons/types';
+
+function filterIcons(category: IconCategory) {
+  // Implementation
+}
+
+// ❌ Avoid - Not type-safe
+function filterIcons(category: string) {
+  // Implementation
+}
+```
+
+### 3. Leverage Utility Types
+
+```tsx
+// ✅ Good - Using utility types
+import type { IconNameToComponent } from '@pelatform/icons/types';
+
+type MyIcon = IconNameToComponent<'heart'>; // 'IconHeart'
+
+// ❌ Avoid - Hardcoded strings
+type MyIcon = 'IconHeart';
+```
+
 ## 🚀 Next Steps
 
-- [Learn about aliases](./aliases.md)
+- [Learn about categories](./categories.md)
 - [Explore dynamic imports](./dynamic-imports.md)
 - [Check out examples](./examples.md)
+- [Read API reference](./api-reference.md)

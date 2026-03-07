@@ -34,7 +34,7 @@ The `pre` command runs the icon generation pipeline in sequence:
 
 1. `bun scripts/prepare/prepare.ts` - Orchestrates the entire preparation pipeline
 2. `bun scripts/convertToReact.ts` - Converts SVGs to React components
-3. `bun scripts/generateAdditionalFiles.ts` - Generates aliases, dynamic imports, and icon list
+3. `bun scripts/generateAdditionalFiles.ts` - Generates aliases, dynamic imports, icon list, and categories
 
 ### Individual Preparation Scripts
 
@@ -49,6 +49,7 @@ bun scripts/convertToReact.ts
 bun scripts/generateAliases.ts           # Creates src/aliases.ts
 bun scripts/generateDynamicImports.ts    # Creates src/dynamic-imports.ts
 bun scripts/generateIconList.ts          # Creates src/icon-list.ts
+bun scripts/generateCategories.ts        # Creates src/categories.ts
 ```
 
 ### Utility Commands
@@ -67,10 +68,10 @@ bun run bump       # Bump package version (uses bumpp)
 The build system produces five separate entry points:
 
 - `index` - Main icon exports (includes all icons from `src/icons/index.ts`)
-- `aliases` - Alternative icon names for backward compatibility
 - `dynamic-imports` - Chunked dynamic import map for code-splitting
 - `icon-list` - Array of all available icon names (kebab-case)
-- `types` - TypeScript type definitions
+- `categories` - List of all icon categories (auto-scanned from icons/ folder)
+- `types` - TypeScript type definitions with comprehensive JSDoc comments
 
 ### Package Exports
 
@@ -80,8 +81,8 @@ The `package.json` defines conditional exports for all entry points, supporting:
 # Main entry (all icons)
 import { IconHeart } from '@pelatform/icons'
 
-# Aliases for backward compatibility
-import { IconOldName } from '@pelatform/icons/aliases'
+# Aliases for backward compatibility (exported from index)
+import { IconBoxSeam } from '@pelatform/icons'  # Re-exports IconPackage
 
 # Dynamic imports for code-splitting
 import iconMap from '@pelatform/icons/dynamic-imports'
@@ -90,8 +91,11 @@ const IconComponent = await iconMap['heart']
 # List of all available icon names
 import iconList from '@pelatform/icons/icon-list'
 
+# List of all icon categories
+import { categories, type Category } from '@pelatform/icons/categories'
+
 # TypeScript types
-import type { IconProps } from '@pelatform/icons/types'
+import type { IconProps, IconName, IconCategory } from '@pelatform/icons/types'
 ```
 
 Each entry point supports ESM (`import`), CJS (`require`), and TypeScript (`types`).
@@ -110,14 +114,14 @@ Each entry point supports ESM (`import`), CJS (`require`), and TypeScript (`type
 
 The build system uses these environment variables (set automatically by scripts):
 
-- `ENTRY` - Which entry point to build (index, aliases, dynamic-imports, icon-list, types)
+- `ENTRY` - Which entry point to build (index, dynamic-imports, icon-list, categories, types)
 - `NODE_ENV` - Set to 'production' for minified builds
 - `NODE_OPTIONS` - Set to '--max-old-space-size=8192' for memory management (critical for large icon sets)
 
 You can manually build specific entries:
 
 ```bash
-ENTRY=aliases NODE_ENV=production bun x rollup -c rollup.config.mjs
+ENTRY=categories NODE_ENV=production bun x rollup -c rollup.config.mjs
 ```
 
 ### Build Process Details
@@ -181,10 +185,11 @@ sources/
    - Components use automatic JSX runtime
    - Outputs to `src/icons/[ComponentName].tsx`
 
-3. **generateAdditionalFiles.ts** - Runs three generators:
-   - `generateAliases.ts` - Creates alias exports from `sources/aliases.json`
+3. **generateAdditionalFiles.ts** - Runs four generators:
+   - `generateAliases.ts` - Creates alias exports from `sources/aliases.json` (exported in index.ts)
    - `generateDynamicImports.ts` - Creates chunked dynamic import map (100 icons per chunk)
    - `generateIconList.ts` - Creates kebab-case icon name array
+   - `generateCategories.ts` - Creates category list by scanning `icons/` folder
 
 The dynamic imports are chunked into groups of 100 icons per chunk for better IDE performance and reduced memory consumption during development. Each chunk is a separate object that gets merged into the final export.
 
@@ -213,6 +218,8 @@ Icons are organized into categories (Animals, Arrows, Brand, Devices, etc.). The
 - Creates category folders under `icons/`
 - Copies and cleans SVG content (removes comments, minifies)
 
+The `generateCategories.ts` script automatically scans the `icons/` folder to generate the category list, so adding new categories only requires creating a new folder.
+
 ## Project Structure
 
 ```
@@ -221,10 +228,11 @@ src/
 │   ├── index.ts           # Auto-generated: exports all icon components
 │   └── *.tsx              # Individual icon components (auto-generated)
 ├── index.ts               # Main entry: re-exports icons, aliases, and types
-├── aliases.ts             # Auto-generated: alternative icon names
+├── aliases.ts             # Auto-generated: alternative icon names (exported in index)
 ├── dynamic-imports.ts     # Auto-generated: dynamic import map
 ├── icon-list.ts           # Auto-generated: array of icon names
-└── types.ts               # TypeScript type definitions
+├── categories.ts          # Auto-generated: list of categories
+└── types.ts               # TypeScript type definitions with JSDoc comments
 
 scripts/
 ├── prepare/               # Icon preparation pipeline
@@ -239,6 +247,7 @@ scripts/
 ├── generateAliases.ts     # Generate aliases.ts
 ├── generateDynamicImports.ts  # Generate dynamic-imports.ts
 ├── generateIconList.ts    # Generate icon-list.ts
+├── generateCategories.ts  # Generate categories.ts
 ├── build-js.ts            # Build JavaScript bundles
 ├── build-ts.ts            # Generate TypeScript declarations
 ├── clean.ts               # Clean generated files
@@ -305,7 +314,55 @@ When aliases are added:
 
 1. Update `sources/aliases.json`
 2. Run `bun run pre` to regenerate `src/aliases.ts`
-3. The generated aliases.ts will export old names pointing to new icon components
+3. The generated aliases are exported from `index.ts` (no separate `/aliases` entry point)
+
+Example usage:
+
+```typescript
+import { IconBoxSeam } from '@pelatform/icons';
+// IconBoxSeam is an alias that re-exports IconPackage
+```
+
+## Categories System
+
+The library automatically generates a list of icon categories by scanning the `icons/` folder. Each folder becomes a category.
+
+**Category structure:**
+
+```typescript
+export interface Category {
+  id: string; // kebab-case, e.g., "animals", "arrows"
+  title: string; // Title Case, e.g., "Animals", "Arrows"
+}
+```
+
+**Generated categories include:**
+
+- `{ id: "all", title: "All" }` - Special category for showing all icons
+- Auto-scanned folders from `icons/` directory
+
+**Usage example:**
+
+```typescript
+import { categories, type Category } from '@pelatform/icons/categories'
+
+// Render category filter dropdown
+categories.map((category: Category) => (
+  <option key={category.id} value={category.id}>
+    {category.title}
+  </option>
+))
+
+// Filter icons by category
+const filterByCategory = (iconList: string[], categoryId: string) => {
+  if (categoryId === 'all') return iconList
+  // Use icon-category.json for filtering
+}
+```
+
+**Adding new categories:**
+
+Simply create a new folder in `icons/` and run `bun run pre`. The category list will automatically update.
 
 ## Component Template
 
@@ -330,6 +387,47 @@ import { IconDeviceMobile } from '@pelatform/icons';
 
 // With data-slot
 <IconDeviceMobile data-slot="my-icon" />
+```
+
+## TypeScript Types
+
+The library provides comprehensive TypeScript types in `src/types.ts` with full JSDoc documentation:
+
+**Core Types:**
+
+- `IconProps` - Props accepted by every icon component (className, data-slot, etc.)
+- `IconComponent` - Type for icon function components
+- `IconName` - Union type of all available icon names (auto-generated from icon-list)
+- `IconVariant` - 'outline' | 'filled'
+- `IconCategory` - Union type of all categories (auto-generated from categories)
+
+**Utility Types:**
+
+- `IconNameToComponent<T>` - Convert icon name to component name (e.g., 'heart' → 'IconHeart')
+- `ComponentNameToIcon<T>` - Convert component name to icon name (e.g., 'IconHeart' → 'heart')
+
+**Advanced Types:**
+
+- `IconMetadata` - Icon metadata structure (name, component, category, variant, tags)
+- `IconSearchOptions` - Search/filter options interface (category, variant, query, limit)
+
+**Usage example:**
+
+```typescript
+import type {
+  IconProps,
+  IconName,
+  IconVariant,
+  IconCategory,
+  IconNameToComponent,
+} from '@pelatform/icons/types';
+
+// Type-safe icon names
+const iconName: IconName = 'heart'; // ✅ Valid
+const invalid: IconName = 'invalid-icon'; // ❌ Type error
+
+// Component name conversion
+type HeartComponent = IconNameToComponent<'heart'>; // 'IconHeart'
 ```
 
 ## TypeScript Configuration
@@ -363,7 +461,7 @@ The `.prettierignore` file excludes auto-generated files from formatting:
 
 - Generated source directories: `dist/`, `out/`, `sources/`, `icons/`
 - Generated icon files: `src/icons/`
-- Generated exports: `src/aliases.ts`, `src/dynamic-imports.ts`, `src/icon-list.ts`
+- Generated exports: `src/aliases.ts`, `src/dynamic-imports.ts`, `src/icon-list.ts`, `src/categories.ts`
 
 This ensures that manually-written source files are formatted, while auto-generated files maintain their generator's formatting.
 
@@ -393,7 +491,7 @@ User-facing documentation is located in the `docs/` directory:
 - `docs/basic-usage.md` - Basic usage examples
 - `docs/advanced-usage.md` - Advanced patterns
 - `docs/types.md` - TypeScript support
-- `docs/aliases.md` - Icon name aliases
+- `docs/categories.md` - Category system and filtering
 - `docs/dynamic-imports.md` - Dynamic loading patterns
 - `docs/api-reference.md` - Complete API reference
 - `docs/examples.md` - Usage examples
@@ -477,29 +575,15 @@ git push origin vx.x.x
 
 - **Package manager**: Always use **Bun** (not npm/pnpm) for all preparation and build scripts
 - **Private sources**: The `sources/` directory is gitignored and contains private source SVG files - do not commit these files
-- **Build optimization**: Builds are sequential (not parallel) to avoid memory issues with large icon sets (5926+ icons)
-- **Source organization**: Source SVGs are organized by category into `icons/` directory before React conversion
-- **JSX runtime**: Icon components use automatic JSX runtime - no `import React` needed in components
-- **Dynamic imports**: Chunked into groups of 100 icons per chunk for better IDE performance and reduced memory consumption
-- **Filled variants**: Automatically get `Filled` suffix in component names (e.g., `IconHeartFilled`)
+- **Build optimization**: Builds are sequential (not parallel) to avoid memory issues with large icon sets
 - **Memory management**: Build process uses `NODE_OPTIONS=--max-old-space-size=8192` to handle large icon sets
+- **Dynamic imports**: Chunked into groups of 100 icons per chunk for better IDE performance and reduced memory consumption
 - **React support**: The library supports both React 18 and React 19 (via peer dependencies `>=18.0.0 || >=19.0.0-rc.0`)
 - **TypeScript targets**: ES2020 with strict mode enabled for modern JavaScript features
 - **Tree-shaking**: Configured with `moduleSideEffects: false` in both Rollup and package.json for optimal bundle size
-- **UMD builds**: Only generated for the `index` entry point (not available for aliases, dynamic-imports, etc.)
+- **UMD builds**: Only generated for the `index` entry point (not available for dynamic-imports, categories, etc.)
 - **Package exports**: All entry points support ESM (`import`), CJS (`require`), and TypeScript (`types`) for maximum compatibility
-- The `sources/` directory is gitignored and contains private source SVG files - do not commit these files
-- Builds are sequential (not parallel) to avoid memory issues with large icon sets
-- Source SVGs are organized by category into `icons/` directory before React conversion
-- Icon components use automatic JSX runtime - no `import React` needed in components
-- Dynamic imports are chunked (100 icons per chunk) for better IDE performance
-- Filled variants automatically get `Filled` suffix in component names
-- Build process uses `NODE_OPTIONS=--max-old-space-size=8192` to handle large icon sets
-- The library supports both React 18 and React 19 (via peer dependencies `>=18.0.0 || >=19.0.0-rc.0`)
-- TypeScript configuration targets ES2020 with strict mode enabled
-- Tree-shaking is configured with `moduleSideEffects: false` for optimal bundle size
-- UMD build is only generated for the `index` entry point (not for aliases, dynamic-imports, etc.)
-- The `sideEffects: false` in package.json enables better tree-shaking by bundlers
+- **Categories**: Auto-generated from `icons/` folder structure - no manual configuration needed
 
 ## Troubleshooting
 
@@ -536,4 +620,4 @@ If consumers see import errors:
 - Verify the package exports in `package.json` match the built files
 - Check that `dist/` directory contains all expected entry points
 - Ensure `sideEffects: false` is set in package.json for optimal tree-shaking
-- For UMD builds, only the `index` entry is available (no UMD for aliases, dynamic-imports, etc.)
+- For UMD builds, only the `index` entry is available (no UMD for dynamic-imports, categories, etc.)

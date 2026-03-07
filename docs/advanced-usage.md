@@ -415,32 +415,54 @@ function App() {
 ### 2. Icon Search and Filter
 
 ```tsx
-import { iconNames } from '@pelatform/icons/icon-list';
-import { aliases } from '@pelatform/icons/aliases';
+import iconList from '@pelatform/icons/icon-list';
+import { categories, type Category } from '@pelatform/icons/categories';
+import iconCategoryMap from '@pelatform/icons/out/icon-category.json';
 import { useState, useMemo } from 'react';
 
 function IconSearch() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const filteredIcons = useMemo(() => {
-    if (!searchTerm) return iconNames.slice(0, 50); // Show first 50 by default
+    let results = iconList;
 
-    const term = searchTerm.toLowerCase();
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      results = results.filter((iconName) => {
+        const iconData = iconCategoryMap[iconName];
+        if (!iconData) return false;
+        return iconData.category.toLowerCase() === selectedCategory;
+      });
+    }
 
-    return iconNames
-      .filter((iconName) => {
-        // Search in icon name
-        if (iconName.toLowerCase().includes(term)) return true;
+    // Filter by search term
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      results = results.filter((iconName) =>
+        iconName.toLowerCase().includes(term),
+      );
+    }
 
-        // Search in aliases
-        const iconAliases = aliases[iconName] || [];
-        return iconAliases.some((alias) => alias.toLowerCase().includes(term));
-      })
-      .slice(0, 50); // Limit results
-  }, [searchTerm]);
+    return results.slice(0, 50); // Limit results
+  }, [searchTerm, selectedCategory]);
 
   return (
     <div>
+      {/* Category Filter */}
+      <select
+        value={selectedCategory}
+        onChange={(e) => setSelectedCategory(e.target.value)}
+        className="w-full p-2 border rounded mb-4"
+      >
+        {categories.map((category: Category) => (
+          <option key={category.id} value={category.id}>
+            {category.title}
+          </option>
+        ))}
+      </select>
+
+      {/* Search Input */}
       <input
         type="text"
         placeholder="Search icons..."
@@ -449,6 +471,7 @@ function IconSearch() {
         className="w-full p-2 border rounded mb-4"
       />
 
+      {/* Icon Grid */}
       <div className="grid grid-cols-8 gap-4">
         {filteredIcons.map((iconName) => (
           <div
@@ -456,9 +479,7 @@ function IconSearch() {
             className="flex flex-col items-center p-2 border rounded"
           >
             <DynamicIcon iconName={iconName} className="w-8 h-8 mb-2" />
-            <span className="text-xs text-center">
-              {iconName.replace('Icon', '')}
-            </span>
+            <span className="text-xs text-center">{iconName}</span>
           </div>
         ))}
       </div>
@@ -470,5 +491,6 @@ function IconSearch() {
 ## 🚀 Next Steps
 
 - [Learn about TypeScript features](./types.md)
-- [Explore aliases functionality](./aliases.md)
+- [Learn about categories](./categories.md)
 - [Check out dynamic imports](./dynamic-imports.md)
+- [Check out more examples](./examples.md)

@@ -1,3 +1,4 @@
+.claude
 .gitignore
 pnpm-lock.yaml
 
@@ -8,5 +9,6 @@ icons
 src/icons/
 
 src/aliases.ts
+src/categories.ts
 src/dynamic-imports.ts
 src/icon-list.ts

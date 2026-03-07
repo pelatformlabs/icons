@@ -1,6 +1,12 @@
 import { execSync } from 'node:child_process';
 
-const entries = ['index', 'aliases', 'dynamic-imports', 'icon-list', 'types'];
+const entries = [
+  'index',
+  'categories',
+  'dynamic-imports',
+  'icon-list',
+  'types',
+];
 
 interface TypeGenResult {
   entry: string;

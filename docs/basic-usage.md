@@ -54,16 +54,14 @@ import { IconHeart } from '@pelatform/icons';
 function SizeExamples() {
   return (
     <div>
-      {/* Method 1: CSS Classes */}
-      <IconHeart className="w-4 h-4" />
-      <IconHeart className="w-6 h-6" />
-      <IconHeart className="w-8 h-8" />
-
+      {/* Method 1: Tailwind CSS size classes */}
+      <IconHeart className="size-4" /> {/* 16px */}
+      <IconHeart className="size-6" /> {/* 24px */}
+      <IconHeart className="size-8" /> {/* 32px */}
       {/* Method 2: Inline Styles */}
       <IconHeart style={{ width: 16, height: 16 }} />
       <IconHeart style={{ width: 24, height: 24 }} />
       <IconHeart style={{ width: 32, height: 32 }} />
-
       {/* Method 3: SVG Props */}
       <IconHeart width={16} height={16} />
       <IconHeart width={24} height={24} />
@@ -303,7 +301,7 @@ function TailwindExample() {
   return (
     <IconHeart
       className="
-      w-6 h-6
+      size-6
       text-red-500
       hover:text-red-700
       transition-colors
@@ -373,8 +371,56 @@ function StyledComponentExample() {
 }
 ```
 
+## 📋 Category Filtering
+
+### Using Categories for Icon Organization
+
+```tsx
+import { categories, type Category } from '@pelatform/icons/categories';
+import { icons } from '@pelatform/icons';
+import { createElement } from 'react';
+
+function CategoryIconPicker() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  return (
+    <div>
+      {/* Category Filter */}
+      <select
+        value={selectedCategory}
+        onChange={(e) => setSelectedCategory(e.target.value)}
+        className="w-full p-2 border rounded mb-4"
+      >
+        {categories.map((category: Category) => (
+          <option key={category.id} value={category.id}>
+            {category.title}
+          </option>
+        ))}
+      </select>
+
+      {/* Icon Grid */}
+      <div className="grid grid-cols-8 gap-2">
+        {Object.keys(icons)
+          .slice(0, 32)
+          .map((iconName) => (
+            <div
+              key={iconName}
+              className="flex items-center justify-center p-2 border rounded"
+            >
+              {createElement(icons[iconName as keyof typeof icons], {
+                className: 'w-6 h-6',
+              })}
+            </div>
+          ))}
+      </div>
+    </div>
+  );
+}
+```
+
 ## 🚀 Next Steps
 
 - [Learn about advanced usage patterns](./advanced-usage.md)
 - [Explore TypeScript features](./types.md)
+- [Learn about categories](./categories.md)
 - [Check out more examples](./examples.md)

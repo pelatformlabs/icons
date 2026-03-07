@@ -1,8 +1,8 @@
 {
   "summary": {
-    "totalIcons": 6057,
+    "totalIcons": 6075,
     "totalFilled": 1053,
-    "totalOutline": 5004,
+    "totalOutline": 5022,
     "totalCategories": 42
   },
   "categories": {
@@ -37,9 +37,9 @@
       ]
     },
     "Arrows": {
-      "total": 428,
+      "total": 432,
       "filled": 100,
-      "outline": 328,
+      "outline": 332,
       "filledIcons": [
         "arrow-autofit-content-filled.svg",
         "arrow-autofit-down-filled.svg",
@@ -378,6 +378,10 @@
         "circle-chevrons-left.svg",
         "circle-chevrons-right.svg",
         "circle-chevrons-up.svg",
+        "circle-open-arrow-down.svg",
+        "circle-open-arrow-left.svg",
+        "circle-open-arrow-right.svg",
+        "circle-open-arrow-up.svg",
         "corner-down-left-double.svg",
         "corner-down-left.svg",
         "corner-down-right-double.svg",
@@ -520,9 +524,9 @@
       ]
     },
     "Brand": {
-      "total": 405,
+      "total": 406,
       "filled": 34,
-      "outline": 371,
+      "outline": 372,
       "filledIcons": [
         "brand-angular-filled.svg",
         "brand-apple-filled.svg",
@@ -723,6 +727,7 @@
         "brand-hipchat.svg",
         "brand-html5.svg",
         "brand-inertia.svg",
+        "brand-infakt.svg",
         "brand-instagram.svg",
         "brand-intercom.svg",
         "brand-itch.svg",
@@ -934,9 +939,9 @@
       ]
     },
     "Buildings": {
-      "total": 97,
+      "total": 98,
       "filled": 7,
-      "outline": 90,
+      "outline": 91,
       "filledIcons": [
         "bath-filled.svg",
         "bed-flat-filled.svg",
@@ -1009,6 +1014,7 @@
         "home-heart.svg",
         "home-infinity.svg",
         "home-link.svg",
+        "home-lock.svg",
         "home-minus.svg",
         "home-move.svg",
         "home-off.svg",
@@ -1040,9 +1046,9 @@
       ]
     },
     "Charts": {
-      "total": 52,
+      "total": 53,
       "filled": 14,
-      "outline": 38,
+      "outline": 39,
       "filledIcons": [
         "chart-area-filled.svg",
         "chart-area-line-filled.svg",
@@ -1097,7 +1103,8 @@
         "chart-sankey.svg",
         "chart-scatter-3d.svg",
         "chart-scatter.svg",
-        "chart-treemap.svg"
+        "chart-treemap.svg",
+        "trending-up-down.svg"
       ]
     },
     "Communication": {
@@ -1430,9 +1437,9 @@
       ]
     },
     "Design": {
-      "total": 432,
+      "total": 436,
       "filled": 102,
-      "outline": 330,
+      "outline": 334,
       "filledIcons": [
         "ad-filled.svg",
         "artboard-filled.svg",
@@ -1780,6 +1787,7 @@
         "magnetic.svg",
         "mask-off.svg",
         "mask.svg",
+        "mesh.svg",
         "mickey.svg",
         "moustache.svg",
         "needle-thread.svg",
@@ -1850,6 +1858,9 @@
         "stack.svg",
         "sticker-2.svg",
         "sticker.svg",
+        "stroke-curved.svg",
+        "stroke-dynamic.svg",
+        "stroke-straight.svg",
         "template-off.svg",
         "template.svg",
         "text-resize.svg",
@@ -1871,9 +1882,9 @@
       ]
     },
     "Development": {
-      "total": 59,
+      "total": 62,
       "filled": 7,
-      "outline": 52,
+      "outline": 55,
       "filledIcons": [
         "apps-filled.svg",
         "assembly-filled.svg",
@@ -1892,6 +1903,7 @@
         "alt.svg",
         "api-app-off.svg",
         "api-app.svg",
+        "api-book.svg",
         "api-off.svg",
         "api.svg",
         "apps-off.svg",
@@ -1916,6 +1928,8 @@
         "package-import.svg",
         "packages.svg",
         "prompt.svg",
+        "queue-pop-in.svg",
+        "queue-pop-out.svg",
         "scan-traces.svg",
         "sdk.svg",
         "seo.svg",
@@ -3622,9 +3636,9 @@
       ]
     },
     "Map": {
-      "total": 302,
+      "total": 304,
       "filled": 43,
-      "outline": 259,
+      "outline": 261,
       "filledIcons": [
         "bed-filled.svg",
         "campfire-filled.svg",
@@ -3758,6 +3772,7 @@
         "map-east.svg",
         "map-exclamation.svg",
         "map-heart.svg",
+        "map-lock.svg",
         "map-minus.svg",
         "map-north.svg",
         "map-off.svg",
@@ -3790,6 +3805,7 @@
         "map-route.svg",
         "map-search.svg",
         "map-share.svg",
+        "map-shield.svg",
         "map-south.svg",
         "map-star.svg",
         "map-up.svg",
@@ -4683,9 +4699,9 @@
       ]
     },
     "Shapes": {
-      "total": 230,
+      "total": 231,
       "filled": 49,
-      "outline": 181,
+      "outline": 182,
       "filledIcons": [
         "capsule-filled.svg",
         "capsule-horizontal-filled.svg",
@@ -4766,6 +4782,7 @@
         "circle-off.svg",
         "circle-percentage.svg",
         "circle-plus-2.svg",
+        "circle-plus-minus.svg",
         "circle-plus.svg",
         "circle-rectangle-off.svg",
         "circle-rectangle.svg",
@@ -5066,9 +5083,9 @@
       ]
     },
     "System": {
-      "total": 895,
+      "total": 896,
       "filled": 132,
-      "outline": 763,
+      "outline": 764,
       "filledIcons": [
         "ad-circle-filled.svg",
         "adjustments-filled.svg",
@@ -5945,6 +5962,7 @@
         "view-360.svg",
         "viewport-short.svg",
         "viewport-tall.svg",
+        "vip-2.svg",
         "vip-off.svg",
         "vip.svg",
         "vs.svg",

@@ -12,228 +12,290 @@ import {
   IconHeart,
   IconStar,
   IconUser,
-  // ... all 5926+ icons
+  // ... all 5000+ icons
+
+  // Aliases (exported from main entry)
+  IconBoxSeam, // alias for IconPackage
+  Icon12Hours, // alias for IconHours12
 
   // Icons object for dynamic access
   icons,
 } from '@pelatform/icons';
 ```
 
-### Aliases Export (`@pelatform/icons/aliases`)
-
-```tsx
-import { aliases } from '@pelatform/icons/aliases';
-
-// Type: Record<string, string[]>
-// Maps icon names to their alternative names
-```
-
 ### Dynamic Imports (`@pelatform/icons/dynamic-imports`)
 
 ```tsx
-import { dynamicIcons } from '@pelatform/icons/dynamic-imports';
+import iconMap from '@pelatform/icons/dynamic-imports';
 
-// Type: Record<string, () => Promise<{ default: ComponentType<SVGProps<SVGSVGElement>> }>>
+// Type: Record<string, () => Promise<{ default: IconComponent }>>
 // Maps kebab-case icon names to dynamic import functions
+
+// Usage
+const IconComponent = await iconMap['heart']();
 ```
 
 ### Icon List (`@pelatform/icons/icon-list`)
 
 ```tsx
-import { iconNames } from '@pelatform/icons/icon-list';
+import iconList from '@pelatform/icons/icon-list';
 
 // Type: string[]
-// Array of all available icon names
+// Array of all available icon names (kebab-case)
+
+// Usage
+console.log(iconList); // ['heart', 'star', 'user', ...]
+console.log(`Total icons: ${iconList.length}`); // 5000+
+```
+
+### Categories (`@pelatform/icons/categories`)
+
+```tsx
+import { categories, type Category } from '@pelatform/icons/categories';
+
+// Type: Category[]
+interface Category {
+  id: string; // kebab-case, e.g., "animals", "arrows"
+  title: string; // Title Case, e.g., "Animals", "Arrows"
+}
+
+// Usage
+console.log(categories); // Array of 42 categories
 ```
 
 ### Types (`@pelatform/icons/types`)
 
 ```tsx
 import type {
+  IconProps,
   IconComponent,
   IconName,
-  IconProps,
+  IconCategory,
+  IconVariant,
+  IconMetadata,
+  IconSearchOptions,
+  IconNameToComponent,
+  ComponentNameToIcon,
 } from '@pelatform/icons/types';
 ```
 
 ## 🎯 Core Types
 
-### IconComponent
+### IconProps
+
+Props accepted by every icon component:
 
 ```tsx
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+interface IconProps {
+  /** Additional CSS classes appended to default classes */
+  className?: string;
+  /** Component identifier (useful for testing, debugging, or styling) */
+  'data-slot'?: string;
+  /** Other props passed-through to SVG element */
+  [key: string]: any;
+}
+
+// Usage
+import type { IconProps } from '@pelatform/icons/types';
+
+const MyIcon = (props: IconProps) => <IconHeart {...props} />;
 ```
 
-Base type for all icon components. Extends React's SVG component with all standard SVG props.
+### IconComponent
+
+Type for icon function components:
+
+```tsx
+type IconComponent = React.FC<IconProps>;
+```
 
 ### IconName
 
-```tsx
-type IconName = keyof typeof icons;
-```
-
-Union type of all available icon names. Provides TypeScript autocomplete and type safety.
-
-### IconProps
+Union type of all available icon names (kebab-case):
 
 ```tsx
-type IconProps = SVGProps<SVGSVGElement>;
+type IconName = 'heart' | 'star' | 'user' | ... // 5000+ icon names
+
+// Usage
+import type { IconName } from '@pelatform/icons/types';
+
+const iconName: IconName = 'heart'; // ✅ Valid
+const invalid: IconName = 'invalid-icon'; // ❌ Type error
 ```
 
-Standard SVG element props that all icons accept.
+### IconCategory
+
+Union type of all available categories:
+
+```tsx
+type IconCategory = 'all' | 'animals' | 'arrows' | ... // 42 categories
+
+// Usage
+import type { IconCategory } from '@pelatform/icons/types';
+
+const category: IconCategory = 'animals'; // ✅ Valid
+```
+
+### IconVariant
+
+Available icon variants:
+
+```tsx
+type IconVariant = 'outline' | 'filled';
+```
 
 ## 🔧 Icon Components
 
 ### Individual Icons
 
-All icons are React functional components that accept standard SVG props:
+All icons are React functional components that accept `IconProps`:
 
 ```tsx
-interface IconComponentProps extends SVGProps<SVGSVGElement> {
-  // Standard SVG props
-  className?: string;
-  style?: CSSProperties;
-  width?: string | number;
-  height?: string | number;
-  fill?: string;
-  stroke?: string;
-  strokeWidth?: string | number;
-
-  // Event handlers
-  onClick?: (event: MouseEvent<SVGSVGElement>) => void;
-  onMouseEnter?: (event: MouseEvent<SVGSVGElement>) => void;
-  onMouseLeave?: (event: MouseEvent<SVGSVGElement>) => void;
-
-  // Accessibility
-  'aria-label'?: string;
-  'aria-hidden'?: boolean;
-  role?: string;
-
-  // Data attributes
-  [key: `data-${string}`]: any;
-}
-
-// Usage
+// All icons support standard SVG props
 <IconHeart
   className="w-6 h-6 text-red-500"
   onClick={handleClick}
   aria-label="Like this item"
   data-testid="heart-icon"
-/>;
+/>
 ```
 
-### Icons Object
+### Aliases
+
+Alternative icon names are exported from the main entry point:
 
 ```tsx
-const icons: Record<IconName, IconComponent>;
+import { IconBoxSeam, Icon12Hours } from '@pelatform/icons';
+
+// IconBoxSeam is an alias for IconPackage
+// Icon12Hours is an alias for IconHours12
 ```
 
-Object containing all icon components, accessible by name:
+## 📋 Categories API
+
+### Categories Array
 
 ```tsx
-import { icons } from '@pelatform/icons';
-
-// Access icons dynamically
-const HeartIcon = icons.IconHeart;
-const StarIcon = icons['IconStar'];
-
-// Use with createElement
-import { createElement } from 'react';
-const icon = createElement(icons.IconHeart, { className: 'w-6 h-6' });
+const categories: Category[];
 ```
 
-## 📋 Aliases API
-
-### Aliases Object
+Array of all available categories:
 
 ```tsx
-const aliases: Record<string, string[]>;
+import { categories, type Category } from '@pelatform/icons/categories';
+
+// Example: Get all categories
+console.log(categories);
+
+// Example: Category filter dropdown
+<select>
+  {categories.map((category: Category) => (
+    <option key={category.id} value={category.id}>
+      {category.title}
+    </option>
+  ))}
+</select>;
 ```
 
-Maps icon names to their alternative names:
+### Category Interface
 
 ```tsx
-import { aliases } from '@pelatform/icons/aliases';
-
-// Example structure
-{
-  'IconHeart': ['love', 'favorite', 'like', 'romance'],
-  'IconStar': ['rating', 'favorite', 'bookmark'],
-  'IconUser': ['person', 'profile', 'account', 'avatar']
+interface Category {
+  id: string; // kebab-case identifier
+  title: string; // Title Case display name
 }
+```
+
+**Example categories:**
+
+```tsx
+{
+  id: "all",
+  title: "All"
+},
+{
+  id: "animals",
+  title: "Animals"
+},
+{
+  id: "arrows",
+  title: "Arrows"
+},
+// ... 39 more categories
 ```
 
 ### Utility Functions
 
 ```tsx
-// Find icons by alias
-function findIconsByAlias(alias: string): string[] {
-  return Object.entries(aliases)
-    .filter(([_, iconAliases]) => iconAliases.includes(alias))
-    .map(([iconName]) => iconName);
+// Find category by ID
+function getCategoryById(id: string): Category | undefined {
+  return categories.find((cat) => cat.id === id);
 }
 
-// Get aliases for icon
-function getAliasesForIcon(iconName: string): string[] {
-  return aliases[iconName] || [];
+// Filter icons by category
+function filterByCategory(iconList: string[], categoryId: string): string[] {
+  if (categoryId === 'all') return iconList;
+
+  const iconCategoryMap = require('@pelatform/icons/out/icon-category.json');
+  return iconList.filter((iconName) => {
+    const category = iconCategoryMap[iconName]?.category.toLowerCase();
+    return category === categoryId;
+  });
 }
 
-// Check if alias exists
-function hasAlias(iconName: string, alias: string): boolean {
-  return (aliases[iconName] || []).includes(alias);
+// Get category count
+function getCategoryCount(): number {
+  return categories.length;
 }
 ```
 
 ## ⚡ Dynamic Imports API
 
-### Dynamic Icons Object
+### Icon Map
 
 ```tsx
-const dynamicIcons: Record<string, () => Promise<{ default: IconComponent }>>;
+const iconMap: Record<string, () => Promise<{ default: IconComponent }>>;
 ```
 
 Maps kebab-case icon names to dynamic import functions:
 
 ```tsx
-import { dynamicIcons } from '@pelatform/icons/dynamic-imports';
+import iconMap from '@pelatform/icons/dynamic-imports';
 
-// Example structure
-{
-  'icon-heart': () => import('./icons/IconHeart'),
-  'icon-star': () => import('./icons/IconStar'),
-  'icon-user': () => import('./icons/IconUser')
+// Load single icon
+async function loadIcon(iconName: string): Promise<IconComponent | null> {
+  if (iconName in iconMap) {
+    const module = await iconMap[iconName]();
+    return module.default;
+  }
+  return null;
 }
+
+// Usage
+const IconHeart = await loadIcon('heart');
 ```
 
 ### Loading Functions
 
 ```tsx
-// Load single icon
-async function loadIcon(iconName: string): Promise<IconComponent | null> {
-  const kebabName = toKebabCase(iconName);
-
-  if (kebabName in dynamicIcons) {
-    const module = await dynamicIcons[kebabName]();
-    return module.default;
-  }
-
-  return null;
-}
-
 // Load multiple icons
 async function loadIcons(
   iconNames: string[],
 ): Promise<(IconComponent | null)[]> {
-  return Promise.all(iconNames.map(loadIcon));
+  return Promise.all(
+    iconNames.map((name) => {
+      if (name in iconMap) {
+        return iconMap[name]().then((module) => module.default);
+      }
+      return Promise.resolve(null);
+    }),
+  );
 }
 
 // Preload icons
 function preloadIcons(iconNames: string[]): Promise<void> {
-  const promises = iconNames.map((iconName) => {
-    const kebabName = toKebabCase(iconName);
-    return kebabName in dynamicIcons
-      ? dynamicIcons[kebabName]()
-      : Promise.resolve();
+  const promises = iconNames.map((name) => {
+    return name in iconMap ? iconMap[name]() : Promise.resolve();
   });
 
   return Promise.all(promises).then(() => void 0);
@@ -245,43 +307,44 @@ function preloadIcons(iconNames: string[]): Promise<void> {
 ### Icon Names Array
 
 ```tsx
-const iconNames: string[];
+const iconList: string[];
 ```
 
-Array of all available icon names:
+Array of all available icon names in kebab-case:
 
 ```tsx
-import { iconNames } from '@pelatform/icons/icon-list';
+import iconList from '@pelatform/icons/icon-list';
 
-// Example: ['IconHeart', 'IconStar', 'IconUser', ...]
-console.log(iconNames.length); // 5926+
+// Example: ['heart', 'star', 'user', ...]
+console.log(iconList.length); // 5000+
 
 // Filter icons
-const heartIcons = iconNames.filter((name) => name.includes('Heart'));
-const arrowIcons = iconNames.filter((name) => name.includes('Arrow'));
+const heartIcons = iconList.filter((name) => name.includes('heart'));
+const arrowIcons = iconList.filter((name) => name.includes('arrow'));
 ```
 
 ### Utility Functions
 
 ```tsx
-// Get total icon count
-function getIconCount(): number {
-  return iconNames.length;
-}
-
 // Check if icon exists
 function iconExists(iconName: string): boolean {
-  return iconNames.includes(iconName);
+  return iconList.includes(iconName);
 }
 
 // Get icons by pattern
 function getIconsByPattern(pattern: RegExp): string[] {
-  return iconNames.filter((name) => pattern.test(name));
+  return iconList.filter((name) => pattern.test(name));
 }
 
 // Get random icon
 function getRandomIcon(): string {
-  return iconNames[Math.floor(Math.random() * iconNames.length)];
+  return iconList[Math.floor(Math.random() * iconList.length)];
+}
+
+// Search icons
+function searchIcons(query: string): string[] {
+  const lowercaseQuery = query.toLowerCase();
+  return iconList.filter((name) => name.toLowerCase().includes(lowercaseQuery));
 }
 ```
 
@@ -293,7 +356,7 @@ Icons inherit styles from their parent and accept standard CSS classes:
 
 ```tsx
 // Tailwind CSS
-<IconHeart className="w-6 h-6 text-red-500 hover:text-red-700" />
+<IconHeart className="size-6 text-red-500 hover:text-red-700" />
 
 // Custom CSS
 <IconStar className="icon icon-large icon-yellow" />
@@ -312,19 +375,23 @@ Icons inherit styles from their parent and accept standard CSS classes:
 />
 ```
 
-### CSS Variables
+### Default Classes
 
-Icons support CSS custom properties:
+All icons come with default CSS classes:
 
-```css
-.icon {
-  --icon-size: 1.5rem;
-  --icon-color: #3b82f6;
+```tsx
+// Default classes applied to all icons
+'pelatform-icons pelatform-icon-[name] size-4';
 
-  width: var(--icon-size);
-  height: var(--icon-size);
-  color: var(--icon-color);
-}
+// Example for IconHeart:
+'pelatform-icons pelatform-icon-heart size-4';
+```
+
+You can override these by providing your own className:
+
+```tsx
+// Override default size-4 with size-6
+<IconHeart className="size-6 text-red-500" />
 ```
 
 ## 🔍 Search API
@@ -332,55 +399,50 @@ Icons support CSS custom properties:
 ### Search Functions
 
 ```tsx
-import { iconNames } from '@pelatform/icons/icon-list';
-import { aliases } from '@pelatform/icons/aliases';
+import iconList from '@pelatform/icons/icon-list';
 
 // Basic search
 function searchIcons(query: string): string[] {
   const lowercaseQuery = query.toLowerCase();
-
-  return iconNames.filter(
-    (iconName) =>
-      iconName.toLowerCase().includes(lowercaseQuery) ||
-      (aliases[iconName] || []).some((alias) => alias.includes(lowercaseQuery)),
-  );
+  return iconList.filter((name) => name.toLowerCase().includes(lowercaseQuery));
 }
 
-// Advanced search with scoring
+// Advanced search with category filter
+function searchIconsInCategory(query: string, categoryId: string): string[] {
+  const iconCategoryMap = require('@pelatform/icons/out/icon-category.json');
+
+  return iconList.filter((iconName) => {
+    const matchesQuery = iconName.toLowerCase().includes(query.toLowerCase());
+    const category = iconCategoryMap[iconName]?.category.toLowerCase();
+
+    const matchesCategory = categoryId === 'all' || category === categoryId;
+
+    return matchesQuery && matchesCategory;
+  });
+}
+```
+
+### Search with Scoring
+
+```tsx
 interface SearchResult {
   iconName: string;
   score: number;
-  matchType: 'name' | 'alias';
 }
 
-function advancedSearch(query: string): SearchResult[] {
+function advancedSearch(query: string, limit: number = 10): SearchResult[] {
   const results: SearchResult[] = [];
   const lowercaseQuery = query.toLowerCase();
 
-  iconNames.forEach((iconName) => {
-    // Check name match
+  iconList.forEach((iconName) => {
     if (iconName.toLowerCase().includes(lowercaseQuery)) {
-      results.push({
-        iconName,
-        score: iconName.toLowerCase() === lowercaseQuery ? 100 : 80,
-        matchType: 'name',
-      });
+      // Exact match gets highest score
+      const score = iconName.toLowerCase() === lowercaseQuery ? 100 : 80;
+      results.push({ iconName, score });
     }
-
-    // Check alias match
-    const iconAliases = aliases[iconName] || [];
-    iconAliases.forEach((alias) => {
-      if (alias.includes(lowercaseQuery)) {
-        results.push({
-          iconName,
-          score: alias === lowercaseQuery ? 90 : 60,
-          matchType: 'alias',
-        });
-      }
-    });
   });
 
-  return results.sort((a, b) => b.score - a.score);
+  return results.sort((a, b) => b.score - a.score).slice(0, limit);
 }
 ```
 
@@ -406,24 +468,14 @@ All icons support standard SVG/DOM events:
 ```tsx
 interface IconWithEventsProps extends IconProps {
   onIconClick?: (iconName: string, event: MouseEvent) => void;
-  onIconHover?: (iconName: string, event: MouseEvent) => void;
 }
 
 function IconWithEvents({
   iconName,
   onIconClick,
-  onIconHover,
   ...props
 }: IconWithEventsProps) {
-  const IconComponent = icons[iconName as IconName];
-
-  return (
-    <IconComponent
-      {...props}
-      onClick={(e) => onIconClick?.(iconName, e)}
-      onMouseEnter={(e) => onIconHover?.(iconName, e)}
-    />
-  );
+  return <IconHeart {...props} onClick={(e) => onIconClick?.(iconName, e)} />;
 }
 ```
 
@@ -435,35 +487,47 @@ function IconWithEvents({
 // Get bundle information
 function getBundleInfo() {
   return {
-    totalIcons: iconNames.length,
-    estimatedSize: `~${Math.round(iconNames.length * 0.5)}KB`,
+    totalIcons: iconList.length,
+    totalCategories: categories.length,
     formats: ['ESM', 'CJS', 'UMD'],
     treeShaking: true,
   };
-}
-
-// Check if icon is loaded (for dynamic imports)
-function isIconLoaded(iconName: string): boolean {
-  const kebabName = toKebabCase(iconName);
-  return kebabName in dynamicIcons;
 }
 ```
 
 ### Memory Management
 
 ```tsx
-// Clear icon cache (for dynamic loading)
-function clearIconCache(): void {
-  // Implementation depends on your caching strategy
-}
+// Check if icon is available for dynamic loading
+import iconMap from '@pelatform/icons/dynamic-imports';
 
-// Get memory usage estimate
-function getMemoryUsage(): { icons: number; cache: number } {
-  return {
-    icons: iconNames.length,
-    cache: 0, // Depends on loaded icons
-  };
+function isIconAvailable(iconName: string): boolean {
+  return iconName in iconMap;
 }
+```
+
+## 🔧 Utility Types
+
+### IconNameToComponent
+
+Convert icon name to component name:
+
+```tsx
+import type { IconNameToComponent } from '@pelatform/icons/types';
+
+type HeartComponent = IconNameToComponent<'heart'>; // 'IconHeart'
+type HeartFilledComponent = IconNameToComponent<'heart-filled'>; // 'IconHeartFilled'
+```
+
+### ComponentNameToIcon
+
+Convert component name to icon name:
+
+```tsx
+import type { ComponentNameToIcon } from '@pelatform/icons/types';
+
+type HeartIcon = ComponentNameToIcon<'IconHeart'>; // 'heart'
+type HeartFilledIcon = ComponentNameToIcon<'IconHeartFilled'>; // 'heart-filled'
 ```
 
 ## 🚀 Next Steps
@@ -471,3 +535,4 @@ function getMemoryUsage(): { icons: number; cache: number } {
 - [Check out practical examples](./examples.md)
 - [Learn about advanced usage](./advanced-usage.md)
 - [Explore TypeScript features](./types.md)
+- [Learn about categories](./categories.md)

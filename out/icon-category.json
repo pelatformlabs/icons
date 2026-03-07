@@ -560,6 +560,10 @@
     "name": "api-app-off",
     "category": "Development"
   },
+  "api-book": {
+    "name": "api-book",
+    "category": "Development"
+  },
   "api-off": {
     "name": "api-off",
     "category": "Development"
@@ -3303,6 +3307,10 @@
   },
   "brand-inertia": {
     "name": "brand-inertia",
+    "category": "Brand"
+  },
+  "brand-infakt": {
+    "name": "brand-infakt",
     "category": "Brand"
   },
   "brand-instagram": {
@@ -6081,6 +6089,22 @@
     "name": "circle-off",
     "category": "Shapes"
   },
+  "circle-open-arrow-down": {
+    "name": "circle-open-arrow-down",
+    "category": "Arrows"
+  },
+  "circle-open-arrow-left": {
+    "name": "circle-open-arrow-left",
+    "category": "Arrows"
+  },
+  "circle-open-arrow-right": {
+    "name": "circle-open-arrow-right",
+    "category": "Arrows"
+  },
+  "circle-open-arrow-up": {
+    "name": "circle-open-arrow-up",
+    "category": "Arrows"
+  },
   "circle-percentage": {
     "name": "circle-percentage",
     "category": "Shapes",
@@ -6093,6 +6117,10 @@
   },
   "circle-plus-2": {
     "name": "circle-plus-2",
+    "category": "Shapes"
+  },
+  "circle-plus-minus": {
+    "name": "circle-plus-minus",
     "category": "Shapes"
   },
   "circle-rectangle": {
@@ -11398,6 +11426,10 @@
     "name": "home-link",
     "category": "Buildings"
   },
+  "home-lock": {
+    "name": "home-lock",
+    "category": "Buildings"
+  },
   "home-minus": {
     "name": "home-minus",
     "category": "Buildings"
@@ -13140,6 +13172,10 @@
     "name": "map-heart",
     "category": "Map"
   },
+  "map-lock": {
+    "name": "map-lock",
+    "category": "Map"
+  },
   "map-minus": {
     "name": "map-minus",
     "category": "Map"
@@ -13267,6 +13303,10 @@
   },
   "map-share": {
     "name": "map-share",
+    "category": "Map"
+  },
+  "map-shield": {
+    "name": "map-shield",
     "category": "Map"
   },
   "map-south": {
@@ -13572,6 +13612,10 @@
   "menu-order": {
     "name": "menu-order",
     "category": "System"
+  },
+  "mesh": {
+    "name": "mesh",
+    "category": "Design"
   },
   "message": {
     "name": "message",
@@ -16460,6 +16504,14 @@
     "name": "question-mark",
     "category": "System"
   },
+  "queue-pop-in": {
+    "name": "queue-pop-in",
+    "category": "Development"
+  },
+  "queue-pop-out": {
+    "name": "queue-pop-out",
+    "category": "Development"
+  },
   "quote": {
     "name": "quote",
     "category": "Text",
@@ -19019,6 +19071,18 @@
     "name": "strikethrough",
     "category": "Text"
   },
+  "stroke-curved": {
+    "name": "stroke-curved",
+    "category": "Design"
+  },
+  "stroke-dynamic": {
+    "name": "stroke-dynamic",
+    "category": "Design"
+  },
+  "stroke-straight": {
+    "name": "stroke-straight",
+    "category": "Design"
+  },
   "submarine": {
     "name": "submarine",
     "category": "Vehicles"
@@ -19925,6 +19989,10 @@
     "name": "trending-up-3",
     "category": "Arrows"
   },
+  "trending-up-down": {
+    "name": "trending-up-down",
+    "category": "Charts"
+  },
   "triangle": {
     "name": "triangle",
     "category": "Shapes",
@@ -20392,6 +20460,10 @@
   },
   "vip": {
     "name": "vip",
+    "category": "System"
+  },
+  "vip-2": {
+    "name": "vip-2",
     "category": "System"
   },
   "vip-off": {

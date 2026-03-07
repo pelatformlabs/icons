@@ -17,11 +17,11 @@
       "require": "./dist/cjs/index.cjs",
       "default": "./dist/esm/index.mjs"
     },
-    "./aliases": {
-      "types": "./dist/types/aliases.d.ts",
-      "import": "./dist/esm/aliases.mjs",
-      "require": "./dist/cjs/aliases.cjs",
-      "default": "./dist/esm/aliases.mjs"
+    "./categories": {
+      "types": "./dist/types/categories.d.ts",
+      "import": "./dist/esm/categories.mjs",
+      "require": "./dist/cjs/categories.cjs",
+      "default": "./dist/esm/categories.mjs"
     },
     "./dynamic-imports": {
       "types": "./dist/types/dynamic-imports.d.ts",
@@ -67,7 +67,7 @@
     "icon"
   ],
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^29.0.1",
+    "@rollup/plugin-commonjs": "^29.0.2",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-typescript": "^12.3.0",
     "@svgr/core": "^8.1.0",

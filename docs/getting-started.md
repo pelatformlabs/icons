@@ -22,6 +22,12 @@ npm install @pelatform/icons
 yarn add @pelatform/icons
 ```
 
+### Using bun
+
+```bash
+bun add @pelatform/icons
+```
+
 ## 🔧 Setup
 
 ### TypeScript Configuration
@@ -48,6 +54,7 @@ The package works out of the box with modern bundlers:
 - ✅ **Create React App** - No configuration needed
 - ✅ **Webpack** - No configuration needed
 - ✅ **Rollup** - No configuration needed
+- ✅ **Bun** - No configuration needed
 
 ## 🎯 First Usage
 
@@ -128,18 +135,30 @@ import { Icon... } from '@pelatform/icons';
 
 ### 2. Icon List
 
-```tsx
-import { iconNames } from '@pelatform/icons/icon-list';
+Get all available icon names:
 
-console.log(iconNames); // Array of all icon names
+```tsx
+import iconList from '@pelatform/icons/icon-list';
+
+console.log(iconList); // Array of 5000+ icon names
+console.log(`Total icons: ${iconList.length}`);
 ```
 
-### 3. Aliases
+### 3. Categories
+
+Get all available categories:
 
 ```tsx
-import { aliases } from '@pelatform/icons/aliases';
+import { categories, type Category } from '@pelatform/icons/categories';
 
-console.log(aliases); // Object with alternative names
+console.log(categories); // Array of 42 categories
+
+// Example: Create category filter dropdown
+categories.map((category: Category) => (
+  <option key={category.id} value={category.id}>
+    {category.title}
+  </option>
+));
 ```
 
 ## ⚡ Performance Tips
@@ -176,6 +195,22 @@ function App() {
     </Suspense>
   );
 }
+```
+
+### 3. Dynamic Loading
+
+Load icons on-demand using the dynamic import map:
+
+```tsx
+import iconMap from '@pelatform/icons/dynamic-imports';
+
+async function loadIcon(iconName: string) {
+  const iconModule = await iconMap[iconName]();
+  return iconModule.default;
+}
+
+// Usage
+const IconHeart = await loadIcon('heart');
 ```
 
 ## 🎨 Styling
@@ -238,8 +273,27 @@ const StyledIcon = styled(IconArrowRight)`
 `;
 ```
 
+### Tailwind CSS
+
+```tsx
+import { IconHeart } from '@pelatform/icons';
+
+// Size classes
+<IconHeart className="size-4" />      // 16px
+<IconHeart className="size-6" />      // 24px
+<IconHeart className="size-8" />      // 32px
+
+// Color classes
+<IconHeart className="text-red-500" />
+<IconHeart className="text-blue-600" />
+
+// Combined
+<IconHeart className="size-6 text-red-500 hover:text-red-600" />
+```
+
 ## 🚀 Next Steps
 
 - [Learn about basic usage patterns](./basic-usage.md)
 - [Explore advanced features](./advanced-usage.md)
 - [Check out examples](./examples.md)
+- [Learn about categories](./categories.md)

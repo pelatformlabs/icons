@@ -1,6 +1,6 @@
 # @pelatform/icons Documentation
 
-A comprehensive React icon library with 5926+ icons, built with TypeScript and optimized for performance.
+A comprehensive React icon library with 5000+ icons, built with TypeScript and optimized for performance.
 
 ## 📚 Documentation Index
 
@@ -8,7 +8,7 @@ A comprehensive React icon library with 5926+ icons, built with TypeScript and o
 - [Basic Usage](./basic-usage.md)
 - [Advanced Usage](./advanced-usage.md)
 - [Types & TypeScript](./types.md)
-- [Aliases](./aliases.md)
+- [Categories](./categories.md)
 - [Dynamic Imports](./dynamic-imports.md)
 - [API Reference](./api-reference.md)
 - [Examples](./examples.md)
@@ -34,14 +34,15 @@ function App() {
 
 ## 📦 Package Features
 
-- ✅ **5926+ Icons** - Comprehensive icon collection
-- ✅ **TypeScript Support** - Full type safety and IntelliSense
+- ✅ **5000+ Icons** - Comprehensive icon collection
+- ✅ **42 Categories** - Organized by category (Animals, Arrows, Brand, etc.)
+- ✅ **TypeScript Support** - Full type safety and IntelliSense with JSDoc
 - ✅ **Tree Shaking** - Import only what you need
 - ✅ **Multiple Formats** - ESM, CJS, UMD support
-- ✅ **Aliases** - Alternative names for easier discovery
+- ✅ **Aliases** - Alternative names for backward compatibility (exported from main entry)
 - ✅ **Dynamic Loading** - Load icons dynamically by name
-- ✅ **Optimized Bundle** - Minified and gzipped (~422KB for all icons)
-- ✅ **React 19 Compatible** - Latest React support
+- ✅ **Optimized Bundle** - Minified and gzipped (~434KB for all icons)
+- ✅ **React 18 & 19 Compatible** - Latest React support
 
 ## 🎯 Use Cases
 
@@ -54,24 +55,23 @@ import { IconArrowRight, IconUser } from '@pelatform/icons';
 ### 2. Dynamic Loading
 
 ```tsx
-import { icons } from '@pelatform/icons';
-import { createElement } from 'react';
+import iconMap from '@pelatform/icons/dynamic-imports';
 
-const icon = createElement(icons['IconArrowRight' as keyof typeof icons]);
+const IconComponent = await iconMap['arrow-right']();
 ```
 
-### 3. Aliases
+### 3. Icon List
 
 ```tsx
-import { aliases } from '@pelatform/icons/aliases';
-// Use alternative names for icons
+import iconList from '@pelatform/icons/icon-list';
+// Get all available icon names (5000+ icons)
 ```
 
-### 4. Icon List
+### 4. Categories
 
 ```tsx
-import { iconNames } from '@pelatform/icons/icon-list';
-// Get all available icon names
+import { categories } from '@pelatform/icons/categories';
+// Get all available categories (42 categories)
 ```
 
 ## 📖 Next Steps
@@ -82,6 +82,5 @@ import { iconNames } from '@pelatform/icons/icon-list';
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/pelatform/icons)
+- [GitHub Repository](https://github.com/pelatformlabs/icons)
 - [NPM Package](https://www.npmjs.com/package/@pelatform/icons)
-- [Pelatform UI](https://ui.pelatform.com/icons)

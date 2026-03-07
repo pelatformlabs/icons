@@ -1,126 +1,168 @@
-import React, {
-  ForwardRefExoticComponent,
-  FunctionComponent,
-  RefAttributes,
-} from 'react';
-export type { ReactNode, ComponentProps, ReactElement } from 'react';
+import type React from 'react';
 
-export type IconNode = [elementName: string, attrs: Record<string, string>][];
+// ============================================================================
+// CORE ICON TYPES
+// ============================================================================
 
+/**
+ * Props accepted by every icon component
+ *
+ * @example
+ * import { IconHeart } from '@pelatform/icons'
+ * import type { IconProps } from '@pelatform/icons/types'
+ *
+ * const MyIcon = (props: IconProps) => <IconHeart {...props} />
+ *
+ * // Usage:
+ * <IconHeart className="text-red-500 size-6" data-slot="heart-icon" />
+ */
 export interface IconProps {
+  /** Additional CSS classes appended to default classes */
   className?: string;
+  /** Component identifier (useful for testing, debugging, or styling) */
   'data-slot'?: string;
+  /** Other props passed-through to SVG element */
   [key: string]: any;
 }
 
-export type Icon = FunctionComponent<IconProps>;
-
-export type PelatformIcon = ForwardRefExoticComponent<
-  Omit<IconProps, 'ref'> & RefAttributes<Icon>
->;
-
-// New icon component type
+/**
+ * Type for icon component (Function Component with IconProps)
+ *
+ * @example
+ * import type { IconComponent } from '@pelatform/icons/types'
+ *
+ * const createIcon = (name: string): IconComponent => {
+ *   return (props) => <svg {...props}></svg>
+ * }
+ */
 export type IconComponent = React.FC<IconProps>;
 
-// Icon name type (kebab-case)
+// ============================================================================
+// ICON NAME & REFERENCE TYPES
+// ============================================================================
+
+/**
+ * Union type of all available icon names (kebab-case)
+ * Auto-generated from `icon-list.ts`
+ *
+ * @example
+ * import type { IconName } from '@pelatform/icons/types'
+ *
+ * const iconName: IconName = 'heart' // Valid
+ * const invalid: IconName = 'invalid-icon' // Type error
+ *
+ * // For type-safe icon names
+ * function getIcon(name: IconName) {
+ *   return iconMap[name]
+ * }
+ */
 export type IconName = (typeof import('./icon-list').default)[number];
 
-// Dynamic import key type
-export type IconImportKey = keyof typeof import('./dynamic-imports').default;
-
-// Icon size classes
-export type IconSize =
-  | 'size-3'
-  | 'size-4'
-  | 'size-5'
-  | 'size-6'
-  | 'size-7'
-  | 'size-8'
-  | 'size-9'
-  | 'size-10'
-  | 'size-11'
-  | 'size-12';
-
-// Icon variant types
+/**
+ * Available icon variants
+ * Each icon can have outline or filled variant
+ *
+ * @example
+ * import type { IconVariant } from '@pelatform/icons/types'
+ *
+ * const variant: IconVariant = 'filled'
+ *
+ * // In component:
+ * import { IconHeart, IconHeartFilled } from '@pelatform/icons'
+ */
 export type IconVariant = 'outline' | 'filled';
 
-// Icon category types
+/**
+ * Union type of all available icon categories
+ * Auto-generated from `categories.ts`
+ *
+ * @example
+ * import type { IconCategory } from '@pelatform/icons/types'
+ * import { categories } from '@pelatform/icons/categories'
+ *
+ * const filterByCategory = (category: IconCategory) => {
+ *   return categories.find(cat => cat.id === category)
+ * }
+ */
 export type IconCategory =
-  | 'animals'
-  | 'arrows'
-  | 'badges'
-  | 'brand'
-  | 'buildings'
-  | 'charts'
-  | 'communication'
-  | 'computers'
-  | 'currencies'
-  | 'database'
-  | 'design'
-  | 'development'
-  | 'devices'
-  | 'document'
-  | 'e-commerce'
-  | 'electrical'
-  | 'extensions'
-  | 'food'
-  | 'games'
-  | 'gender'
-  | 'gestures'
-  | 'health'
-  | 'laundry'
-  | 'letters'
-  | 'logic'
-  | 'map'
-  | 'math'
-  | 'media'
-  | 'mood'
-  | 'nature'
-  | 'numbers'
-  | 'other'
-  | 'photography'
-  | 'shapes'
-  | 'sport'
-  | 'symbols'
-  | 'system'
-  | 'text'
-  | 'vehicles'
-  | 'version-control'
-  | 'weather'
-  | 'zodiac';
+  (typeof import('./categories').categories)[number]['id'];
 
-// Dynamic import function type
-export type IconImportFunction = () => Promise<{ default: IconComponent }>;
+// ============================================================================
+// UTILITY TYPES
+// ============================================================================
 
-// Icon metadata interface
+/**
+ * Convert icon name (kebab-case) to component name (PascalCase)
+ *
+ * @example
+ * import type { IconNameToComponent } from '@pelatform/icons/types'
+ *
+ * type HeartComponent = IconNameToComponent<'heart'> // 'IconHeart'
+ * type HeartFilledComponent = IconNameToComponent<'heart-filled'> // 'IconHeartFilled'
+ */
+export type IconNameToComponent<T extends IconName> =
+  T extends `${infer First}-${infer Rest}`
+    ? `Icon${Capitalize<First>}${Capitalize<Rest>}`
+    : T extends `${infer Name}`
+      ? `Icon${Capitalize<Name>}`
+      : never;
+
+/**
+ * Convert component name (PascalCase) to icon name (kebab-case)
+ *
+ * @example
+ * import type { ComponentNameToIcon } from '@pelatform/icons/types'
+ *
+ * type HeartIcon = ComponentNameToIcon<'IconHeart'> // 'heart'
+ * type HeartFilledIcon = ComponentNameToIcon<'IconHeartFilled'> // 'heart-filled'
+ */
+export type ComponentNameToIcon<T extends string> = T extends `Icon${infer U}`
+  ? Lowercase<U extends `${infer First}-${infer Rest}` ? First : U>
+  : never;
+
+// ============================================================================
+// HELPER TYPES FOR ADVANCED USAGE
+// ============================================================================
+
+/**
+ * Type for icon metadata (internal usage)
+ * Used by the system to store icon information
+ */
 export interface IconMetadata {
+  /** Icon name in kebab-case */
   name: IconName;
+  /** Component name in PascalCase */
   component: string;
+  /** Icon category */
   category: IconCategory;
+  /** Icon variant (outline/filled) */
   variant: IconVariant;
+  /** Tags for searching (optional) */
   tags?: string[];
 }
 
-// Icon search options
+/**
+ * Props for icon search/filter functionality
+ *
+ * @example
+ * import type { IconSearchOptions } from '@pelatform/icons/types'
+ *
+ * const searchOptions: IconSearchOptions = {
+ *   category: 'animals',
+ *   variant: 'outline',
+ *   query: 'cat',
+ *   limit: 10
+ * }
+ *
+ * const icons = searchIcons(searchOptions)
+ */
 export interface IconSearchOptions {
+  /** Filter by category */
   category?: IconCategory;
+  /** Filter by variant */
   variant?: IconVariant;
+  /** Search query string */
   query?: string;
+  /** Limit number of results */
   limit?: number;
 }
-
-// Icon library configuration
-export interface IconLibraryConfig {
-  defaultSize?: IconSize;
-  defaultClassName?: string;
-  prefix?: string;
-}
-
-// Utility types for icon manipulation
-export type IconNameToComponent<T extends IconName> = T extends any
-  ? `Icon${Capitalize<T>}`
-  : never;
-
-export type ComponentNameToIcon<T extends string> = T extends `Icon${infer U}`
-  ? Lowercase<U>
-  : never;
