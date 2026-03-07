@@ -29,6 +29,12 @@
       "require": "./dist/cjs/dynamic-imports.cjs",
       "default": "./dist/esm/dynamic-imports.mjs"
     },
+    "./icons-by-category": {
+      "types": "./dist/types/icons-by-category.d.ts",
+      "import": "./dist/esm/icons-by-category.mjs",
+      "require": "./dist/cjs/icons-by-category.cjs",
+      "default": "./dist/esm/icons-by-category.mjs"
+    },
     "./icon-list": {
       "types": "./dist/types/icon-list.d.ts",
       "import": "./dist/esm/icon-list.mjs",

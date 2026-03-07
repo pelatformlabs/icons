@@ -10,6 +10,7 @@ A comprehensive React icon library with 5000+ icons, built with TypeScript and o
 - [Types & TypeScript](./types.md)
 - [Categories](./categories.md)
 - [Dynamic Imports](./dynamic-imports.md)
+- [Icons by Category](./icons-by-category.md)
 - [API Reference](./api-reference.md)
 - [Examples](./examples.md)
 
@@ -72,6 +73,14 @@ import iconList from '@pelatform/icons/icon-list';
 ```tsx
 import { categories } from '@pelatform/icons/categories';
 // Get all available categories (42 categories)
+```
+
+### 5. Icons by Category
+
+```tsx
+import iconsByCategory from '@pelatform/icons/icons-by-category';
+// Get icons in a specific category
+const animalsIcons = iconsByCategory['animals']; // ['cat', 'dog', ...]
 ```
 
 ## 📖 Next Steps

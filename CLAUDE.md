@@ -65,12 +65,13 @@ bun run bump       # Bump package version (uses bumpp)
 
 ### Entry Points
 
-The build system produces five separate entry points:
+The build system produces six separate entry points:
 
 - `index` - Main icon exports (includes all icons from `src/icons/index.ts`)
-- `dynamic-imports` - Chunked dynamic import map for code-splitting
-- `icon-list` - Array of all available icon names (kebab-case)
 - `categories` - List of all icon categories (auto-scanned from icons/ folder)
+- `dynamic-imports` - Chunked dynamic import map for code-splitting
+- `icons-by-category` - Mapping of category IDs to arrays of icon names (for filtering)
+- `icon-list` - Array of all available icon names (kebab-case)
 - `types` - TypeScript type definitions with comprehensive JSDoc comments
 
 ### Package Exports
@@ -84,15 +85,19 @@ import { IconHeart } from '@pelatform/icons'
 # Aliases for backward compatibility (exported from index)
 import { IconBoxSeam } from '@pelatform/icons'  # Re-exports IconPackage
 
+# List of all icon categories
+import { categories, type Category } from '@pelatform/icons/categories'
+
 # Dynamic imports for code-splitting
 import iconMap from '@pelatform/icons/dynamic-imports'
 const IconComponent = await iconMap['heart']
 
+# Icons filtered by category (for UI filtering)
+import iconsByCategory from '@pelatform/icons/icons-by-category'
+const animalsIcons = iconsByCategory['animals']  # ['cat', 'dog', ...]
+
 # List of all available icon names
 import iconList from '@pelatform/icons/icon-list'
-
-# List of all icon categories
-import { categories, type Category } from '@pelatform/icons/categories'
 
 # TypeScript types
 import type { IconProps, IconName, IconCategory } from '@pelatform/icons/types'

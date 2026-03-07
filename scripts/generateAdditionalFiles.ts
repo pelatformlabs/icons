@@ -41,7 +41,7 @@ function runScript(
 async function generateAdditionalFiles(): Promise<void> {
   console.log('🚀 Starting additional files generation...');
   console.log(
-    '📂 Generating aliases, dynamic imports, icon list, and categories files...\n',
+    '📂 Generating aliases, categories, dynamic imports, icons-by-category, and icon list files...\n',
   );
 
   const scripts = [
@@ -53,6 +53,10 @@ async function generateAdditionalFiles(): Promise<void> {
     {
       path: join('scripts', 'generateDynamicImports.ts'),
       name: 'Dynamic Imports Generator',
+    },
+    {
+      path: join('scripts', 'generateIconsByCategory.ts'),
+      name: 'Icons By Category Generator',
     },
     {
       path: join('scripts', 'generateIconList.ts'),
@@ -95,6 +99,7 @@ async function generateAdditionalFiles(): Promise<void> {
     console.log('   - src/aliases.ts');
     console.log('   - src/categories.ts');
     console.log('   - src/dynamic-imports.ts');
+    console.log('   - src/icons-by-category.ts');
     console.log('   - src/icon-list.ts');
   }
 }

@@ -161,6 +161,23 @@ categories.map((category: Category) => (
 ));
 ```
 
+### 4. Icons by Category
+
+Get icons filtered by category:
+
+```tsx
+import iconsByCategory from '@pelatform/icons/icons-by-category';
+
+// Get all icons in a specific category
+const animalsIcons = iconsByCategory['animals'];
+console.log(animalsIcons); // ['cat', 'dog', 'bird', ...]
+
+// Example: Filter icons by category
+const getCategoryIcons = (categoryId: string) => {
+  return iconsByCategory[categoryId] || [];
+};
+```
+
 ## ⚡ Performance Tips
 
 ### 1. Tree Shaking

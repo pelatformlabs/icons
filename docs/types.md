@@ -256,27 +256,19 @@ function App() {
 
 ```tsx
 import type { IconCategory, IconName } from '@pelatform/icons/types';
-import iconList from '@pelatform/icons/icon-list';
-import iconCategoryMap from '@pelatform/icons/out/icon-category.json';
+import iconsByCategory from '@pelatform/icons/icons-by-category';
 
-function filterByCategory(
-  iconList: IconName[],
-  category: IconCategory,
-): IconName[] {
-  if (category === 'all') return iconList;
+function filterByCategory(category: IconCategory): IconName[] {
+  if (category === 'all') {
+    return Object.values(iconsByCategory).flat();
+  }
 
-  return iconList.filter((iconName) => {
-    const iconData = iconCategoryMap[iconName];
-    if (!iconData) return false;
-
-    const categoryLower = iconData.category.toLowerCase();
-    return categoryLower === category;
-  });
+  return iconsByCategory[category] || [];
 }
 
 // Usage
-const healthIcons = filterByCategory(allIcons, 'health'); // ✅ Type-safe
-const invalid = filterByCategory(allIcons, 'invalid'); // ❌ TypeScript error
+const healthIcons = filterByCategory('health'); // ✅ Type-safe
+const invalid = filterByCategory('invalid'); // ❌ TypeScript error
 ```
 
 ### 4. Type-Safe Icon Registry

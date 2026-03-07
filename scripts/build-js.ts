@@ -4,6 +4,7 @@ const entries = [
   'index',
   'categories',
   'dynamic-imports',
+  'icons-by-category',
   'icon-list',
   'types',
 ];

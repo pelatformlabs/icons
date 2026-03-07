@@ -10,7 +10,7 @@ async function main() {
 
     console.log('▶️ Running remove all prebuild...');
     await run(
-      'rimraf dist src/icons src/aliases.ts src/categories.ts src/dynamic-imports.ts src/icon-list.ts',
+      'rimraf dist src/icons src/aliases.ts src/categories.ts src/dynamic-imports.ts src/icons-by-category.ts src/icon-list.ts',
     );
   } catch (error) {
     console.error('❌ Script failed:', error);

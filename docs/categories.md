@@ -134,18 +134,14 @@ Use TypeScript for type-safe category handling:
 
 ```tsx
 import { categories, type Category } from '@pelatform/icons/categories';
+import iconsByCategory from '@pelatform/icons/icons-by-category';
 import type { IconCategory } from '@pelatform/icons/types';
 
 function filterByCategory(iconList: string[], categoryId: IconCategory) {
   if (categoryId === 'all') return iconList;
 
-  // Use icon-category.json for filtering
-  const iconCategoryMap = require('@pelatform/icons/out/icon-category.json');
-
-  return iconList.filter((iconName) => {
-    const category = iconCategoryMap[iconName]?.category.toLowerCase();
-    return category === categoryId;
-  });
+  // Use icons-by-category for filtering
+  return iconsByCategory[categoryId] || [];
 }
 
 // Usage
@@ -159,20 +155,23 @@ Display icon count per category:
 
 ```tsx
 import { categories } from '@pelatform/icons/categories';
-import iconCategoryMap from '@pelatform/icons/out/icon-category.json';
+import iconsByCategory from '@pelatform/icons/icons-by-category';
 
 function CategoryStats() {
   const stats = categories.map((category) => {
     if (category.id === 'all') {
+      const totalCount = Object.values(iconsByCategory).reduce(
+        (sum, icons) => sum + icons.length,
+        0,
+      );
+
       return {
         ...category,
-        count: Object.keys(iconCategoryMap).length,
+        count: totalCount,
       };
     }
 
-    const count = Object.values(iconCategoryMap).filter(
-      (icon) => icon.category.toLowerCase() === category.id,
-    ).length;
+    const count = iconsByCategory[category.id]?.length || 0;
 
     return { ...category, count };
   });
@@ -215,17 +214,15 @@ Display icons grouped by category:
 
 ```tsx
 import { categories, type Category } from '@pelatform/icons/categories';
-import iconList from '@pelatform/icons/icon-list';
-import iconCategoryMap from '@pelatform/icons/out/icon-category.json';
+import iconsByCategory from '@pelatform/icons/icons-by-category';
 
 function IconGrid() {
   const getIconsByCategory = (categoryId: string) => {
-    if (categoryId === 'all') return iconList;
+    if (categoryId === 'all') {
+      return Object.values(iconsByCategory).flat();
+    }
 
-    return iconList.filter((iconName) => {
-      const category = iconCategoryMap[iconName]?.category.toLowerCase();
-      return category === categoryId;
-    });
+    return iconsByCategory[categoryId] || [];
   };
 
   return (
@@ -287,17 +284,13 @@ Search within categories:
 
 ```tsx
 import { categories, type Category } from '@pelatform/icons/categories';
-import iconList from '@pelatform/icons/icon-list';
-import iconCategoryMap from '@pelatform/icons/out/icon-category.json';
+import iconsByCategory from '@pelatform/icons/icons-by-category';
 
 function searchIcons(query: string, categoryId: string) {
   const categoryIcons =
     categoryId === 'all'
-      ? iconList
-      : iconList.filter((iconName) => {
-          const category = iconCategoryMap[iconName]?.category.toLowerCase();
-          return category === categoryId;
-        });
+      ? Object.values(iconsByCategory).flat()
+      : iconsByCategory[categoryId] || [];
 
   return categoryIcons.filter((iconName) =>
     iconName.toLowerCase().includes(query.toLowerCase()),
@@ -315,6 +308,7 @@ function searchIcons(query: string, categoryId: string) {
 
 ## 🚀 Related
 
+- [Icons by Category](./icons-by-category.md) - Get icons filtered by category
 - [Icon List](./api-reference.md#icon-list) - Get all icon names
 - [Dynamic Imports](./dynamic-imports.md) - Load icons dynamically
 - [Types](./types.md) - TypeScript type definitions

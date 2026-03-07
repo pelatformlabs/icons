@@ -39,6 +39,17 @@ export function getComponentName(fileName: string): string {
 }
 
 /**
+ * Converts a string to kebab-case
+ * Example: 'Category Name' -> 'category-name'
+ */
+export function toKebabCase(str: string): string {
+  return str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+/**
  * Chunks an array into smaller arrays of specified size
  */
 export function chunkArray<T>(array: T[], chunkSize: number): T[][] {

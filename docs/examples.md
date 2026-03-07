@@ -583,9 +583,8 @@ function Card({ title, description, image, author, date }: CardProps) {
 
 ```tsx
 import { icons } from '@pelatform/icons';
-import iconList from '@pelatform/icons/icon-list';
 import { categories, type Category } from '@pelatform/icons/categories';
-import iconCategoryMap from '@pelatform/icons/out/icon-category.json';
+import iconsByCategory from '@pelatform/icons/icons-by-category';
 import { useState, useMemo } from 'react';
 
 function IconPicker({ onSelect }: { onSelect: (iconName: string) => void }) {
@@ -593,16 +592,11 @@ function IconPicker({ onSelect }: { onSelect: (iconName: string) => void }) {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const filteredIcons = useMemo(() => {
-    let results = iconList;
-
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      results = results.filter((iconName) => {
-        const iconData = iconCategoryMap[iconName];
-        if (!iconData) return false;
-        return iconData.category.toLowerCase() === selectedCategory;
-      });
-    }
+    // Get icons by category
+    let results =
+      selectedCategory === 'all'
+        ? Object.values(iconsByCategory).flat()
+        : iconsByCategory[selectedCategory] || [];
 
     // Filter by search term
     if (searchTerm) {

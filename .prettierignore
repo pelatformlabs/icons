@@ -11,4 +11,5 @@ src/icons/
 src/aliases.ts
 src/categories.ts
 src/dynamic-imports.ts
+src/icons-by-category.ts
 src/icon-list.ts

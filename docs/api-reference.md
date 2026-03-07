@@ -63,6 +63,24 @@ interface Category {
 console.log(categories); // Array of 42 categories
 ```
 
+### Icons by Category (`@pelatform/icons/icons-by-category`)
+
+```tsx
+import iconsByCategory from '@pelatform/icons/icons-by-category';
+
+// Type: Record<string, string[]>
+// Mapping of category IDs to arrays of icon names
+
+// Usage
+const animalsIcons = iconsByCategory['animals'];
+console.log(animalsIcons); // ['cat', 'dog', 'bird', ...]
+
+// Get icons in a specific category
+const getCategoryIcons = (categoryId: string) => {
+  return iconsByCategory[categoryId] || [];
+};
+```
+
 ### Types (`@pelatform/icons/types`)
 
 ```tsx
@@ -233,14 +251,12 @@ function getCategoryById(id: string): Category | undefined {
 }
 
 // Filter icons by category
-function filterByCategory(iconList: string[], categoryId: string): string[] {
-  if (categoryId === 'all') return iconList;
+function filterByCategory(categoryId: string): string[] {
+  if (categoryId === 'all') {
+    return Object.values(iconsByCategory).flat();
+  }
 
-  const iconCategoryMap = require('@pelatform/icons/out/icon-category.json');
-  return iconList.filter((iconName) => {
-    const category = iconCategoryMap[iconName]?.category.toLowerCase();
-    return category === categoryId;
-  });
+  return iconsByCategory[categoryId] || [];
 }
 
 // Get category count
@@ -409,16 +425,14 @@ function searchIcons(query: string): string[] {
 
 // Advanced search with category filter
 function searchIconsInCategory(query: string, categoryId: string): string[] {
-  const iconCategoryMap = require('@pelatform/icons/out/icon-category.json');
+  const categoryIcons =
+    categoryId === 'all'
+      ? Object.values(iconsByCategory).flat()
+      : iconsByCategory[categoryId] || [];
 
-  return iconList.filter((iconName) => {
-    const matchesQuery = iconName.toLowerCase().includes(query.toLowerCase());
-    const category = iconCategoryMap[iconName]?.category.toLowerCase();
-
-    const matchesCategory = categoryId === 'all' || category === categoryId;
-
-    return matchesQuery && matchesCategory;
-  });
+  return categoryIcons.filter((iconName) =>
+    iconName.toLowerCase().includes(query.toLowerCase()),
+  );
 }
 ```
 
