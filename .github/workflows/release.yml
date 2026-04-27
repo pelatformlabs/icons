@@ -54,9 +54,15 @@ jobs:
         run: bun run build:types
 
       - name: Publish to NPM
+        id: publish
+        if: startsWith(github.ref, 'refs/tags/')
         run: |
           # Set NPM token
           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+
+          # npm CLI expects "workspaces" to be an array, but this repo
+          # uses Bun catalog object. Remove it temporarily for publish checks.
+          node -e "const fs=require('fs');const p=JSON.parse(fs.readFileSync('package.json','utf8'));delete p.workspaces;fs.writeFileSync('package.json', JSON.stringify(p, null, 2) + '\n');"
 
           # Read package name & version
           PACKAGE_NAME=$(node -p "require('./package.json').name")
@@ -68,15 +74,22 @@ jobs:
           # Check if this version is already published
           if npm view "$PACKAGE_NAME@$PACKAGE_VERSION" > /dev/null 2>&1; then
             echo "⏭️ Version already exists on NPM. Skipping publish."
+            echo "published=false" >> "$GITHUB_OUTPUT"
           else
             echo "🚀 Publishing $PACKAGE_NAME@$PACKAGE_VERSION..."
             npm publish --access public
+            echo "published=true" >> "$GITHUB_OUTPUT"
           fi
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_OPTIONS: --max-old-space-size=8192
 
       - name: Release Summary
+        if: startsWith(github.ref, 'refs/tags/')
         run: |
-          echo "✅ Release published!"
+          if [ "${{ steps.publish.outputs.published }}" = "true" ]; then
+            echo "✅ Release published!"
+          else
+            echo "ℹ️ Release skipped (version already exists on NPM)."
+          fi
           echo "Tag: ${{ github.ref_name }}"
