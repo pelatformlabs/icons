@@ -1,8 +1,8 @@
 {
   "summary": {
-    "totalIcons": 6075,
+    "totalIcons": 6093,
     "totalFilled": 1053,
-    "totalOutline": 5022,
+    "totalOutline": 5040,
     "totalCategories": 42
   },
   "categories": {
@@ -524,9 +524,9 @@
       ]
     },
     "Brand": {
-      "total": 406,
+      "total": 407,
       "filled": 34,
-      "outline": 372,
+      "outline": 373,
       "filledIcons": [
         "brand-angular-filled.svg",
         "brand-apple-filled.svg",
@@ -732,6 +732,7 @@
         "brand-intercom.svg",
         "brand-itch.svg",
         "brand-javascript.svg",
+        "brand-jira.svg",
         "brand-juejin.svg",
         "brand-kako-talk.svg",
         "brand-kbin.svg",
@@ -1882,9 +1883,9 @@
       ]
     },
     "Development": {
-      "total": 62,
+      "total": 63,
       "filled": 7,
-      "outline": 55,
+      "outline": 56,
       "filledIcons": [
         "apps-filled.svg",
         "assembly-filled.svg",
@@ -1927,6 +1928,7 @@
         "package-export.svg",
         "package-import.svg",
         "packages.svg",
+        "pipeline.svg",
         "prompt.svg",
         "queue-pop-in.svg",
         "queue-pop-out.svg",
@@ -1953,9 +1955,9 @@
       ]
     },
     "Devices": {
-      "total": 394,
+      "total": 397,
       "filled": 45,
-      "outline": 349,
+      "outline": 352,
       "filledIcons": [
         "battery-1-filled.svg",
         "battery-2-filled.svg",
@@ -2066,6 +2068,8 @@
         "cpu-2.svg",
         "cpu-off.svg",
         "cpu.svg",
+        "device-3d-camera.svg",
+        "device-3d-lens.svg",
         "device-airpods-case.svg",
         "device-airpods.svg",
         "device-airtag.svg",
@@ -2197,6 +2201,7 @@
         "device-nintendo-off.svg",
         "device-nintendo.svg",
         "device-remote.svg",
+        "device-screen.svg",
         "device-sd-card.svg",
         "device-sim-1.svg",
         "device-sim-2.svg",
@@ -2634,9 +2639,9 @@
       ]
     },
     "E-commerce": {
-      "total": 175,
+      "total": 176,
       "filled": 26,
-      "outline": 149,
+      "outline": 150,
       "filledIcons": [
         "basket-filled.svg",
         "cash-banknote-filled.svg",
@@ -2721,6 +2726,7 @@
         "coin-yuan.svg",
         "coin.svg",
         "coins.svg",
+        "credit-card-hand.svg",
         "credit-card-off.svg",
         "credit-card-pay.svg",
         "credit-card-refund.svg",
@@ -3295,9 +3301,9 @@
       ]
     },
     "Letters": {
-      "total": 316,
+      "total": 318,
       "filled": 104,
-      "outline": 212,
+      "outline": 214,
       "filledIcons": [
         "circle-letter-a-filled.svg",
         "circle-letter-b-filled.svg",
@@ -3565,6 +3571,8 @@
         "letter-y.svg",
         "letter-z-small.svg",
         "letter-z.svg",
+        "scan-letter-a.svg",
+        "scan-letter-t.svg",
         "square-letter-a.svg",
         "square-letter-b.svg",
         "square-letter-c.svg",
@@ -3636,9 +3644,9 @@
       ]
     },
     "Map": {
-      "total": 304,
+      "total": 305,
       "filled": 43,
-      "outline": 261,
+      "outline": 262,
       "filledIcons": [
         "bed-filled.svg",
         "campfire-filled.svg",
@@ -3846,6 +3854,7 @@
         "navigation-x.svg",
         "navigation.svg",
         "north-star.svg",
+        "parking-meter.svg",
         "parking-off.svg",
         "parking.svg",
         "pennant-2.svg",
@@ -4305,9 +4314,9 @@
       ]
     },
     "Nature": {
-      "total": 61,
+      "total": 62,
       "filled": 18,
-      "outline": 43,
+      "outline": 44,
       "filledIcons": [
         "alien-filled.svg",
         "atom-2-filled.svg",
@@ -4354,6 +4363,7 @@
         "flower-off.svg",
         "flower.svg",
         "growth.svg",
+        "iceberg.svg",
         "leaf-2.svg",
         "leaf-off.svg",
         "leaf.svg",
@@ -4939,9 +4949,9 @@
       ]
     },
     "Sport": {
-      "total": 81,
+      "total": 82,
       "filled": 13,
-      "outline": 68,
+      "outline": 69,
       "filledIcons": [
         "ball-bowling-filled.svg",
         "barbell-filled.svg",
@@ -4992,6 +5002,7 @@
         "medal-2.svg",
         "medal.svg",
         "meeple.svg",
+        "olympic-torch.svg",
         "olympics-off.svg",
         "olympics.svg",
         "ping-pong.svg",
@@ -5083,9 +5094,9 @@
       ]
     },
     "System": {
-      "total": 896,
+      "total": 898,
       "filled": 132,
-      "outline": 764,
+      "outline": 766,
       "filledIcons": [
         "ad-circle-filled.svg",
         "adjustments-filled.svg",
@@ -5696,6 +5707,7 @@
         "percentage-80.svg",
         "percentage-90.svg",
         "photo-scan.svg",
+        "pillow.svg",
         "pin-end.svg",
         "pin-invoke.svg",
         "playlist-add.svg",
@@ -5979,6 +5991,7 @@
         "window-minimize.svg",
         "woman.svg",
         "wood.svg",
+        "x-mark.svg",
         "x.svg",
         "xd.svg",
         "xxx.svg",
@@ -5988,9 +6001,9 @@
       ]
     },
     "Text": {
-      "total": 212,
+      "total": 213,
       "filled": 34,
-      "outline": 178,
+      "outline": 179,
       "filledIcons": [
         "align-box-bottom-center-filled.svg",
         "align-box-bottom-left-filled.svg",
@@ -6150,6 +6163,7 @@
         "pilcrow-right.svg",
         "pilcrow.svg",
         "quote-off.svg",
+        "quote-open.svg",
         "quote.svg",
         "quotes.svg",
         "regex-off.svg",
@@ -6209,9 +6223,9 @@
       ]
     },
     "Vehicles": {
-      "total": 114,
+      "total": 118,
       "filled": 31,
-      "outline": 83,
+      "outline": 87,
       "filledIcons": [
         "aerial-lift-filled.svg",
         "air-balloon-filled.svg",
@@ -6267,7 +6281,9 @@
         "car-fan-3.svg",
         "car-fan-auto.svg",
         "car-fan.svg",
+        "car-off-road.svg",
         "car-off.svg",
+        "car-suspension.svg",
         "car-suv.svg",
         "car-turbine.svg",
         "car.svg",
@@ -6288,6 +6304,7 @@
         "gas-station.svg",
         "helicopter-landing.svg",
         "helicopter.svg",
+        "jetski.svg",
         "moped.svg",
         "motorbike.svg",
         "parachute-off.svg",
@@ -6305,6 +6322,7 @@
         "sailboat.svg",
         "scooter-electric.svg",
         "scooter.svg",
+        "segway.svg",
         "ship-off.svg",
         "ship.svg",
         "skateboard-off.svg",

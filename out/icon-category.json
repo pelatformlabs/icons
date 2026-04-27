@@ -3330,6 +3330,10 @@
     "name": "brand-javascript",
     "category": "Brand"
   },
+  "brand-jira": {
+    "name": "brand-jira",
+    "category": "Brand"
+  },
   "brand-juejin": {
     "name": "brand-juejin",
     "category": "Brand"
@@ -4889,6 +4893,14 @@
   },
   "car-off": {
     "name": "car-off",
+    "category": "Vehicles"
+  },
+  "car-off-road": {
+    "name": "car-off-road",
+    "category": "Vehicles"
+  },
+  "car-suspension": {
+    "name": "car-suspension",
     "category": "Vehicles"
   },
   "car-suv": {
@@ -7097,6 +7109,10 @@
     "category": "E-commerce",
     "filled": true
   },
+  "credit-card-hand": {
+    "name": "credit-card-hand",
+    "category": "E-commerce"
+  },
   "credit-card-off": {
     "name": "credit-card-off",
     "category": "E-commerce"
@@ -7665,6 +7681,14 @@
     "name": "details-off",
     "category": "System"
   },
+  "device-3d-camera": {
+    "name": "device-3d-camera",
+    "category": "Devices"
+  },
+  "device-3d-lens": {
+    "name": "device-3d-lens",
+    "category": "Devices"
+  },
   "device-airpods": {
     "name": "device-airpods",
     "category": "Devices"
@@ -8203,6 +8227,10 @@
     "name": "device-remote",
     "category": "Devices",
     "filled": true
+  },
+  "device-screen": {
+    "name": "device-screen",
+    "category": "Devices"
   },
   "device-sd-card": {
     "name": "device-sd-card",
@@ -11644,6 +11672,10 @@
     "name": "ice-skating",
     "category": "Sport"
   },
+  "iceberg": {
+    "name": "iceberg",
+    "category": "Nature"
+  },
   "icons": {
     "name": "icons",
     "category": "Shapes",
@@ -11865,6 +11897,10 @@
     "name": "jetpack",
     "category": "System",
     "filled": true
+  },
+  "jetski": {
+    "name": "jetski",
+    "category": "Vehicles"
   },
   "jewish-star": {
     "name": "jewish-star",
@@ -15192,6 +15228,10 @@
     "name": "old",
     "category": "Health"
   },
+  "olympic-torch": {
+    "name": "olympic-torch",
+    "category": "Sport"
+  },
   "olympics": {
     "name": "olympics",
     "category": "Sport"
@@ -15335,6 +15375,10 @@
     "name": "parking-circle",
     "category": "Symbols",
     "filled": true
+  },
+  "parking-meter": {
+    "name": "parking-meter",
+    "category": "Map"
   },
   "parking-off": {
     "name": "parking-off",
@@ -15907,6 +15951,10 @@
     "name": "pill-off",
     "category": "Health"
   },
+  "pillow": {
+    "name": "pillow",
+    "category": "System"
+  },
   "pills": {
     "name": "pills",
     "category": "Health"
@@ -15936,6 +15984,10 @@
   "pinned-off": {
     "name": "pinned-off",
     "category": "Map"
+  },
+  "pipeline": {
+    "name": "pipeline",
+    "category": "Development"
   },
   "pizza": {
     "name": "pizza",
@@ -16519,6 +16571,10 @@
   },
   "quote-off": {
     "name": "quote-off",
+    "category": "Text"
+  },
+  "quote-open": {
+    "name": "quote-open",
     "category": "Text"
   },
   "quotes": {
@@ -17246,6 +17302,14 @@
     "name": "scan-eye",
     "category": "System"
   },
+  "scan-letter-a": {
+    "name": "scan-letter-a",
+    "category": "Letters"
+  },
+  "scan-letter-t": {
+    "name": "scan-letter-t",
+    "category": "Letters"
+  },
   "scan-position": {
     "name": "scan-position",
     "category": "System"
@@ -17378,6 +17442,10 @@
   "seedling-off": {
     "name": "seedling-off",
     "category": "Nature"
+  },
+  "segway": {
+    "name": "segway",
+    "category": "Vehicles"
   },
   "select": {
     "name": "select",
@@ -20948,6 +21016,10 @@
     "name": "x",
     "category": "System",
     "filled": true
+  },
+  "x-mark": {
+    "name": "x-mark",
+    "category": "System"
   },
   "x-power-y": {
     "name": "x-power-y",
