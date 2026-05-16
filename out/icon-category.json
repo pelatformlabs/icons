@@ -40,6 +40,14 @@
     "name": "accessible-off",
     "category": "Health"
   },
+  "acorn": {
+    "name": "acorn",
+    "category": "Nature"
+  },
+  "acrobatic": {
+    "name": "acrobatic",
+    "category": "Sport"
+  },
   "activity": {
     "name": "activity",
     "category": "Health"
@@ -1711,6 +1719,10 @@
     "name": "ban",
     "category": "System"
   },
+  "banana": {
+    "name": "banana",
+    "category": "Food"
+  },
   "bandage": {
     "name": "bandage",
     "category": "Health",
@@ -2783,6 +2795,10 @@
     "name": "brand-astro",
     "category": "Brand"
   },
+  "brand-audible": {
+    "name": "brand-audible",
+    "category": "Brand"
+  },
   "brand-auth0": {
     "name": "brand-auth0",
     "category": "Brand"
@@ -3794,6 +3810,10 @@
     "category": "Brand",
     "filled": true
   },
+  "brand-stellar": {
+    "name": "brand-stellar",
+    "category": "Brand"
+  },
   "brand-stocktwits": {
     "name": "brand-stocktwits",
     "category": "Brand"
@@ -3986,6 +4006,10 @@
   },
   "brand-valorant": {
     "name": "brand-valorant",
+    "category": "Brand"
+  },
+  "brand-vechain": {
+    "name": "brand-vechain",
     "category": "Brand"
   },
   "brand-vercel": {
@@ -4385,6 +4409,10 @@
   },
   "building-cottage": {
     "name": "building-cottage",
+    "category": "Buildings"
+  },
+  "building-eiffel-tower": {
+    "name": "building-eiffel-tower",
     "category": "Buildings"
   },
   "building-estate": {
@@ -4866,6 +4894,10 @@
     "name": "car-crash",
     "category": "Vehicles"
   },
+  "car-door": {
+    "name": "car-door",
+    "category": "Vehicles"
+  },
   "car-fan": {
     "name": "car-fan",
     "category": "Vehicles",
@@ -4890,6 +4922,10 @@
   "car-garage": {
     "name": "car-garage",
     "category": "Buildings"
+  },
+  "car-lifter": {
+    "name": "car-lifter",
+    "category": "Vehicles"
   },
   "car-off": {
     "name": "car-off",
@@ -5483,6 +5519,10 @@
   "chisel": {
     "name": "chisel",
     "category": "Design"
+  },
+  "chocolate": {
+    "name": "chocolate",
+    "category": "Food"
   },
   "christmas-ball": {
     "name": "christmas-ball",
@@ -6250,6 +6290,14 @@
     "name": "clear-formatting",
     "category": "Text"
   },
+  "clef": {
+    "name": "clef",
+    "category": "Media"
+  },
+  "clef-staff": {
+    "name": "clef-staff",
+    "category": "Media"
+  },
   "click": {
     "name": "click",
     "category": "System",
@@ -6661,6 +6709,10 @@
   "code": {
     "name": "code",
     "category": "Text"
+  },
+  "code-ai": {
+    "name": "code-ai",
+    "category": "Development"
   },
   "code-asterisk": {
     "name": "code-asterisk",
@@ -7366,6 +7418,10 @@
     "name": "currency-hryvnia",
     "category": "Currencies"
   },
+  "currency-husd": {
+    "name": "currency-husd",
+    "category": "Currencies"
+  },
   "currency-iranian-rial": {
     "name": "currency-iranian-rial",
     "category": "Currencies"
@@ -7498,6 +7554,10 @@
     "name": "currency-tenge",
     "category": "Currencies"
   },
+  "currency-tether": {
+    "name": "currency-tether",
+    "category": "Currencies"
+  },
   "currency-tugrik": {
     "name": "currency-tugrik",
     "category": "Currencies"
@@ -7520,6 +7580,10 @@
   },
   "currency-yuan": {
     "name": "currency-yuan",
+    "category": "Currencies"
+  },
+  "currency-zcash": {
+    "name": "currency-zcash",
     "category": "Currencies"
   },
   "currency-zloty": {
@@ -7724,6 +7788,10 @@
   },
   "device-computer-camera": {
     "name": "device-computer-camera",
+    "category": "Devices"
+  },
+  "device-computer-camera-2": {
+    "name": "device-computer-camera-2",
     "category": "Devices"
   },
   "device-computer-camera-off": {
@@ -8747,6 +8815,10 @@
     "name": "door-exit",
     "category": "System"
   },
+  "door-hanger": {
+    "name": "door-hanger",
+    "category": "Buildings"
+  },
   "door-off": {
     "name": "door-off",
     "category": "System"
@@ -8908,6 +8980,10 @@
     "category": "Devices",
     "filled": true
   },
+  "dumbbell": {
+    "name": "dumbbell",
+    "category": "Sport"
+  },
   "dumpling": {
     "name": "dumpling",
     "category": "Food",
@@ -8928,6 +9004,10 @@
   "ear-scan": {
     "name": "ear-scan",
     "category": "System"
+  },
+  "earphone-bluetooth": {
+    "name": "earphone-bluetooth",
+    "category": "Devices"
   },
   "ease-in": {
     "name": "ease-in",
@@ -9004,6 +9084,10 @@
   "elevator-off": {
     "name": "elevator-off",
     "category": "System"
+  },
+  "email-stamp": {
+    "name": "email-stamp",
+    "category": "Communication"
   },
   "emergency-bed": {
     "name": "emergency-bed",
@@ -9094,6 +9178,10 @@
   "exclamation-mark-off": {
     "name": "exclamation-mark-off",
     "category": "System"
+  },
+  "exercise-ball": {
+    "name": "exercise-ball",
+    "category": "Sport"
   },
   "explicit": {
     "name": "explicit",
@@ -10183,6 +10271,10 @@
     "name": "float-right",
     "category": "Text"
   },
+  "flood": {
+    "name": "flood",
+    "category": "Weather"
+  },
   "flower": {
     "name": "flower",
     "category": "Nature",
@@ -10326,6 +10418,10 @@
   "folders-off": {
     "name": "folders-off",
     "category": "Document"
+  },
+  "foodsteps": {
+    "name": "foodsteps",
+    "category": "Health"
   },
   "forbid": {
     "name": "forbid",
@@ -10599,6 +10695,10 @@
     "name": "git-pull-request-closed",
     "category": "Version control"
   },
+  "git-pull-request-conflict": {
+    "name": "git-pull-request-conflict",
+    "category": "Version control"
+  },
   "git-pull-request-draft": {
     "name": "git-pull-request-draft",
     "category": "Version control"
@@ -10667,6 +10767,10 @@
   "grain": {
     "name": "grain",
     "category": "Design"
+  },
+  "grape": {
+    "name": "grape",
+    "category": "Food"
   },
   "graph": {
     "name": "graph",
@@ -10774,6 +10878,10 @@
   "hammer": {
     "name": "hammer",
     "category": "Design"
+  },
+  "hammer-drill": {
+    "name": "hammer-drill",
+    "category": "Devices"
   },
   "hammer-off": {
     "name": "hammer-off",
@@ -11656,6 +11764,10 @@
     "name": "http-trace-off",
     "category": "Computers"
   },
+  "hula-hoop": {
+    "name": "hula-hoop",
+    "category": "Sport"
+  },
   "ice-cream": {
     "name": "ice-cream",
     "category": "Food"
@@ -11736,6 +11848,10 @@
   },
   "infinity": {
     "name": "infinity",
+    "category": "Math"
+  },
+  "infinity-2": {
+    "name": "infinity-2",
     "category": "Math"
   },
   "infinity-off": {
@@ -12093,6 +12209,10 @@
     "category": "Design",
     "filled": true
   },
+  "lawn-mower": {
+    "name": "lawn-mower",
+    "category": "Devices"
+  },
   "layers-difference": {
     "name": "layers-difference",
     "category": "Design"
@@ -12321,6 +12441,10 @@
   },
   "leaf-2": {
     "name": "leaf-2",
+    "category": "Nature"
+  },
+  "leaf-maple": {
+    "name": "leaf-maple",
     "category": "Nature"
   },
   "leaf-off": {
@@ -12708,6 +12832,10 @@
   },
   "loader-3": {
     "name": "loader-3",
+    "category": "System"
+  },
+  "loader-4": {
+    "name": "loader-4",
     "category": "System"
   },
   "loader-quarter": {
@@ -14354,6 +14482,10 @@
     "name": "moped",
     "category": "Vehicles"
   },
+  "mosque": {
+    "name": "mosque",
+    "category": "Buildings"
+  },
   "motorbike": {
     "name": "motorbike",
     "category": "Vehicles",
@@ -14672,9 +14804,17 @@
     "name": "no-derivatives",
     "category": "System"
   },
+  "noise-reduction": {
+    "name": "noise-reduction",
+    "category": "Design"
+  },
   "north-star": {
     "name": "north-star",
     "category": "Map"
+  },
+  "notdef": {
+    "name": "notdef",
+    "category": "Text"
   },
   "note": {
     "name": "note",
@@ -15510,6 +15650,10 @@
     "name": "pencil-x",
     "category": "Design"
   },
+  "pendulum": {
+    "name": "pendulum",
+    "category": "Math"
+  },
   "pennant": {
     "name": "pennant",
     "category": "Map",
@@ -15741,6 +15885,10 @@
   },
   "photo-ai": {
     "name": "photo-ai",
+    "category": "Media"
+  },
+  "photo-alt": {
+    "name": "photo-alt",
     "category": "Media"
   },
   "photo-bitcoin": {
@@ -16252,6 +16400,10 @@
     "name": "plug-x",
     "category": "Devices"
   },
+  "plunger": {
+    "name": "plunger",
+    "category": "Health"
+  },
   "plus": {
     "name": "plus",
     "category": "Math",
@@ -16291,6 +16443,10 @@
     "category": "System",
     "filled": true
   },
+  "pointer-2": {
+    "name": "pointer-2",
+    "category": "System"
+  },
   "pointer-bolt": {
     "name": "pointer-bolt",
     "category": "System"
@@ -16309,6 +16465,14 @@
   },
   "pointer-cog": {
     "name": "pointer-cog",
+    "category": "System"
+  },
+  "pointer-collaboration": {
+    "name": "pointer-collaboration",
+    "category": "System"
+  },
+  "pointer-collaboration-2": {
+    "name": "pointer-collaboration-2",
     "category": "System"
   },
   "pointer-dollar": {
@@ -17115,6 +17279,10 @@
     "name": "rotate-rectangle",
     "category": "Arrows"
   },
+  "roulette": {
+    "name": "roulette",
+    "category": "Games"
+  },
   "route": {
     "name": "route",
     "category": "Map"
@@ -17186,6 +17354,10 @@
   "rubber-stamp-off": {
     "name": "rubber-stamp-off",
     "category": "Document"
+  },
+  "rugby": {
+    "name": "rugby",
+    "category": "Sport"
   },
   "ruler": {
     "name": "ruler",
@@ -17296,6 +17468,10 @@
   },
   "scan": {
     "name": "scan",
+    "category": "System"
+  },
+  "scan-cube": {
+    "name": "scan-cube",
     "category": "System"
   },
   "scan-eye": {
@@ -18027,6 +18203,10 @@
     "name": "skateboarding",
     "category": "Sport"
   },
+  "sketching": {
+    "name": "sketching",
+    "category": "Design"
+  },
   "skew-x": {
     "name": "skew-x",
     "category": "System"
@@ -18241,6 +18421,18 @@
     "category": "Shapes",
     "filled": true
   },
+  "sparkle": {
+    "name": "sparkle",
+    "category": "Design"
+  },
+  "sparkle-2": {
+    "name": "sparkle-2",
+    "category": "Design"
+  },
+  "sparkle-highlight": {
+    "name": "sparkle-highlight",
+    "category": "Design"
+  },
   "sparkles": {
     "name": "sparkles",
     "category": "System",
@@ -18262,6 +18454,10 @@
   },
   "sphere": {
     "name": "sphere",
+    "category": "Shapes"
+  },
+  "sphere-2": {
+    "name": "sphere-2",
     "category": "Shapes"
   },
   "sphere-off": {
@@ -19401,6 +19597,10 @@
     "name": "tags-off",
     "category": "E-commerce"
   },
+  "taiwan-dollar": {
+    "name": "taiwan-dollar",
+    "category": "Currencies"
+  },
   "tallymark-1": {
     "name": "tallymark-1",
     "category": "Math"
@@ -19428,6 +19628,10 @@
   "target": {
     "name": "target",
     "category": "Map"
+  },
+  "target-2": {
+    "name": "target-2",
+    "category": "Sport"
   },
   "target-arrow": {
     "name": "target-arrow",
@@ -19583,6 +19787,10 @@
   },
   "text-scan-2": {
     "name": "text-scan-2",
+    "category": "System"
+  },
+  "text-scan-ai": {
+    "name": "text-scan-ai",
     "category": "System"
   },
   "text-size": {
@@ -20205,6 +20413,10 @@
     "name": "underline",
     "category": "Text"
   },
+  "unicycle": {
+    "name": "unicycle",
+    "category": "Vehicles"
+  },
   "universe": {
     "name": "universe",
     "category": "System"
@@ -20521,6 +20733,10 @@
   "viewport-wide": {
     "name": "viewport-wide",
     "category": "Devices"
+  },
+  "vignette": {
+    "name": "vignette",
+    "category": "Design"
   },
   "vinyl": {
     "name": "vinyl",

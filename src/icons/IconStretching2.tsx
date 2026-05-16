@@ -24,10 +24,10 @@ const IconStretching2: React.FC<IconStretching2Props> = (props) => {
     strokeLinejoin="round"
     {...props}
    className={finalClassName} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
-    <path d="M11 4a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
     <path d="M6.5 21l3.5 -5" />
     <path d="M5 11l7 -2" />
     <path d="M16 21l-4 -7v-5l7 -4" />
+    <path d="M9.007 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
   </svg>
   );
 };

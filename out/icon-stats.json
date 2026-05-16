@@ -1,8 +1,8 @@
 {
   "summary": {
-    "totalIcons": 6093,
+    "totalIcons": 6147,
     "totalFilled": 1053,
-    "totalOutline": 5040,
+    "totalOutline": 5094,
     "totalCategories": 42
   },
   "categories": {
@@ -524,9 +524,9 @@
       ]
     },
     "Brand": {
-      "total": 407,
+      "total": 410,
       "filled": 34,
-      "outline": 373,
+      "outline": 376,
       "filledIcons": [
         "brand-angular-filled.svg",
         "brand-apple-filled.svg",
@@ -597,6 +597,7 @@
         "brand-arc.svg",
         "brand-asana.svg",
         "brand-astro.svg",
+        "brand-audible.svg",
         "brand-auth0.svg",
         "brand-aws.svg",
         "brand-azure.svg",
@@ -846,6 +847,7 @@
         "brand-stackoverflow.svg",
         "brand-stackshare.svg",
         "brand-steam.svg",
+        "brand-stellar.svg",
         "brand-stocktwits.svg",
         "brand-storj.svg",
         "brand-storybook.svg",
@@ -893,6 +895,7 @@
         "brand-unsplash.svg",
         "brand-upwork.svg",
         "brand-valorant.svg",
+        "brand-vechain.svg",
         "brand-vercel.svg",
         "brand-vimeo.svg",
         "brand-vinted.svg",
@@ -940,9 +943,9 @@
       ]
     },
     "Buildings": {
-      "total": 98,
+      "total": 101,
       "filled": 7,
-      "outline": 91,
+      "outline": 94,
       "filledIcons": [
         "bath-filled.svg",
         "bed-flat-filled.svg",
@@ -975,6 +978,7 @@
         "building-cog.svg",
         "building-community.svg",
         "building-cottage.svg",
+        "building-eiffel-tower.svg",
         "building-estate.svg",
         "building-factory-2.svg",
         "building-factory.svg",
@@ -997,6 +1001,7 @@
         "buildings.svg",
         "car-garage.svg",
         "chalkboard-teacher.svg",
+        "door-hanger.svg",
         "fence-off.svg",
         "fence.svg",
         "home-2.svg",
@@ -1033,6 +1038,7 @@
         "home-x.svg",
         "home.svg",
         "hotel-service.svg",
+        "mosque.svg",
         "podium-off.svg",
         "podium.svg",
         "school-bell.svg",
@@ -1109,9 +1115,9 @@
       ]
     },
     "Communication": {
-      "total": 127,
+      "total": 128,
       "filled": 11,
-      "outline": 116,
+      "outline": 117,
       "filledIcons": [
         "bubble-filled.svg",
         "bubble-text-filled.svg",
@@ -1133,6 +1139,7 @@
         "bubble-text.svg",
         "bubble-x.svg",
         "bubble.svg",
+        "email-stamp.svg",
         "mail-ai.svg",
         "mail-bitcoin.svg",
         "mail-bolt.svg",
@@ -1302,9 +1309,9 @@
       ]
     },
     "Currencies": {
-      "total": 72,
+      "total": 76,
       "filled": 0,
-      "outline": 72,
+      "outline": 76,
       "filledIcons": [],
       "outlineIcons": [
         "currency-afghani.svg",
@@ -1333,6 +1340,7 @@
         "currency-frank.svg",
         "currency-guarani.svg",
         "currency-hryvnia.svg",
+        "currency-husd.svg",
         "currency-iranian-rial.svg",
         "currency-kip.svg",
         "currency-krone-czech.svg",
@@ -1366,14 +1374,17 @@
         "currency-som.svg",
         "currency-taka.svg",
         "currency-tenge.svg",
+        "currency-tether.svg",
         "currency-tugrik.svg",
         "currency-won.svg",
         "currency-xrp.svg",
         "currency-yen-off.svg",
         "currency-yen.svg",
         "currency-yuan.svg",
+        "currency-zcash.svg",
         "currency-zloty.svg",
         "currency.svg",
+        "taiwan-dollar.svg",
         "tax-euro.svg",
         "tax-pound.svg",
         "tax.svg",
@@ -1438,9 +1449,9 @@
       ]
     },
     "Design": {
-      "total": 436,
+      "total": 442,
       "filled": 102,
-      "outline": 334,
+      "outline": 340,
       "filledIcons": [
         "ad-filled.svg",
         "artboard-filled.svg",
@@ -1793,6 +1804,7 @@
         "moustache.svg",
         "needle-thread.svg",
         "needle.svg",
+        "noise-reduction.svg",
         "paint-off.svg",
         "paint.svg",
         "palette-off.svg",
@@ -1845,7 +1857,11 @@
         "shape.svg",
         "shovel-pitchforks.svg",
         "shovel.svg",
+        "sketching.svg",
         "slice.svg",
+        "sparkle-2.svg",
+        "sparkle-highlight.svg",
+        "sparkle.svg",
         "sparkles-2.svg",
         "square-half.svg",
         "square-toggle-horizontal.svg",
@@ -1879,13 +1895,14 @@
         "vector-triangle-off.svg",
         "vector-triangle.svg",
         "vector.svg",
+        "vignette.svg",
         "wheel.svg"
       ]
     },
     "Development": {
-      "total": 63,
+      "total": 64,
       "filled": 7,
-      "outline": 56,
+      "outline": 57,
       "filledIcons": [
         "apps-filled.svg",
         "assembly-filled.svg",
@@ -1917,6 +1934,7 @@
         "bug-off.svg",
         "bug.svg",
         "canary.svg",
+        "code-ai.svg",
         "codeblock.svg",
         "connection.svg",
         "firewall-check.svg",
@@ -1955,9 +1973,9 @@
       ]
     },
     "Devices": {
-      "total": 397,
+      "total": 401,
       "filled": 45,
-      "outline": 352,
+      "outline": 356,
       "filledIcons": [
         "battery-1-filled.svg",
         "battery-2-filled.svg",
@@ -2078,6 +2096,7 @@
         "device-camera-phone.svg",
         "device-cctv-off.svg",
         "device-cctv.svg",
+        "device-computer-camera-2.svg",
         "device-computer-camera-off.svg",
         "device-computer-camera.svg",
         "device-desktop-analytics.svg",
@@ -2287,12 +2306,15 @@
         "disc-off.svg",
         "disc.svg",
         "dual-screen.svg",
+        "earphone-bluetooth.svg",
         "fridge-off.svg",
         "fridge.svg",
+        "hammer-drill.svg",
         "keyboard-hide.svg",
         "keyboard-off.svg",
         "keyboard-show.svg",
         "keyboard.svg",
+        "lawn-mower.svg",
         "mouse-2.svg",
         "mouse-off.svg",
         "mouse.svg",
@@ -2872,9 +2894,9 @@
       ]
     },
     "Food": {
-      "total": 121,
+      "total": 124,
       "filled": 28,
-      "outline": 93,
+      "outline": 96,
       "filledIcons": [
         "apple-filled.svg",
         "beer-filled.svg",
@@ -2909,6 +2931,7 @@
         "apple.svg",
         "avocado.svg",
         "baguette.svg",
+        "banana.svg",
         "beer-off.svg",
         "beer.svg",
         "bone-off.svg",
@@ -2934,6 +2957,7 @@
         "cheese.svg",
         "chef-hat-off.svg",
         "chef-hat.svg",
+        "chocolate.svg",
         "coffee-off.svg",
         "coffee.svg",
         "cooker.svg",
@@ -2954,6 +2978,7 @@
         "glass-gin.svg",
         "glass-off.svg",
         "glass.svg",
+        "grape.svg",
         "grill-fork.svg",
         "grill-off.svg",
         "grill-spatula.svg",
@@ -3002,9 +3027,9 @@
       ]
     },
     "Games": {
-      "total": 75,
+      "total": 76,
       "filled": 29,
-      "outline": 46,
+      "outline": 47,
       "filledIcons": [
         "dice-1-filled.svg",
         "dice-2-filled.svg",
@@ -3079,6 +3104,7 @@
         "puzzle-off.svg",
         "puzzle.svg",
         "robot.svg",
+        "roulette.svg",
         "sword-off.svg",
         "sword.svg",
         "swords.svg",
@@ -3137,9 +3163,9 @@
       ]
     },
     "Health": {
-      "total": 101,
+      "total": 103,
       "filled": 16,
-      "outline": 85,
+      "outline": 87,
       "filledIcons": [
         "accessible-filled.svg",
         "baby-carriage-filled.svg",
@@ -3206,6 +3232,7 @@
         "flask-2.svg",
         "flask-off.svg",
         "flask.svg",
+        "foodsteps.svg",
         "hand-sanitizer.svg",
         "heart-bitcoin.svg",
         "heart-broken.svg",
@@ -3227,6 +3254,7 @@
         "pill-off.svg",
         "pill.svg",
         "pills.svg",
+        "plunger.svg",
         "prescription.svg",
         "razor-electric.svg",
         "razor.svg",
@@ -3958,9 +3986,9 @@
       ]
     },
     "Math": {
-      "total": 88,
+      "total": 90,
       "filled": 2,
-      "outline": 86,
+      "outline": 88,
       "filledIcons": [
         "function-filled.svg",
         "plus-filled.svg"
@@ -3984,6 +4012,7 @@
         "equal.svg",
         "function-off.svg",
         "function.svg",
+        "infinity-2.svg",
         "infinity-off.svg",
         "infinity.svg",
         "math-1-divide-2.svg",
@@ -4033,6 +4062,7 @@
         "omega.svg",
         "parentheses-off.svg",
         "parentheses.svg",
+        "pendulum.svg",
         "percentage.svg",
         "plus-equal.svg",
         "plus-minus.svg",
@@ -4055,9 +4085,9 @@
       ]
     },
     "Media": {
-      "total": 179,
+      "total": 182,
       "filled": 27,
-      "outline": 152,
+      "outline": 155,
       "filledIcons": [
         "aspect-ratio-filled.svg",
         "camera-filled.svg",
@@ -4121,6 +4151,8 @@
         "capture.svg",
         "cast-off.svg",
         "cast.svg",
+        "clef-staff.svg",
+        "clef.svg",
         "headphones-off.svg",
         "headphones.svg",
         "headset-off.svg",
@@ -4161,6 +4193,7 @@
         "music-x.svg",
         "music.svg",
         "photo-ai.svg",
+        "photo-alt.svg",
         "photo-bolt.svg",
         "photo-cancel.svg",
         "photo-check.svg",
@@ -4314,9 +4347,9 @@
       ]
     },
     "Nature": {
-      "total": 62,
+      "total": 64,
       "filled": 18,
-      "outline": 44,
+      "outline": 46,
       "filledIcons": [
         "alien-filled.svg",
         "atom-2-filled.svg",
@@ -4338,6 +4371,7 @@
         "seedling-filled.svg"
       ],
       "outlineIcons": [
+        "acorn.svg",
         "alien.svg",
         "atom-2.svg",
         "atom-off.svg",
@@ -4365,6 +4399,7 @@
         "growth.svg",
         "iceberg.svg",
         "leaf-2.svg",
+        "leaf-maple.svg",
         "leaf-off.svg",
         "leaf.svg",
         "meteor-off.svg",
@@ -4709,9 +4744,9 @@
       ]
     },
     "Shapes": {
-      "total": 231,
+      "total": 232,
       "filled": 49,
-      "outline": 182,
+      "outline": 183,
       "filledIcons": [
         "capsule-filled.svg",
         "capsule-horizontal-filled.svg",
@@ -4905,6 +4940,7 @@
         "rosette-asterisk.svg",
         "rosette.svg",
         "spade.svg",
+        "sphere-2.svg",
         "sphere-off.svg",
         "sphere-plus.svg",
         "sphere.svg",
@@ -4949,9 +4985,9 @@
       ]
     },
     "Sport": {
-      "total": 82,
+      "total": 88,
       "filled": 13,
-      "outline": 69,
+      "outline": 75,
       "filledIcons": [
         "ball-bowling-filled.svg",
         "barbell-filled.svg",
@@ -4968,6 +5004,7 @@
         "trophy-filled.svg"
       ],
       "outlineIcons": [
+        "acrobatic.svg",
         "ball-american-football-off.svg",
         "ball-american-football.svg",
         "ball-baseball.svg",
@@ -4991,10 +5028,13 @@
         "cricket.svg",
         "curling.svg",
         "disc-golf.svg",
+        "dumbbell.svg",
+        "exercise-ball.svg",
         "golf-off.svg",
         "golf.svg",
         "helmet-off.svg",
         "helmet.svg",
+        "hula-hoop.svg",
         "ice-skating.svg",
         "jump-rope.svg",
         "karate.svg",
@@ -5014,6 +5054,7 @@
         "pool.svg",
         "rings.svg",
         "roller-skating.svg",
+        "rugby.svg",
         "run.svg",
         "scoreboard.svg",
         "scuba-diving-tank.svg",
@@ -5027,6 +5068,7 @@
         "stretching-2.svg",
         "stretching.svg",
         "swimming.svg",
+        "target-2.svg",
         "target-arrow.svg",
         "tic-tac.svg",
         "tournament.svg",
@@ -5094,9 +5136,9 @@
       ]
     },
     "System": {
-      "total": 898,
+      "total": 904,
       "filled": 132,
-      "outline": 766,
+      "outline": 772,
       "filledIcons": [
         "ad-circle-filled.svg",
         "adjustments-filled.svg",
@@ -5620,6 +5662,7 @@
         "list-tree.svg",
         "loader-2.svg",
         "loader-3.svg",
+        "loader-4.svg",
         "loader-quarter.svg",
         "loader.svg",
         "location-discount.svg",
@@ -5713,11 +5756,14 @@
         "playlist-add.svg",
         "point-off.svg",
         "point.svg",
+        "pointer-2.svg",
         "pointer-bolt.svg",
         "pointer-cancel.svg",
         "pointer-check.svg",
         "pointer-code.svg",
         "pointer-cog.svg",
+        "pointer-collaboration-2.svg",
+        "pointer-collaboration.svg",
         "pointer-dollar.svg",
         "pointer-down.svg",
         "pointer-exclamation.svg",
@@ -5768,6 +5814,7 @@
         "scale-outline-off.svg",
         "scale-outline.svg",
         "scale.svg",
+        "scan-cube.svg",
         "scan-eye.svg",
         "scan-position.svg",
         "scan.svg",
@@ -5885,6 +5932,7 @@
         "test-pipe-off.svg",
         "test-pipe.svg",
         "text-scan-2.svg",
+        "text-scan-ai.svg",
         "texture.svg",
         "thumb-down-off.svg",
         "thumb-down.svg",
@@ -6001,9 +6049,9 @@
       ]
     },
     "Text": {
-      "total": 213,
+      "total": 214,
       "filled": 34,
-      "outline": 179,
+      "outline": 180,
       "filledIcons": [
         "align-box-bottom-center-filled.svg",
         "align-box-bottom-left-filled.svg",
@@ -6158,6 +6206,7 @@
         "list.svg",
         "markdown-off.svg",
         "markdown.svg",
+        "notdef.svg",
         "overline.svg",
         "pilcrow-left.svg",
         "pilcrow-right.svg",
@@ -6223,9 +6272,9 @@
       ]
     },
     "Vehicles": {
-      "total": 118,
+      "total": 121,
       "filled": 31,
-      "outline": 87,
+      "outline": 90,
       "filledIcons": [
         "aerial-lift-filled.svg",
         "air-balloon-filled.svg",
@@ -6276,11 +6325,13 @@
         "car-4wd.svg",
         "car-crane.svg",
         "car-crash.svg",
+        "car-door.svg",
         "car-fan-1.svg",
         "car-fan-2.svg",
         "car-fan-3.svg",
         "car-fan-auto.svg",
         "car-fan.svg",
+        "car-lifter.svg",
         "car-off-road.svg",
         "car-off.svg",
         "car-suspension.svg",
@@ -6340,6 +6391,7 @@
         "trolley.svg",
         "truck-off.svg",
         "truck.svg",
+        "unicycle.svg",
         "wheelchair-off.svg",
         "wheelchair.svg",
         "wiper-wash.svg",
@@ -6350,9 +6402,9 @@
       ]
     },
     "Version control": {
-      "total": 10,
+      "total": 11,
       "filled": 0,
-      "outline": 10,
+      "outline": 11,
       "filledIcons": [],
       "outlineIcons": [
         "git-branch-deleted.svg",
@@ -6363,14 +6415,15 @@
         "git-fork.svg",
         "git-merge.svg",
         "git-pull-request-closed.svg",
+        "git-pull-request-conflict.svg",
         "git-pull-request-draft.svg",
         "git-pull-request.svg"
       ]
     },
     "Weather": {
-      "total": 71,
+      "total": 72,
       "filled": 11,
-      "outline": 60,
+      "outline": 61,
       "filledIcons": [
         "cloud-filled.svg",
         "flare-filled.svg",
@@ -6412,6 +6465,7 @@
         "cloud.svg",
         "comet.svg",
         "flare.svg",
+        "flood.svg",
         "haze.svg",
         "mist-off.svg",
         "mist.svg",
