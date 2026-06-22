@@ -33,14 +33,14 @@ bun run bump         # Bump version (bumpp)
 
 ## Entry Points (matched to source files → dist output)
 
-| Entry | Source | Package Export | Notes |
-|-------|--------|---------------|-------|
-| `index` | `src/index.ts` → `src/icons/index.ts` + `src/aliases.ts` | `.` | UMD too (`dist/umd/`) |
-| `categories` | `src/categories.ts` | `./categories` | |
-| `dynamic-imports` | `src/dynamic-imports.ts` | `./dynamic-imports` | 100 icons/chunk |
-| `icons-by-category` | `src/icons-by-category.ts` | `./icons-by-category` | |
-| `icon-list` | `src/icon-list.ts` | `./icon-list` | |
-| `types` | `src/types.ts` | `./types` | |
+| Entry               | Source                                                   | Package Export        | Notes                 |
+| ------------------- | -------------------------------------------------------- | --------------------- | --------------------- |
+| `index`             | `src/index.ts` → `src/icons/index.ts` + `src/aliases.ts` | `.`                   | UMD too (`dist/umd/`) |
+| `categories`        | `src/categories.ts`                                      | `./categories`        |                       |
+| `dynamic-imports`   | `src/dynamic-imports.ts`                                 | `./dynamic-imports`   | 100 icons/chunk       |
+| `icons-by-category` | `src/icons-by-category.ts`                               | `./icons-by-category` |                       |
+| `icon-list`         | `src/icon-list.ts`                                       | `./icon-list`         |                       |
+| `types`             | `src/types.ts`                                           | `./types`             |                       |
 
 ## Auto-Generated Files (do not edit manually)
 
